@@ -1,0 +1,62 @@
+
+projectByStateByDate:
+    name: Liste des projets du contact
+    attributes:
+        state:
+            label: Choisissez des états de projets
+            type: taglist
+            options: fnc::getProjectState
+            useKey: true
+        start_date:
+            label: Dernière MAJ > à
+            type: datepicker
+            mode: date
+            span: left
+        end_date:
+            label: Dernière MAJ < à
+            type: datepicker
+            mode: date
+            span: right
+    outputs:
+        attributes: 
+            main: wcli/crm/models/project/attributes.yaml
+        
+    
+
+solutionsFiltered:
+    name: Liste des solutions
+    attributes:
+        solutions:
+            label: Choisissez une ou plusieurs solutions
+            type: taglist
+            options: list::Waka\Wcms\Models\Solution
+            useKey: true
+        width: config::waka.cloudis::ImageOptions.width 
+        height: config::waka.cloudis::ImageOptions.height
+        crop: config::waka.cloudis::ImageOptions.crop
+        gravity: config::waka.cloudis::ImageOptions.gravity
+    
+    outputs:
+        # models:
+        #     - fnc::getSolution
+        images:
+            - main_image
+        
+    
+
+needsFiltered:
+    name: Liste de outils
+    attributes:
+        needs:
+            label: Choisissez un ou plusieurs outils
+            type: taglist
+            options: list::Waka\Wcms\Models\Need
+        width: config::waka.cloudis::ImageOptions.width 
+        height: config::waka.cloudis::ImageOptions.height
+        crop: config::waka.cloudis::ImageOptions.crop
+        gravity: config::waka.cloudis::ImageOptions.gravity
+    outputs:
+        # models: 
+        #     - fnc::getNeed
+        images: 
+            - main_image

@@ -1,0 +1,9 @@
+tabs:
+    stretch: true
+    defaultTab: Programation
+    fields:
+        time_bilan_commerciaux:
+            label: Heure de calcul bilan des comerciaux
+            type: datepicker
+            mode: time
+            span: left

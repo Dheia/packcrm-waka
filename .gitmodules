@@ -1,0 +1,15 @@
+[submodule "plugins/waka/utils"]
+	path = plugins/waka/utils
+	url = https://github.com/charlesStOlive/oc-utils.git
+[submodule "plugins/waka/informer"]
+	path = plugins/waka/informer
+	url = https://github.com/charlesStOlive/oc-informer.git
+[submodule "plugins/waka/importexport"]
+	path = plugins/waka/importexport
+	url = https://github.com/charlesStOlive/oc-import-export.git
+[submodule "plugins/waka/mailer"]
+	path = plugins/waka/mailer
+	url = https://github.com/charlesStOlive/oc-mailer.git
+[submodule "plugins/waka/wakajob"]
+	path = plugins/waka/wakajob
+	url = https://github.com/charlesStOlive/oc-wakajob.git

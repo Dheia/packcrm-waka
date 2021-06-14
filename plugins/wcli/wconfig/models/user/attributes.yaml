@@ -1,0 +1,12 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+icon: icon-child
+attributes:
+    first_name:
+        label: Nom
+    last_name:
+        label: Prenom
+    email:
+        label: email

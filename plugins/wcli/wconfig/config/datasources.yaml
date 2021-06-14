@@ -1,0 +1,73 @@
+# ===================================
+#  Config des data source
+
+##Les champs suivant sont obligatoire
+# id
+# test_id
+# name
+# class
+# controller
+#CONFIG COMPLETE EXEMPLE en base de page
+
+# ===================================
+
+client:
+    label: Client
+    code: client
+    test_id: 9
+    author: Waka
+    plugin: Crm
+    name : Client
+    class: Wcli\Crm\Models\Client
+    controller: wcli/crm/clients
+    editFunctions: Wcli\Wconfig\Functions\Client
+    attributes: wcli/crm/models/client/attributes.yaml
+    # publications:
+    #     types: 
+    #         Waka\Worder\Models\Document: Word
+    #         Waka\Pdfer\Models\WakaPdf: Pdf
+    emails:
+        to: 
+            key: email
+            relation: contacts
+        cc: 
+            key: email
+            relation: contacts
+    relations:
+        sector:
+            images: true
+            label: Secteur
+            attributes: wcli/crm/models/sector/attributes.yaml
+    # otherRelations:
+    #         info:
+    #             class: Wcli\Crm\Models\Info
+    #             label: Info
+contact:
+    label: Contact
+    code : contact
+    test_id: 48
+    author: Waka
+    plugin: Crm
+    name : Contact
+    class: Wcli\Crm\Models\Contact
+    controller: wcli/crm/contacts
+    editFunctions: Wcli\Wconfig\Functions\Contact
+    attributes: wcli/crm/models/contact/attributes.yaml
+    emails:
+        to: 
+            key: email
+        cc: 
+            key: email
+            relation: client.contacts
+    relations:
+        client: 
+            label: Client
+            images: true
+            attributes: wcli/crm/models/client/attributes.yaml
+        client.sector: 
+            label: Client
+            attributes: wcli/crm/models/sector/attributes.yaml
+    # publications:
+    #     types: 
+    #         Waka\Worder\Models\Document: Word
+    #         Waka\Pdfer\Models\WakaPdf: Pdf
