@@ -1,0 +1,91 @@
+description = "Default layout"
+==
+<?php
+
+
+function onStart()
+{
+
+}
+?>
+==
+{##}
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <script async
+            src="https://www.googletagmanager.com/gtag/js?id=UA-170503703-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-170503703-1');
+    </script>
+    <meta charset="utf-8">
+    <title>Notilac - {{ this.page.title }}</title>
+    <meta name="description"
+          content="{{ this.page.meta_description }}">
+    <meta name="title"
+          content="{{ this.page.meta_title }}">
+    <meta name="author"
+          content="OctoberCMS">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1">
+    <meta name="generator"
+          content="OctoberCMS">
+    <link rel="icon"
+          type="image/png"
+          href="{{ 'assets/images/favicon.png'|theme }}">
+    <link rel="stylesheet"
+          property="stylesheet"
+          href="{{ 'assets/css/theme.css'|theme }}">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+    {% styles %}
+</head>
+<!-- For IE <= 9 -->
+<!--[if IE]>
+<script type="text/javascript">
+    window.location = "/erreur?url={{ thisurl }}";
+</script>
+<![endif]-->
+
+<!-- For IE > 9 -->
+<!-- <script type="text/javascript">
+	if (window.navigator.msPointerEnabled) {
+        window.location = "/erreur?url={{ thisurl }}";
+    }
+</script> -->
+
+<body class="text-white bg-primary" x-data="{ 'showModal': false }" @keydown.escape="showModal = false">
+
+
+    <!-- <header id="layout-header">
+        {% partial 'site/header' %}
+    </header> -->
+
+    <section id="layout-content">
+        {% page %}
+    </section>
+
+    <!--Footer-->
+    <!-- <footer id="layout_footer" aria-labelledby="footerHeading">
+        {% partial 'site/footer' %}
+    </footer> -->
+
+
+
+    <!-- Scripts & Styles-->
+    <script src="{{ 'assets/javascript/theme.js'|theme }}"></script>
+
+    {% framework extras %}
+    {% scripts %}
+
+</body>
+
+</html>

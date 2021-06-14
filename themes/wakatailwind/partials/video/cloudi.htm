@@ -1,0 +1,13 @@
+<div class="w-full m-auto py-4">
+    <h3 class="w-h3 text-mydark">{{data.title}}</h3>
+    <video class="video_auto_play"
+           controlsList="nodownload nofullscreen noremoteplayback"
+           muted
+           controls
+           width="100%">
+
+        <source src="{{ biblioVideo(data.code)}}"
+                type="video/mp4">
+        Sorry, your browser doesn't support embedded videos.
+    </video>
+</div>

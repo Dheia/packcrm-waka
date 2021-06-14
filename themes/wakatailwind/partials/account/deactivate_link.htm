@@ -1,0 +1,24 @@
+<a href="javascript:;" onclick="$('#accountDeactivateForm').toggle()"
+    class="hover:scale-105 mx-auto lg:mx-0 btn bg-danger">
+    Désactiver le compte
+</a>
+
+<div id="accountDeactivateForm" style="display: none">
+    {{ form_ajax('onDeactivate') }}
+    <hr />
+    <h3>Désaciver le compte client ?</h3>
+    <p>
+        Le compte client et les informations du compte seront supprimés.
+    </p>
+    <div class="form-group">
+        <label for="accountDeletePassword">Pour continuer entrez votre password</label>
+        <input name="password" type="password" class="form-control" id="accountDeletePassword" />
+    </div>
+    <button type="submit" class="hover:scale-105 mx-auto lg:mx-0 btn bg-danger">
+        Confirmer la suppresion du compte
+    </button>
+    <a href="javascript:;" onclick="$('#accountDeactivateForm').toggle()">
+        J'ai changé d'avis
+    </a>
+    {{ form_close() }}
+</div>

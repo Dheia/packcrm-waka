@@ -1,0 +1,45 @@
+
+@font-face {
+    font-family: Raleway;
+    font-weight: 400;
+    src: url(/themes/wakatailwind/assets/fonts/Raleway-Regular.ttf) format("truetype");
+    font-display: swap;
+}
+html {
+  font-size: 18px;
+}
+.bold {
+  @apply font-bold 
+}
+
+b {
+  @apply bold 
+}
+
+
+.w-grid-container {
+  @apply flex justify-center items-center px-2
+}
+.w-title {
+  @apply w-full mt-2 pb-0 mb-0 text-5xl font-bold leading-tight text-center
+}
+.w-titleline {
+  @apply h-1 mx-auto bg-secondary w-64 mt-0 mb-4
+}
+.w-h1 {
+  @apply text-3xl font-extrabold uppercase tracking-wide
+}
+.w-h2 {
+  @apply text-2xl font-bold uppercase tracking-wide
+}
+.w-h3 {
+  @apply text-xl font-bold uppercase tracking-wide
+}
+
+.tooltip {
+  @apply invisible absolute;
+}
+
+.has-tooltip:hover .tooltip {
+  @apply visible z-50
+}

@@ -1,0 +1,8 @@
+
+ 
+  .w-nav-element {
+    @apply -m-3 p-3 flex items-center rounded-md text-base font-medium text-gray-900 hover:bg-gray-200 transition ease-in-out duration-150
+  }
+  .w-nav-element:hover {
+    @apply bg-gray-200 
+  }

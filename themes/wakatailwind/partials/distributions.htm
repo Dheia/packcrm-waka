@@ -1,0 +1,22 @@
+{% for content in datas %}
+{% if content._group == 'wg_vimeo' %}
+{% partial 'video/vimeo' data=content %}
+{% endif %}
+
+{% if content._group == 'wg_cloudi_video' %}
+{% partial 'video/cloudi' data=content %}
+{% endif %}
+
+{% if content._group == 'wg_carousel' %}
+{% partial 'carousel/swiper' data=content %}
+{% endif %}
+
+{% if content._group == 'wg_partial' %}
+{% partial 'specifique/' ~ content.partial %}
+{% endif %}
+
+{% if content._group == 'wg_problematique' %}
+{% partial 'specifique/problematique/problematique_compare' problematique=content %}
+{% endif %}
+
+{% endfor %}

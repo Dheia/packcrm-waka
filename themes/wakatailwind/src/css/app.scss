@@ -1,0 +1,19 @@
+/* open-sans-regular - latin */
+
+@import "tailwindcss/base";
+@import "heading.scss";
+
+
+// PERSO
+//Double system de heading pour l'instant pas très utile...
+//@import "heading.scss";
+@import "theme.scss";
+@import "sub/forms.scss";
+@import "sub/tabs.scss";
+@import "sub/menu.scss";
+
+//FIN DU PERSO
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";

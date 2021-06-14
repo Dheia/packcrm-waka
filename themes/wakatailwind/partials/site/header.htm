@@ -1,0 +1,214 @@
+==
+{##}
+<!--Nav-->
+<!-- This example requires Tailwind CSS v2.0+ -->
+<div class="z-30 fixed w-full" x-data="instanciateMenu()" x-init="init()">
+    <div :class="bgColor()" class="relative z-40  ">
+        <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0">
+            <div class="p-2 flex items-center">
+                <a id="logo_menu"
+                   href="{{ 'home'|page }}">
+                    <img id="h_logo" x-show="!isOpenOnTop()"
+                         alt="logo"
+                         class="h-12"
+                         src="{{ 'assets/images/logo@0.5x.png' | theme }}">
+                    <img id="h_logo_w" x-show="isOpenOnTop()"
+                         alt="logo"
+                         class="h-8 md:h-12"
+                         src="{{ 'assets/images/logo_w@0.5x.png' | theme }}">
+                </a>
+            </div>
+            <div class="flex items-center justify-end lg:w-auto md:p-4 lg:p-0 z-20"
+                 :class="{ 'text-white' : isOpenOnTop() , 'text-primary' : !isOpenOnTop()}">
+
+                <a class="text-current hover:text-gray-500 cursor-pointer text-xs"
+                   href="{{ '/backend'}}">
+                    e.r.p
+                </a>
+                <span>/</span>
+                <a class="text-current  hover:text-gray-500 cursor-pointer text-xs mr-2"
+                   href="{{ '/backend'}}">
+                    clients
+                </a>
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     class="md:mr-4"
+                     :class="{ 'fill-white' : isOpenOnTop() , 'fill-primary' : !isOpenOnTop()}"
+                     xmlns:xlink="http://www.w3.org/1999/xlink"
+                     width="10px" height="10px" viewBox="0 0 401.998 401.998"
+                     style="enable-background:new 0 0 401.998 401.998;"
+                     xml:space="preserve">
+                    <g>
+                        <path d="M357.45,190.721c-5.331-5.33-11.8-7.993-19.417-7.993h-9.131v-54.821c0-35.022-12.559-65.093-37.685-90.218
+		C266.093,12.563,236.025,0,200.998,0c-35.026,0-65.1,12.563-90.222,37.688C85.65,62.814,73.091,92.884,73.091,127.907v54.821
+		h-9.135c-7.611,0-14.084,2.663-19.414,7.993c-5.33,5.326-7.994,11.799-7.994,19.417V374.59c0,7.611,2.665,14.086,7.994,19.417
+		c5.33,5.325,11.803,7.991,19.414,7.991H338.04c7.617,0,14.085-2.663,19.417-7.991c5.325-5.331,7.994-11.806,7.994-19.417V210.135
+		C365.455,202.523,362.782,196.051,357.45,190.721z M274.087,182.728H127.909v-54.821c0-20.175,7.139-37.402,21.414-51.675
+		c14.277-14.275,31.501-21.411,51.678-21.411c20.179,0,37.399,7.135,51.677,21.411c14.271,14.272,21.409,31.5,21.409,51.675V182.728
+		z" />
+                    </g>
+                </svg>
+                <!-- <button x-show="isOpen"
+                        onclick="location.href='privates/client'"
+                        class="hover:scale-105 mx-auto lg:mx-0 btn btn-secondary text-sm">client</button> -->
+
+                <div class="max-w-7xl mx-auto flex px-4 py-2 md:py-4 sm:px-6 lg:px-8 ">
+                    <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
+                    <a
+                       @click="isOpen = !isOpen"
+                       type="button"
+                       class="inline-flex items-center text-base font-medium hover:text-secondary text-current cursor-pointer"
+                       aria-expanded="false">
+                        <span class="hidden md:block">MENU </span>
+                        <!--
+          Heroicon name: solid/chevron-down
+
+          Item active: "text-gray-600", Item inactive: "text-gray-400"
+        -->
+                        <svg id="Layer_1" viewBox="0 0 512 512" width="20" xmlns="http://www.w3.org/2000/svg"
+                             class="ml-2 h-5 w-5 hover:fill-grey"
+                             :class="{ 'fill-white' : isOpenOnTop() , 'fill-primary' : !isOpenOnTop()}">
+                            <path
+                                  d="m464.883 64.267h-417.766c-25.98 0-47.117 21.136-47.117 47.149 0 25.98 21.137 47.117 47.117 47.117h417.766c25.98 0 47.117-21.137 47.117-47.117 0-26.013-21.137-47.149-47.117-47.149z" />
+                            <path
+                                  d="m464.883 208.867h-417.766c-25.98 0-47.117 21.136-47.117 47.149 0 25.98 21.137 47.117 47.117 47.117h417.766c25.98 0 47.117-21.137 47.117-47.117 0-26.013-21.137-47.149-47.117-47.149z" />
+                            <path
+                                  d="m464.883 353.467h-417.766c-25.98 0-47.117 21.137-47.117 47.149 0 25.98 21.137 47.117 47.117 47.117h417.766c25.98 0 47.117-21.137 47.117-47.117 0-26.012-21.137-47.149-47.117-47.149z" />
+                        </svg>
+
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!--
+    Flyout menu, show/hide based on flyout menu state.
+
+    Entering: "transition ease-out duration-200"
+      From: "opacity-0 -translate-y-1"
+      To: "opacity-100 translate-y-0"
+    Leaving: "transition ease-in duration-150"
+      From: "opacity-100 translate-y-0"
+      To: "opacity-0 -translate-y-1"
+  -->
+        <template x-if="isOpen">
+            <div
+                 x-transition:enter="transition ease-out duration-200"
+                 x-transition:enter-start="opacity-0 -translate-y-1/3"
+                 x-transition:enter-end="opacity-100 translate-y-0"
+                 x-transition:leave="transition ease-in duration-150"
+                 x-transition:leave-start="opacity-100 translate-y-0"
+                 x-transition:leave-end="opacity-0 -translate-y-1/3"
+                 class="absolute z-40 inset-x-0 transform shadow-lg">
+                <div class="absolute inset-0 flex" aria-hidden="true">
+                    <div class="bg-white w-1/2"></div>
+                    <div class="bg-gray-50 w-1/2"></div>
+                </div>
+                <div
+                     class="relative mx-auto grid grid-cols-1 lg:grid-cols-2 scrollbar-thin  scrollbar-thumb-primary scrollbar-track-gray-400 max-h-screen overflow-y-scroll">
+                    <nav class="grid gap-y-10 px-4 py-8 bg-white sm:grid-cols-3 sm:gap-x-8 sm:py-12 sm:px-6 lg:px-8 xl:pr-12"
+                         aria-labelledby="solutionsHeading">
+                        <h2 id="solutionsHeading" class="sr-only">Solutions menu</h2>
+                        <div>
+                            <h3 class="text-sm font-medium tracking-wide text-gray-500 uppercase">
+                                Votre profil
+                            </h3>
+                            <ul class="mt-5 space-y-4">
+                                {% for profil in menu_profils %}
+                                <li class="flow-root">
+                                    <a href="/profil/{{profil.slug}}"
+                                       class="w-nav-element">
+                                        <!-- Heroicon name: outline/information-circle -->
+                                        <div class="text-gray-400 h-6 w-6">{{ profil.icone_svg | raw }}</div>
+                                        <span class="ml-4">{{ profil.short_name}}</span>
+                                    </a>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-sm font-medium tracking-wide text-gray-500 uppercase">
+                                Votre besoin
+                            </h3>
+                            <ul class="mt-5 space-y-6">
+                                {% for need in menu_needs %}
+                                <li class="flow-root">
+                                    <a href="/besoins/{{need.slug}}"
+                                       class="w-nav-element">
+                                        <!-- Heroicon name: outline/information-circle -->
+                                        <div class="text-gray-400 h-6 w-6">{{ need.icone_svg | raw }}</div>
+                                        <span class="ml-4">{{ need.name}}</span>
+                                    </a>
+                                </li>
+                                {% endfor %}
+                                <li class="flow-root">
+                                    <a href="/besoins"
+                                       class="w-nav-element text-gray-700">
+                                        <!-- Heroicon name: outline/information-circle -->
+                                        <div class="text-gray-800 h-6 w-6"><svg xmlns="http://www.w3.org/2000/svg"
+                                                 class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                      d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z" />
+                                            </svg></div>
+                                        <span class="ml-4">Voir tout...</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-sm font-medium tracking-wide text-gray-500 uppercase">
+                                Société
+                            </h3>
+                            <ul class="mt-5 space-y-6">
+                                <li class="flow-root">
+                                    <div href="#"
+                                         class="-m-3 p-3 flex items-center rounded-md text-base font-medium text-gray-300">
+                                        <!-- Heroicon name: outline/user-group -->
+                                        <svg class="flex-shrink-0 h-6 w-6 text-gray-200"
+                                             xmlns="http://www.w3.org/2000/svg"
+                                             fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                  d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                                        </svg>
+                                        <span class="ml-4">Contenu en construction...</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="bg-gray-50 px-4 py-8 sm:py-12 sm:px-6 lg:px-8 xl:pl-12">
+                        <div>
+                            <h3 class="text-sm font-medium tracking-wide text-gray-500 uppercase">
+                                Cas & démo
+                            </h3>
+                            <ul class="mt-6 space-y-6">
+                                {% for cas in menu_cas %}
+                                <li class="flow-root">
+                                    <a href="/cas/{{cas.slug}}"
+                                       class="-m-3 p-3 flex rounded-lg hover:bg-gray-200 transition ease-in-out duration-150">
+                                        <div class="hidden sm:block flex-shrink-0">
+                                            <img class="w-32 h-20 object-cover rounded-md"
+                                                 src="{{ cas.main_img|getCloudiUrl(150,100, 'jpg', 'fill') }}"
+                                                 alt="Image : {{ cas.name }}">
+                                        </div>
+                                        <div class="min-w-0 flex-1 sm:ml-8">
+                                            <h4 class="text-base font-medium text-gray-900 truncate">
+                                                {{ cas.name }}
+                                            </h4>
+                                            <p class="mt-1 text-sm text-gray-500">
+                                                {{ cas.intro }}
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        <!-- <div class="mt-6 text-sm font-medium">
+                    <a href="#" class="text-indigo-600 hover:text-indigo-500 transition ease-in-out duration-150">View
+                        all posts <span aria-hidden="true">&rarr;</span></a>
+                </div> -->
+                    </div>
+                </div>
+            </div>
+        </template>
+    </div>

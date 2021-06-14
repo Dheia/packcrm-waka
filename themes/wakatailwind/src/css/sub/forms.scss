@@ -1,0 +1,9 @@
+.form-group {
+    @apply block p-2;
+}
+.form-control {
+    @apply block text-black;
+}
+.form-label {
+    @apply block text-white uppercase;
+}

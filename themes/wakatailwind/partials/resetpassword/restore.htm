@@ -1,0 +1,13 @@
+<p class="lead">
+    <strong>Password oublié ? </strong>Entrez votre email pour recevoir un code de restauration.
+</p>
+
+<form data-request="{{ __SELF__ }}::onRestorePassword"
+    data-request-update="'{{ __SELF__ }}::reset': '#partialUserResetForm'">
+    <div class="form-group">
+        <label for="userRestoreEmail" class="form-label">Email</label>
+        <input name="email" type="email" class="form-control" id="userRestoreEmail" placeholder="Enter your email">
+    </div>
+
+    <button type="submit" class="btn btn-default">Restore password</button>
+</form>

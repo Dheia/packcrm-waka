@@ -1,0 +1,49 @@
+{
+  "name": "wakatailwind",
+  "version": "1.0.0",
+  "description": "WakaTailwind",
+  "main": "index.js",
+  "dependencies": {
+    "@tailwindcss/aspect-ratio": "^0.2.0",
+    "@tailwindcss/forms": "^0.3.2",
+    "@tailwindcss/typography": "^0.4.0",
+    "alpinejs": "^2.8.2",
+    "autoprefixer": "^10.2.5",
+    "cross-env": "^7.0.2",
+    "jquery": "^3.6.0",
+    "postcss": "^8.2.12",
+    "scrollmagic-plugin-gsap": "^1.0.4",
+    "swiper": "^6.5.8",
+    "tailwindcss": "^2.1.2"
+  },
+  "devDependencies": {
+    "gsap": "^3.6.1",
+    "laravel-mix": "^5.0.4",
+    "laravel-mix-purgecss": "^5.0.0-rc.1",
+    "resolve-url-loader": "^3.1.0",
+    "sass": "^1.32.11",
+    "sass-loader": "^8.0.2",
+    "scrollmagic": "^2.0.7",
+    "tailwind-scrollbar": "^1.3.0",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "scripts": {
+    "dev": "npm run development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "npm run development -- --watch",
+    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "npm run production",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/charlesStOlive/wakaari.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/charlesStOlive/wakaari/issues"
+  },
+  "homepage": "https://github.com/charlesStOlive/wakaari#readme"
+}
