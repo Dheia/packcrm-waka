@@ -157,6 +157,8 @@ return [
         // 'Illuminate\Html\HtmlServiceProvider', // Example
 
         'System\ServiceProvider',
+        Spatie\Backup\BackupServiceProvider::class,
+        ZeroDaHero\LaravelWorkflow\WorkflowServiceProvider::class,
     ]),
 
     /*
@@ -191,7 +193,7 @@ return [
     */
 
     'aliases' => array_merge(include(base_path('modules/system/aliases.php')), [
-
+        'Workflow' => ZeroDaHero\LaravelWorkflow\Facades\WorkflowFacade::class,
         // 'Str' => 'Illuminate\Support\Str', // Example
 
     ]),
