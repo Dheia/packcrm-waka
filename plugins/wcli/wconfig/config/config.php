@@ -1,6 +1,15 @@
 <?php
 
 return [
+    'brand_data' => [
+        'logoPath' => themes_path('wakatailwind/assets/images/logo.png'),
+        'faviconPath' => themes_path('wakatailwind/assets/images/logo.png'),
+        'appName' => 'Pack CRM',
+        'tagline' => 'Automatisez vos documents',
+        'primaryColor' => "#004C54",
+        'secondaryColor' => "#787978",
+        'accentColor' => "#F94D2A",
+    ],
     'dataSource' => [
         'src' => 'wcli/wconfig/config/datasources.yaml',
     ],

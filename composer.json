@@ -35,7 +35,15 @@
         "winter/wn-backend-module": "dev-develop as 1.1.999",
         "winter/wn-cms-module": "dev-develop as 1.1.999",
         "laravel/framework": "~6.0",
-        "wikimedia/composer-merge-plugin": "~2.0.1"
+        "wikimedia/composer-merge-plugin": "~2.0.1",
+        "maatwebsite/excel": "^3.1",
+        "nikkanetiya/laravel-color-palette": "dev-master",
+        "mexitek/phpcolors": "dev-master",
+        "markrogoyski/math-php": "0.*",
+        "juanmiguelbesada/mjml-php": "dev-dev-waka",
+        "zerodahero/laravel-workflow": "^2.0",
+        "spatie/laravel-backup": "^6.11",
+        "brick/varexporter": "^0.3.5"
     },
     "require-dev": {
         "phpunit/phpunit": "^8.4|^9.3.3",
