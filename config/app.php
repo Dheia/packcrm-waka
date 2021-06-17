@@ -179,7 +179,7 @@ return [
     |
     */
 
-    'loadDiscoveredPackages' => false,
+    'loadDiscoveredPackages' => true,
 
     /*
     |--------------------------------------------------------------------------
