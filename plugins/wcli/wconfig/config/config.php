@@ -7,7 +7,7 @@ return [
         'appName' => 'Pack CRM',
         'tagline' => 'Automatisez vos documents',
         'primaryColor' => "#004C54",
-        'secondaryColor' => "#787978",
+        'secondaryColor' => "#405261",
         'accentColor' => "#F94D2A",
     ],
     'dataSource' => [
