@@ -4,21 +4,17 @@
 
 fields:    
     first_name:
-        label: wcli.crm::contact.first_name
+        label: wcli.crm::commercial.first_name
         span: left
         required: true
     last_name:
-        label: wcli.crm::contact.last_name
+        label: wcli.crm::commercial.last_name
         span: right
         required: true
     tel:
-        label: wcli.crm::contact.tel
+        label: wcli.crm::commercial.tel
         span: left
     email:
-        label: wcli.crm::contact.email
+        label: wcli.crm::commercial.email
         span: right
         required: true
-    commercial:
-        label: wcli.crm::contact.commercial
-        span: left
-        type: relation

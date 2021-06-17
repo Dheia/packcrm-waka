@@ -1,0 +1,28 @@
+# ===================================
+# Relation Behavior Config
+# ===================================
+
+clients:
+    label: wcli.crm::commercial.clients
+    manage:
+        form: $/wcli/crm/models/client/fields_for_commercial.yaml
+        list: $/wcli/crm/models/client/columns_for_commercial.yaml
+    view:
+        list: $/wcli/crm/models/client/columns_for_commercial.yaml
+        toolbarButtons: 
+        defaultSort:
+            column: name
+            direction: asc
+
+contacts:
+    label: wcli.crm::commercial.contacts
+    manage:
+        form: $/wcli/crm/models/contact/fields_for_commercial.yaml
+        list: $/wcli/crm/models/contact/columns_for_commercial.yaml
+    view:
+        list: $/wcli/crm/models/contact/columns_for_commercial.yaml
+        toolbarButtons: 
+        defaultSort:
+            column: name
+            direction: asc
+

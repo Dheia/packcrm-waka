@@ -12,12 +12,26 @@ columns:
     email:
         label: wcli.crm::contact.email
         searchable: true
-    client:
+    client_r:
         label: wcli.crm::contact.client
         searchable: true
-    commercial:
+        relation: client
+        select: name
+        type: col_type
+    commercial_r:
         label: wcli.crm::contact.commercial
         searchable: true
+        relation: commercial
+        select: name
+        type: col_type
+    first_name:
+        label: wcli.crm::contact.first_name
+        searchable: true
+        invisible: true
+    last_name:
+        label: wcli.crm::contact.last_name
+        searchable: true
+        invisible: true
     updated_at:
         label: waka.utils::lang.global.updated_at
         type: timetense

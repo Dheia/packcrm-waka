@@ -1,32 +1,33 @@
-# ===================================
-#  Form Field Definitions
-# ===================================
-
-fields:    
+fields:
     name:
-        label: wcli.crm::client.name
+        label: 'wcli.crm::client.name'
         span: left
         required: true
-        permissions: [wcli.crm.*]
+        permissions:
+            - 'wcli.crm.*'
     slug:
-        label: wcli.crm::client.slug
+        label: 'wcli.crm::client.slug'
         span: right
         required: true
         preset: name
-        permissions: [wcli.crm.*]
+        permissions:
+            - 'wcli.crm.*'
     secteur:
-        label: wcli.crm::client.secteur
+        label: 'wcli.crm::client.secteur'
         span: left
         type: relation
-        permissions: [wcli.crm.*]
+        permissions:
+            - 'wcli.crm.*'
     commercial:
-        label: wcli.crm::client.commercial
+        label: 'wcli.crm::client.commercial'
         span: right
         type: relation
-        permissions: [wcli.crm.*]
+        permissions:
+            - 'wcli.crm.*'
     contacts:
-        label: wcli.crm::client.contacts
+        label: 'wcli.crm::client.contacts'
         span: full
         type: partial
         path: field_contacts
-        permissions: [wcli.crm.*]
+        permissions:
+            - 'wcli.crm.*'

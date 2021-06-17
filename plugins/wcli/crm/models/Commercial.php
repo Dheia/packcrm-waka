@@ -3,17 +3,17 @@
 use Model;
 
 /**
- * contact Model
+ * commercial Model
  */
 
-class Contact extends Model
+class Commercial extends Model
 {
     use \Winter\Storm\Database\Traits\Validation;
 
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'wcli_crm_contacts';
+    public $table = 'wcli_crm_commercials';
 
 
     /**
@@ -30,9 +30,10 @@ class Contact extends Model
      * @var array Validation rules for attributes
      */
     public $rules = [
+        'name' => 'required',
         'first_name' => 'required',
         'last_name' => 'required',
-        'email' => 'unique',
+        'email' => 'required|unique',
     ];
 
     public $customMessages = [
@@ -79,18 +80,18 @@ class Contact extends Model
      */
     public $hasOne = [];
     public $hasMany = [
+        'clients' => [
+            'Wcli\Crm\Models\Client'
+        ],
+        'contacts' => [
+            'Wcli\Crm\Models\Contact'
+        ],
     ];
     public $hasOneThrough = [
     ];
     public $hasManyThrough = [
     ];
     public $belongsTo = [
-       'client' => [
-            'Wcli\Crm\Models\Client'
-        ],
-       'commercial' => [
-            'Wcli\Crm\Models\Commercial'
-        ],
     ];
     public $belongsToMany = [
     ];        
@@ -109,14 +110,14 @@ class Contact extends Model
     /**
      *EVENTS
      **/
-    public function beforeValidate()
-    {
-
-    }
-
     public function beforeSave() 
     {
         $this->name = $this->first_name.' '.$this->last_name;
+    }
+
+    public function afterSave() 
+    {
+
     }
 
 

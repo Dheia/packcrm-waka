@@ -2,24 +2,24 @@ columns:
     name:
         label: 'wcli.crm::contact.name'
         searchable: true
-    last_name:
-        label: 'wcli.crm::contact.last_name'
-        searchable: true
-        hidden: true
     tel:
         label: 'wcli.crm::contact.tel'
         searchable: true
     email:
         label: 'wcli.crm::contact.email'
         searchable: true
-    commercial_r:
-        label: 'wcli.crm::contact.commercial'
+    client_r:
+        label: 'wcli.crm::contact.client'
         searchable: true
-        relation: commercial
+        relation: client
         select: name
         type: col_type
     first_name:
         label: 'wcli.crm::contact.first_name'
+        searchable: true
+        invisible: true
+    last_name:
+        label: 'wcli.crm::contact.last_name'
         searchable: true
         invisible: true
     updated_at:

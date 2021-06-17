@@ -1,0 +1,32 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: wcli.crm::commercial.form_name
+
+# Model Form Field configuration
+form: $/wcli/crm/models/commercial/fields.yaml
+
+# Model Class name
+modelClass: Wcli\Crm\Models\Commercial
+
+# Default redirect location
+defaultRedirect: wcli/crm/commercials
+
+# Create page
+create:
+    title: wcli.crm::commercial.create
+    redirect: wcli/crm/commercials/update/:id
+    redirectClose: wcli/crm/commercials
+    form: $/wcli/crm/models/commercial/fields_create.yaml
+
+# Update page
+update:
+    title: wcli.crm::commercial.update
+    redirect: wcli/crm/commercials/update/:id
+    redirectClose: wcli/crm/commercials
+
+# Preview page
+preview:
+    title: wcli.crm::commercial.preview_name

@@ -1,0 +1,19 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+icon: icon-info
+attributes:
+    name:
+        label: wcli.crm::commercial.name
+    first_name:
+        label: wcli.crm::commercial.first_name
+    last_name:
+        label: wcli.crm::commercial.last_name
+    tel:
+        label: wcli.crm::commercial.tel
+    email:
+        label: wcli.crm::commercial.email
+    updated_at:
+        label: waka.utils::lang.global.updated_at
+        type: date-medium

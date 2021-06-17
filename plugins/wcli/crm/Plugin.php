@@ -89,6 +89,30 @@ class Plugin extends PluginBase
                 'icon'        => 'icon-user',
                 'permissions' => ['wcli.crm.*'],
                 'order'       => 500,
+                'sideMenu' => [
+                    'side-menu-contacts' => [
+                        'label' => Lang::get('wcli.crm::lang.menu.contacts'),
+                        'icon' => 'icon-address-card',
+                        'url' => Backend::url('wcli/crm/contacts'),
+                    ],
+                    'side-menu-clients' => [
+                        'label' => Lang::get('wcli.crm::lang.menu.clients'),
+                        'icon' => 'icon-building',
+                        'url' => Backend::url('wcli/crm/clients'),
+                    ],
+                    'side-menu-secteurs' => [
+                        'label' => Lang::get('wcli.crm::lang.menu.secteurs'),
+                        'icon' => 'icon-dot-circle-o',
+                        'url' => Backend::url('wcli/crm/secteurs'),
+                        'permissions' => ['wcli.crm.admin'],
+                    ],
+                    'side-menu-commercials' => [
+                        'label' => Lang::get('wcli.crm::lang.menu.commercials'),
+                        'icon' => 'icon-users',
+                        'url' => Backend::url('wcli/crm/commercials'),
+                        'permissions' => ['wcli.crm.user.*'],
+                    ],
+                ],
             ],
         ];
     }

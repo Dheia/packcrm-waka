@@ -83,7 +83,7 @@ class Client extends Model
             [
                 'delete' => 'true'
             ]
-        ]
+        ],
     ];
     public $hasOneThrough = [
     ];
@@ -92,10 +92,10 @@ class Client extends Model
     public $belongsTo = [
        'secteur' => [
             'Wcli\Crm\Models\Secteur'
-        ]
+        ],
        'commercial' => [
             'Wcli\Crm\Models\Commercial'
-        ]
+        ],
     ];
     public $belongsToMany = [
     ];        
@@ -108,6 +108,8 @@ class Client extends Model
     ];
     public $attachMany = [
     ];
+
+    //startKeep/
 
     /**
      *EVENTS
@@ -153,5 +155,6 @@ class Client extends Model
     /**
      * OTHERS
      */
-    
+
+    //endKeep/
 }

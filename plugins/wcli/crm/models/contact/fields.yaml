@@ -17,10 +17,12 @@ fields:
     email:
         label: wcli.crm::contact.email
         span: right
+        required: true
     client:
         label: wcli.crm::contact.client
         span: full
-        type: partial_path
+        type: partial
+        path: field_client
     commercial:
         label: wcli.crm::contact.commercial
         span: left

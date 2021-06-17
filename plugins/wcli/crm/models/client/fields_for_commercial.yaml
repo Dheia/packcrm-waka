@@ -12,9 +12,9 @@ fields:
         preset: name
         permissions:
             - 'wcli.crm.*'
-    commercial:
-        label: 'wcli.crm::client.commercial'
-        span: right
+    secteur:
+        label: 'wcli.crm::client.secteur'
+        span: left
         type: relation
         permissions:
             - 'wcli.crm.*'

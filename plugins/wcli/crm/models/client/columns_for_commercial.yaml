@@ -8,9 +8,6 @@ columns:
     secteur:
         label: 'wcli.crm::client.secteur'
         searchable: true
-    commercial:
-        label: 'wcli.crm::client.commercial'
-        searchable: true
     updated_at:
         label: 'waka.utils::lang.global.updated_at'
         type: timetense

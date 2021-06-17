@@ -1,0 +1,30 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:    
+    first_name:
+        label: wcli.crm::commercial.first_name
+        span: left
+        required: true
+    last_name:
+        label: wcli.crm::commercial.last_name
+        span: right
+        required: true
+    tel:
+        label: wcli.crm::commercial.tel
+        span: left
+    email:
+        label: wcli.crm::commercial.email
+        span: right
+        required: true
+    clients:
+        label: wcli.crm::commercial.clients
+        span: full
+        type: partial
+        path: field_clients
+    contacts:
+        label: wcli.crm::commercial.contacts
+        span: full
+        type: partial
+        path: field_contacts

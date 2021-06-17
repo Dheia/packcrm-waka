@@ -81,7 +81,7 @@ class Secteur extends Model
     public $hasMany = [
         'clients' => [
             'Wcli\Crm\Models\Client'
-        ]
+        ],
     ];
     public $hasOneThrough = [
     ];
@@ -100,7 +100,7 @@ class Secteur extends Model
             [
                 'delete' => 'true'
             ]
-        ]
+        ],
     ];
     public $attachOne = [
         'image' => [
@@ -112,6 +112,8 @@ class Secteur extends Model
     ];
     public $attachMany = [
     ];
+
+    //startKeep/
 
     /**
      *EVENTS
@@ -163,5 +165,6 @@ class Secteur extends Model
             }
         }
     }
-    
+
+    //endKeep/
 }
