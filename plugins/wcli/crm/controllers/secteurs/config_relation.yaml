@@ -1,0 +1,28 @@
+# ===================================
+# Relation Behavior Config
+# ===================================
+
+clients:
+    label: wcli.crm::secteur.clients
+    manage:
+        form: $/wcli/crm/models/client/fields_for_secteur.yaml
+        list: $/wcli/crm/models/client/columns_for_secteur.yaml
+    view:
+        list: $/wcli/crm/models/client/columns_for_secteur.yaml
+        toolbarButtons: link|unlink
+        defaultSort:
+            column: name
+            direction: asc
+
+messages:
+    label: waka.utils::secteur.messages
+    manage:
+        form: $/utils/message/models/message/fields_for_secteur.yaml
+        list: $/utils/message/models/message/columns_for_secteur.yaml
+    view:
+        list: $/utils/message/models/message/columns_for_secteur.yaml
+        toolbarButtons: create|update|delete
+        defaultSort:
+            column: name
+            direction: asc
+

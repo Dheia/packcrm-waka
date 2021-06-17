@@ -1,0 +1,32 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: wcli.crm::secteur.form_name
+
+# Model Form Field configuration
+form: $/wcli/crm/models/secteur/fields.yaml
+
+# Model Class name
+modelClass: Wcli\Crm\Models\Secteur
+
+# Default redirect location
+defaultRedirect: wcli/crm/secteurs
+
+# Create page
+create:
+    title: wcli.crm::secteur.create
+    redirect: wcli/crm/secteurs/update/:id
+    redirectClose: wcli/crm/secteurs
+    form: $/wcli/crm/models/secteur/fields_create.yaml
+
+# Update page
+update:
+    title: wcli.crm::secteur.update
+    redirect: wcli/crm/secteurs/update/:id
+    redirectClose: wcli/crm/secteurs
+
+# Preview page
+preview:
+    title: wcli.crm::secteur.preview_name

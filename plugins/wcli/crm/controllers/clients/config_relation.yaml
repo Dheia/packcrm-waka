@@ -1,0 +1,16 @@
+# ===================================
+# Relation Behavior Config
+# ===================================
+
+contacts:
+    label: wcli.crm::client.contacts
+    manage:
+        form: $/wcli/crm/models/contact/fields_for_client.yaml
+        list: $/wcli/crm/models/contact/columns_for_client.yaml
+    view:
+        list: $/wcli/crm/models/contact/columns_for_client.yaml
+        toolbarButtons: create|link|unlink|delete
+        defaultSort:
+            column: name
+            direction: asc
+

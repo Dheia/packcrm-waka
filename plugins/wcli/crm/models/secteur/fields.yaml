@@ -1,0 +1,35 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:    
+    name:
+        label: wcli.crm::secteur.name
+        span: left
+        required: true
+        permissions: [wcli.crm.*]
+    code:
+        label: wcli.crm::secteur.code
+        span: right
+        required: true
+        permissions: [wcli.crm.*]
+    description:
+        label: wcli.crm::secteur.description
+        span: full
+        type: markdown
+        permissions: [wcli.crm.*]
+    clients:
+        label: wcli.crm::secteur.clients
+        span: full
+        type: partial
+        path: field_clients
+    messages:
+        label: wcli.crm::secteur.messages
+        span: full
+        type: partial
+        path: field_messages
+    image:
+        label: wcli.crm::secteur.image
+        span: left
+        type: fileupload
+        mode: file

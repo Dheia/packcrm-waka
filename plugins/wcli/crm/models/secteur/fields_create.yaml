@@ -1,0 +1,20 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:    
+    name:
+        label: wcli.crm::secteur.name
+        span: left
+        required: true
+        permissions: [wcli.crm.*]
+    code:
+        label: wcli.crm::secteur.code
+        span: right
+        required: true
+        permissions: [wcli.crm.*]
+    description:
+        label: wcli.crm::secteur.description
+        span: full
+        type: markdown
+        permissions: [wcli.crm.*]

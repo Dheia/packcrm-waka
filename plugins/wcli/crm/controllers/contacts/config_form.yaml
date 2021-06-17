@@ -1,0 +1,32 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: wcli.crm::contact.form_name
+
+# Model Form Field configuration
+form: $/wcli/crm/models/contact/fields.yaml
+
+# Model Class name
+modelClass: Wcli\Crm\Models\Contact
+
+# Default redirect location
+defaultRedirect: wcli/crm/contacts
+
+# Create page
+create:
+    title: wcli.crm::contact.create
+    redirect: wcli/crm/contacts/update/:id
+    redirectClose: wcli/crm/contacts
+    form: $/wcli/crm/models/contact/fields_create.yaml
+
+# Update page
+update:
+    title: wcli.crm::contact.update
+    redirect: wcli/crm/contacts/update/:id
+    redirectClose: wcli/crm/contacts
+
+# Preview page
+preview:
+    title: wcli.crm::contact.preview_name

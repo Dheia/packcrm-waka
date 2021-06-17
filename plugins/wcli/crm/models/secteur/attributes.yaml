@@ -1,0 +1,15 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+icon: icon-info
+attributes:
+    name:
+        label: wcli.crm::secteur.name
+    code:
+        label: wcli.crm::secteur.code
+    description:
+        label: wcli.crm::secteur.description
+    updated_at:
+        label: waka.utils::lang.global.updated_at
+        type: date-medium

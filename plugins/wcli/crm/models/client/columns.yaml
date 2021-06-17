@@ -1,0 +1,20 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    name:
+        label: wcli.crm::client.name
+        searchable: true
+    slug:
+        label: wcli.crm::client.slug
+        searchable: true
+    secteur:
+        label: wcli.crm::client.secteur
+        searchable: true
+    commercial:
+        label: wcli.crm::client.commercial
+        searchable: true
+    updated_at:
+        label: waka.utils::lang.global.updated_at
+        type: timetense

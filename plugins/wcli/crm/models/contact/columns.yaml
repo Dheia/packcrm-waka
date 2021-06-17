@@ -1,0 +1,23 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    name:
+        label: wcli.crm::contact.name
+        searchable: true
+    tel:
+        label: wcli.crm::contact.tel
+        searchable: true
+    email:
+        label: wcli.crm::contact.email
+        searchable: true
+    client:
+        label: wcli.crm::contact.client
+        searchable: true
+    commercial:
+        label: wcli.crm::contact.commercial
+        searchable: true
+    updated_at:
+        label: waka.utils::lang.global.updated_at
+        type: timetense
