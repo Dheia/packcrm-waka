@@ -9,6 +9,7 @@ use Model;
 class Commercial extends Model
 {
     use \Winter\Storm\Database\Traits\Validation;
+    use \Waka\Utils\Classes\Traits\ScopePeriodes;
 
     /**
      * @var string The database table used by the model.
@@ -43,6 +44,9 @@ class Commercial extends Model
      * @var array attributes send to datasource for creating document
      */
     public $attributesToDs = [
+        'venteMois',
+        'ventesTotal',
+        'venteAnnee',
     ];
 
     /**
@@ -90,6 +94,10 @@ class Commercial extends Model
     public $hasOneThrough = [
     ];
     public $hasManyThrough = [
+        'ventes' => [
+            'Wcli\Crm\Models\Vente',
+            'through' => 'Wcli\Crm\Models\Client'
+        ],
     ];
     public $belongsTo = [
     ];
@@ -112,12 +120,13 @@ class Commercial extends Model
      **/
     public function beforeSave() 
     {
-        $this->name = $this->first_name.' '.$this->last_name;
+        trace_log($this->ventes->toArray());
+        
     }
 
-    public function afterSave() 
+    public function beforeValidate() 
     {
-
+        $this->name = $this->first_name.' '.$this->last_name;
     }
 
 
@@ -128,7 +137,18 @@ class Commercial extends Model
     /**
      * GETTERS
      **/
-
+    public function getVenteMoisAttribute()
+    {
+        return $this->ventes()->wakaPeriode('d_30', 'sale_at')->sum('amount');
+    }
+    public function getVentesTotalAttribute()
+    {
+        return $this->ventes()->sum('amount');
+    }
+    public function getVenteAnneeAttribute()
+    {
+        return $this->ventes()->wakaPeriode('y', 'sale_at')->sum('amount');
+    }
     /**
      * SCOPES
      */

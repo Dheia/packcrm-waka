@@ -2,11 +2,21 @@ columns:
     name:
         label: 'wcli.crm::client.name'
         searchable: true
+    action:
+        label: 'wcli.crm::client.action'
+        type: waka-btn-actions
+        icon: icon-wrench
+        clickable: false
+        searchable: false
+        sortable: false
+        width: 25px
     slug:
         label: 'wcli.crm::client.slug'
         searchable: true
-    secteur:
+    secteur_r:
         label: 'wcli.crm::client.secteur'
+        relation: secteur
+        select: name
         searchable: true
     updated_at:
         label: 'waka.utils::lang.global.updated_at'

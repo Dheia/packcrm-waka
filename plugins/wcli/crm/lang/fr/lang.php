@@ -6,6 +6,7 @@ return [
         'clients' => 'Clients',
         'contacts' => 'Contacts',
         'secteurs' => 'Secteurs',
-        'commercial' => 'Commercials',
+        'commercials' => 'Commercials',
+        'ventes' => 'Ventes',
     ],
 ];

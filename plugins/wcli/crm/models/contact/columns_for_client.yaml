@@ -2,10 +2,14 @@ columns:
     name:
         label: 'wcli.crm::contact.name'
         searchable: true
-    last_name:
-        label: 'wcli.crm::contact.last_name'
-        searchable: true
-        hidden: true
+    action:
+        label: 'wcli.crm::contact.action'
+        type: waka-btn-actions
+        icon: icon-wrench
+        clickable: false
+        searchable: false
+        sortable: false
+        width: 25px
     tel:
         label: 'wcli.crm::contact.tel'
         searchable: true
@@ -14,12 +18,15 @@ columns:
         searchable: true
     commercial_r:
         label: 'wcli.crm::contact.commercial'
-        searchable: true
         relation: commercial
         select: name
-        type: col_type
+        searchable: true
     first_name:
         label: 'wcli.crm::contact.first_name'
+        searchable: true
+        invisible: true
+    last_name:
+        label: 'wcli.crm::contact.last_name'
         searchable: true
         invisible: true
     updated_at:

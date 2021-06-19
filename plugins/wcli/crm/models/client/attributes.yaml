@@ -8,8 +8,6 @@ attributes:
         label: wcli.crm::client.name
     slug:
         label: wcli.crm::client.slug
-    secteur:
-        label: wcli.crm::client.secteur
     commercial:
         label: wcli.crm::client.commercial
     updated_at:

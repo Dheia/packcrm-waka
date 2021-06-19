@@ -1,70 +1,11 @@
 
-projets:
+ventes:
     name: Tous les projet actifs OU fermés
     attributes:
-        active:
-            label: Uniquement les projets actifs
-            type: checkbox
-        state:
-            label: Choisissez des états de projets
-            type: taglist
-            options: fnc::getProjectState
-            useKey: true
-        start_date:
-            label: Date de debut
-            type: datepicker
-            mode: date
-            span: left
-        end_date:
-            label: date de fin
-            type: datepicker
-            mode: date
-            span: right
+        periode:
+            label: Choisissez une période
+            type: dropdown
+            options: fnc::getPeriode
     outputs:
         attributes: 
-            main: wcli/crm/models/project/attributes.yaml
-
-taches:
-    name: Toutes ses taches client ou des projets du client.
-    attributes:
-        task_from:
-            label: Etat des taches
-            type: dropdown
-            options:
-                all: Taches du client et des projets du client
-                client: Taches du client SANS ses tâches projets
-                projets: Uniquement les taches des projets 
-        state:
-            label: Etat des taches
-            type: taglist
-            useKey: true
-            options: fnc::getTaskState
-        task_type:
-            label: Type de taches
-            type: taglist
-            useKey: true
-            options: list::Waka\Tasker\Models\TaskType
-        start_date:
-            label: Date de debut
-            type: datepicker
-            mode: date
-            span: left
-        end_date:
-            label: date de fin
-            type: datepicker
-            mode: date
-            span: right
-    outputs:
-        values:
-            name: 
-                label: nom de la tache
-            created_at: 
-                label: date de création
-            next_at: 
-                label: fin étape suivante
-            closed_at: 
-                label: Fermé le
-            wfPlaceLabel: 
-                label: Nom de létat
-            task_type.name: 
-                label: Type de tache
+            main: wcli/crm/models/vente/attributes.yaml

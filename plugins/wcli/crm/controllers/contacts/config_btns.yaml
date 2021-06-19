@@ -29,11 +29,17 @@ tool_bar:
     config_btns:
             format: all
             btns:
-                excelImportChild:
-                    config: waka.importexport::btns.importChild
+                excelImport:
+                    config: waka.importexport::btns.importExcel
+                excelExport:
+                    config: waka.importexport::btns.exportExcel
     config_lot:
         format: all
         btns: 
+            
+            lot_mail:
+                config: waka.mailer::btns.lot_mail
+                group: waka.utils::lang.prod.send
     # partials: #Attention seul les variables modelId et modelClass (class du controller) sont disponible sans les partials.  
     #     testbtns:
     #         url: $/wcli/crm/controllers/projects/_test_index.htm
@@ -47,6 +53,9 @@ action_bar:
             waka.utils::lang.prod.send: oc-icon-external-link
             waka.utils::lang.prod.tools: oc-icon-wrench
         btns:
+            mail:
+                config: waka.mailer::btns.mail
+                group: waka.utils::lang.prod.send
             excelExportChild:
                 config: waka.importexport::btns.exportChild
                 group: waka.utils::lang.prod.produce

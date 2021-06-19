@@ -3,5 +3,5 @@
 # ===================================
 
 scopes:
-  test:
-    label: coin
+  # test:
+  #   label: coin

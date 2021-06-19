@@ -2,10 +2,12 @@
 
 return [
     'name' => "Nom client",
+    'action' => "Action",
     'slug' => "Code",
     'secteur' => "Secteur",
     'commercial' => "Commercial",
     'contacts' => "Contacts",
+    'ventes' => "Ventes",
     'title' => "Gestion client",
     'update' => "Modification client",
     'courriers' => "Gestion client",

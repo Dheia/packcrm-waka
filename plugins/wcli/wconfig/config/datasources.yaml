@@ -15,7 +15,7 @@ client:
     label: Client
     code: client
     test_id: 9
-    author: Waka
+    author: Wcli
     plugin: Crm
     name : Client
     class: Wcli\Crm\Models\Client
@@ -34,10 +34,10 @@ client:
             key: email
             relation: contacts
     relations:
-        sector:
+        secteur:
             images: true
             label: Secteur
-            attributes: wcli/crm/models/sector/attributes.yaml
+            attributes: wcli/crm/models/secteur/attributes.yaml
     # otherRelations:
     #         info:
     #             class: Wcli\Crm\Models\Info
@@ -46,7 +46,7 @@ contact:
     label: Contact
     code : contact
     test_id: 48
-    author: Waka
+    author: Wcli
     plugin: Crm
     name : Contact
     class: Wcli\Crm\Models\Contact
@@ -64,10 +64,47 @@ contact:
             label: Client
             images: true
             attributes: wcli/crm/models/client/attributes.yaml
-        client.sector: 
+        client.secteur: 
             label: Client
-            attributes: wcli/crm/models/sector/attributes.yaml
+            attributes: wcli/crm/models/secteur/attributes.yaml
+        commercial:
+            label: Commercial (du contact)
+            attributes: wcli/crm/models/commercial/attributes.yaml
+
     # publications:
     #     types: 
     #         Waka\Worder\Models\Document: Word
     #         Waka\Pdfer\Models\WakaPdf: Pdf
+Commercial:
+    label: Commercial
+    code : commercial
+    test_id: 48
+    author: Wcli
+    plugin: Crm
+    name : Commercial
+    class: Wcli\Crm\Models\Commercial
+    controller: wcli/crm/commercials
+    editFunctions: Wcli\Wconfig\Functions\Commercial
+    attributes: wcli/crm/models/commercial/attributes.yaml
+    relations:
+        client: 
+            label: Client
+            images: true
+            attributes: wcli/crm/models/client/attributes.yaml
+        client.secteur: 
+            label: Client
+            attributes: wcli/crm/models/secteur/attributes.yaml
+    emails:
+        to: 
+            key: email
+
+Secteur:
+    label: Secteur
+    code : secteur
+    test_id: 48
+    author: Wcli
+    plugin: Crm
+    name : Secteur
+    class: Wcli\Crm\Models\Secteur
+    controller: wcli/crm/secteurs
+    attributes: wcli/crm/models/secteur/attributes.yaml

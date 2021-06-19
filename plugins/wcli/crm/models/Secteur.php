@@ -32,7 +32,7 @@ class Secteur extends Model
      */
     public $rules = [
         'name' => 'required',
-        'code' => 'unique',
+        'slug' => 'unique',
     ];
 
     public $customMessages = [
@@ -95,19 +95,11 @@ class Secteur extends Model
     public $morphOne = [
     ];
     public $morphMany = [
-        'messages' => [
-            'Waka\Utils\Models\Message',
-            [
-                'delete' => 'true'
-            ]
-        ],
     ];
     public $attachOne = [
         'image' => [
             'System\Models\File',
-            [
-                'delete' => 'true'
-            ]
+            'delete' => 'true'
         ],
     ];
     public $attachMany = [

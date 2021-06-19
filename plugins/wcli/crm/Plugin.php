@@ -112,6 +112,12 @@ class Plugin extends PluginBase
                         'url' => Backend::url('wcli/crm/commercials'),
                         'permissions' => ['wcli.crm.user.*'],
                     ],
+                    'side-menu-ventes' => [
+                        'label' => Lang::get('wcli.crm::lang.menu.ventes'),
+                        'icon' => 'icon-dollar',
+                        'url' => Backend::url('wcli/crm/ventes'),
+                        'permissions' => ['wcli.crm.user.*'],
+                    ],
                 ],
             ],
         ];

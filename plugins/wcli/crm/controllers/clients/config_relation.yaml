@@ -14,3 +14,15 @@ contacts:
             column: name
             direction: asc
 
+ventes:
+    label: wcli.crm::client.ventes
+    manage:
+        form: $/wcli/crm/models/vente/fields_for_client.yaml
+        list: $/wcli/crm/models/vente/columns_for_client.yaml
+    view:
+        list: $/wcli/crm/models/vente/columns_for_client.yaml
+        toolbarButtons: create|delete
+        defaultSort:
+            column: name
+            direction: asc
+

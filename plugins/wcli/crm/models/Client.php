@@ -9,6 +9,7 @@ use Model;
 class Client extends Model
 {
     use \Winter\Storm\Database\Traits\Validation;
+    use \Waka\Utils\Classes\Traits\ScopePeriodes;
 
     /**
      * @var string The database table used by the model.
@@ -80,9 +81,11 @@ class Client extends Model
     public $hasMany = [
         'contacts' => [
             'Wcli\Crm\Models\Contact',
-            [
-                'delete' => 'true'
-            ]
+            'delete' => 'true'
+        ],
+        'ventes' => [
+            'Wcli\Crm\Models\Vente',
+            'delete' => 'true'
         ],
     ];
     public $hasOneThrough = [

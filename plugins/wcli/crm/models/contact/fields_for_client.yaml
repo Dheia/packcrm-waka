@@ -13,6 +13,7 @@ fields:
     email:
         label: 'wcli.crm::contact.email'
         span: right
+        required: true
     commercial:
         label: 'wcli.crm::contact.commercial'
         span: left

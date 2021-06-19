@@ -1,0 +1,15 @@
+fields:
+    name:
+        label: 'wcli.crm::vente.name'
+        span: left
+        required: true
+    sale_at:
+        label: 'wcli.crm::vente.sale_at'
+        span: left
+        type: datepicker
+        mode: date
+        required: true
+    amount:
+        label: 'wcli.crm::vente.amount'
+        span: left
+        required: true

@@ -6,6 +6,14 @@ columns:
     name:
         label: wcli.crm::contact.name
         searchable: true
+    action:
+        label: wcli.crm::contact.action
+        type: waka-btn-actions
+        icon: icon-wrench
+        clickable: false
+        searchable: false
+        sortable: false
+        width: 25px
     tel:
         label: wcli.crm::contact.tel
         searchable: true
@@ -14,16 +22,14 @@ columns:
         searchable: true
     client_r:
         label: wcli.crm::contact.client
-        searchable: true
         relation: client
         select: name
-        type: col_type
+        searchable: true
     commercial_r:
         label: wcli.crm::contact.commercial
-        searchable: true
         relation: commercial
         select: name
-        type: col_type
+        searchable: true
     first_name:
         label: wcli.crm::contact.first_name
         searchable: true

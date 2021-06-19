@@ -16,12 +16,6 @@ fields:
         label: 'wcli.crm::client.secteur'
         span: left
         type: relation
-        permissions:
-            - 'wcli.crm.*'
-    contacts:
-        label: 'wcli.crm::client.contacts'
-        span: full
-        type: partial
-        path: field_contacts
+        default: 1
         permissions:
             - 'wcli.crm.*'

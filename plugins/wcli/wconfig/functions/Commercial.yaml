@@ -1,0 +1,10 @@
+ventes:
+    name: Tous les ventes de ses clients
+    attributes:
+        periode:
+            label: Choisissez une période
+            type: dropdown
+            options: fnc::getPeriode
+    outputs:
+        attributes: 
+            main: wcli/crm/models/vente/attributes.yaml

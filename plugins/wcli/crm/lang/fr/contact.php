@@ -2,6 +2,7 @@
 
 return [
     'name' => "Nom complet",
+    'action' => "Action",
     'first_name' => "Prénom",
     'last_name' => "Nom",
     'tel' => "Tel",

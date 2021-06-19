@@ -14,7 +14,6 @@ class Commercials extends Controller
         'Waka.Utils.Behaviors.BtnsBehavior',
         'Backend.Behaviors.RelationController',
         'Waka.Mailer.Behaviors.MailBehavior',
-        'Waka.Mailtoer.Behaviors.MailtoBehavior',
         'Waka.ImportExport.Behaviors.ExcelImport',
         'Waka.ImportExport.Behaviors.ExcelExport',
     ];
@@ -32,6 +31,6 @@ class Commercials extends Controller
 
     //startKeep/
 
-        //endKeep/
+    //endKeep/
 }
 

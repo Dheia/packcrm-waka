@@ -2,7 +2,26 @@
 #  Form Field Definitions
 # ===================================
 
-fields:
-    id:
-        label: id
-
+fields:    
+    name:
+        label: wcli.crm::client.name
+        span: left
+        required: true
+        permissions: [wcli.crm.*]
+    slug:
+        label: wcli.crm::client.slug
+        span: right
+        required: true
+        preset: name
+        permissions: [wcli.crm.*]
+    secteur:
+        label: wcli.crm::client.secteur
+        span: left
+        type: relation
+        default: 1
+        permissions: [wcli.crm.*]
+    commercial:
+        label: wcli.crm::client.commercial
+        span: right
+        type: relation
+        permissions: [wcli.crm.*]

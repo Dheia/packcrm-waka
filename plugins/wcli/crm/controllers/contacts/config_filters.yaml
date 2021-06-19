@@ -1,0 +1,10 @@
+# ===================================
+#  Config filter
+# ===================================
+
+scopes:
+  commercial:
+    label: Commercial
+    modelClass: Wcli\Crm\Models\Commercial
+    conditions: commercial_id in (:filtered)
+    nameFrom: name

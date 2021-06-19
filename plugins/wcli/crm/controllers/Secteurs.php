@@ -14,6 +14,9 @@ class Secteurs extends Controller
         'Waka.Utils.Behaviors.BtnsBehavior',
         'Backend.Behaviors.RelationController',
         'Waka.Mailer.Behaviors.MailBehavior',
+        'Waka.ImportExport.Behaviors.ExcelImport',
+        'Waka.ImportExport.Behaviors.ExcelExport',
+        'Backend.Behaviors.ReorderController',
         'Waka.Utils.Behaviors.DuplicateModel',
     ];
     public $formConfig = 'config_form.yaml';
@@ -21,6 +24,7 @@ class Secteurs extends Controller
     public $btnsConfig = 'config_btns.yaml';
     public $relationConfig = 'config_relation.yaml';
     public $duplicateConfig = 'config_duplicate.yaml';
+    public $reorderConfig = 'config_reorder.yaml';
     //FIN DE LA CONFIG AUTO
 
     public function __construct()
@@ -29,5 +33,8 @@ class Secteurs extends Controller
         BackendMenu::setContext('Wcli.Crm', 'crm', 'side-menu-secteurs');
     }
 
+    //startKeep/
+
+        //endKeep/
 }
 

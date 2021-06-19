@@ -13,6 +13,7 @@ class Contacts extends Controller
         'Backend.Behaviors.ListController',
         'Waka.Utils.Behaviors.BtnsBehavior',
         'Backend.Behaviors.RelationController',
+        'Waka.Mailer.Behaviors.MailBehavior',
         'Waka.ImportExport.Behaviors.ExcelImport',
         'Waka.ImportExport.Behaviors.ExcelExport',
     ];
@@ -28,5 +29,8 @@ class Contacts extends Controller
         BackendMenu::setContext('Wcli.Crm', 'crm', 'side-menu-contacts');
     }
 
+    //startKeep/
+
+        //endKeep/
 }
 

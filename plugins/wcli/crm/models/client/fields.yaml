@@ -18,6 +18,7 @@ fields:
         label: wcli.crm::client.secteur
         span: left
         type: relation
+        default: 1
         permissions: [wcli.crm.*]
     commercial:
         label: wcli.crm::client.commercial
@@ -29,4 +30,10 @@ fields:
         span: full
         type: partial
         path: field_contacts
+        permissions: [wcli.crm.*]
+    ventes:
+        label: wcli.crm::client.ventes
+        span: full
+        type: partial
+        path: field_ventes
         permissions: [wcli.crm.*]

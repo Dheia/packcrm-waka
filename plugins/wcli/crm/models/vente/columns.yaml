@@ -1,0 +1,22 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    name:
+        label: wcli.crm::vente.name
+        searchable: true
+    client_r:
+        label: wcli.crm::vente.client
+        relation: client
+        select: name
+        searchable: true
+    sale_at:
+        label: wcli.crm::vente.sale_at
+        type: date-medium
+    amount:
+        label: wcli.crm::vente.amount
+        searchable: true
+    updated_at:
+        label: waka.utils::lang.global.updated_at
+        type: timetense

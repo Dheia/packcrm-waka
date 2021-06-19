@@ -29,8 +29,8 @@ tool_bar:
     config_btns:
             format: all
             btns:
-                excelImportChild:
-                    config: waka.importexport::btns.importChild
+                excelImport:
+                    config: waka.importexport::btns.importExcel
     config_lot:
         format: all
         btns: 
@@ -54,14 +54,11 @@ action_bar:
             mail:
                 config: waka.mailer::btns.mail
                 group: waka.utils::lang.prod.send
-            mailto:
-                config: waka.mailtoer::btns.mailto
+            excelExport:
+                config: waka.importexport::btns.exportExcel
                 group: waka.utils::lang.prod.produce
-            excelExportChild:
-                config: waka.importexport::btns.exportChild
-                group: waka.utils::lang.prod.produce
-            excelImportChild:
-                config: waka.importexport::btns.importChild
+            excelImport:
+                config: waka.importexport::btns.importExcel
                 group: waka.utils::lang.prod.tools
     # partials: #Attention seul les variables modelId et modelClass (class du controller) sont disponible sans les partials.  
     #     name:

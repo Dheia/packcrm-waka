@@ -16,6 +16,33 @@ return [
     'workflows' => [
         // '/wcli/crm/config/project_w.yaml',
     ],
+    'start_data' => [
+        'clients' => [
+            'class' => '\Wcli\Crm\Classes\Imports\ClientsImport',
+            'table' => 'wcli_crm_clients',
+            'truncate' => true,
+        ],
+        'contacts' => [
+            'class' => '\Wcli\Crm\Classes\Imports\ContactsImport',
+            'table' => 'wcli_crm_contacts',
+            'truncate' => true,
+        ],
+        'secteurs' => [
+            'class' => '\Wcli\Crm\Classes\Imports\SecteursImport',
+            'table' => 'wcli_crm_secteurs',
+            'truncate' => true,
+        ],
+        'commercials' => [
+            'class' => '\Wcli\Crm\Classes\Imports\CommercialsImport',
+            'table' => 'wcli_crm_commercials',
+            'truncate' => true,
+        ],
+        'ventes' => [
+            'class' => '\Wcli\Crm\Classes\Imports\VentesImport',
+            'table' => 'wcli_crm_ventes',
+            'truncate' => true,
+        ],
+    ],
     // 'cloud' => [ //obligatoire si utilisation du cloud et du plugin lot
     //     //'class' => 'Waka\Cloud\Classes\Cloud\Gd',
     //     'class' => 'Waka\MsGraph\Classes\Cloud\MsDrive',

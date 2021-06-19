@@ -9,80 +9,22 @@ use Waka\Wcms\Models\Solution;
 class Contact extends FunctionsBase
 {
     public $model;
+    use \Waka\Utils\Classes\Traits\ScopePeriodes;
 
-    public function solutionsFiltered($attributes)
+    public function ventes($attributes)
     {
-        //trace_log($attributes['solutions']);
-        $results = Solution::whereIn('id', $attributes['solutions'])->with('main_image')->get();
-        //trace_log($results);
-        $finalResult = [];
-        foreach ($results as $key => $result) {
-            $finalResult[$key] = $result->toArray();
-            $options = [
-                'width' => $attributes['width'] ?? null,
-                'height' => $attributes['height'] ?? null,
-                'crop' => $attributes['crop'] ?? 'fit',
-                'gravity' => $attributes['gravity'] ?? 'center',
-            ];
-            $finalResult[$key]['main_image'] = [
-                'path' => $result->main_image->getUrl($options),
-                'width' => $attributes['width'],
-                'height' => $attributes['height'],
-            ];
-        }
-        return $finalResult;
-    }
+        $result = $this->model->client->ventes();
 
-    public function needsFiltered($attributes)
-    {
-        $results = Need::whereIn('id', $attributes['needs'])->with('main_image')->get();
-        $finalResult = [];
-        foreach ($results as $key => $result) {
-            $finalResult[$key] = $result->toArray();
-            $options = [
-                'width' => $attributes['width'] ?? null,
-                'height' => $attributes['height'] ?? null,
-                'crop' => $attributes['crop'] ?? 'fit',
-                'gravity' => $attributes['gravity'] ?? 'center',
-            ];
-            $finalResult[$key]['main_image'] = [
-                'path' => $result->main_image->getUrl($options),
-                'width' => $attributes['width'],
-                'height' => $attributes['height'],
-            ];
+        if ($attributes['periode'] ?? false) {
+            $result = $result->wakaPeriode($attributes['periode'], 'sale_at');
         }
-        return $finalResult;
-    }
+        $result = $result->orderby('sale_at', 'asc')->get();
 
-    public function projectByStateByDate($attributes)
-    {
-        //trace_log($this->model->client->name);
-        $projects = $this->model->client->projects()
-            ->whereIn('state', $attributes['state']);
-        if($attributes['start_date']) {
-            $projects = $projects->where('updated_at', '>' ,$attributes['start_date']);
-        }
-        if($attributes['end_date']) {
-            $projects = $projects->where('updated_at', '<' ,$attributes['end_date']);
-        }
-        return $projects->get()->toArray();
+        return $result->toArray();
     }
 
     /**
      * List et fonctions
      */
-    public function getSolution()
-    {
-        return \Waka\Wcms\Models\Solution::first()->toArray();
-    }
-
-    public function getNeed()
-    {
-        return \Waka\Wcms\Models\Need::first()->toArray();
-    }
-    public function getProjectState() {
-        $projectModel = new \Wcli\Crm\Models\Project();
-        return $projectModel->listAllWorklowstate();
-    }
 
 }

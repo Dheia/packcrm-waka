@@ -14,8 +14,3 @@ fields:
         label: 'wcli.crm::contact.email'
         span: right
         required: true
-    client:
-        label: 'wcli.crm::contact.client'
-        span: full
-        type: partial
-        path: field_client

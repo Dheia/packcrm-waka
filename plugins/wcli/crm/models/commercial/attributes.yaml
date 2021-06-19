@@ -14,6 +14,15 @@ attributes:
         label: wcli.crm::commercial.tel
     email:
         label: wcli.crm::commercial.email
+    venteMois:
+        label: wcli.crm::commercial.venteMois
+        type: euro
+    ventesTotal:
+        label: wcli.crm::commercial.ventesTotal
+        type: euro
+    venteAnnee:
+        label: wcli.crm::commercial.venteAnnee
+        type: euro
     updated_at:
         label: waka.utils::lang.global.updated_at
         type: date-medium

@@ -2,11 +2,15 @@
 
 return [
     'name' => "Nom secteur",
-    'code' => "Code secteur",
+    'slug' => "Code secteur",
     'description' => "Description",
+    'msg_approche' => "Notre approche",
+    'msg_approche_com' => "Texte recursif ( si vide, la valeur du parent sera recherché)",
+    'msg_kpi' => "KPI",
+    'msg_kpi_com' => "Texte recursif ( si vide, la valeur du parent sera recherché)",
     'clients' => "Clients",
-    'messages' => "Autres textes",
     'image' => "Image",
+    'parent_id' => "Parent",
     'title' => "Gestion secteur",
     'update' => "Modification secteur",
     'courriers' => "Gestion secteur",

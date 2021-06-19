@@ -111,12 +111,12 @@ class Contact extends Model
      **/
     public function beforeValidate()
     {
-
+        $this->name = $this->first_name.' '.$this->last_name;
     }
 
     public function beforeSave() 
     {
-        $this->name = $this->first_name.' '.$this->last_name;
+        
     }
 
 

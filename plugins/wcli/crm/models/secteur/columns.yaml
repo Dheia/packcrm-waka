@@ -6,8 +6,8 @@ columns:
     name:
         label: wcli.crm::secteur.name
         searchable: true
-    code:
-        label: wcli.crm::secteur.code
+    slug:
+        label: wcli.crm::secteur.slug
         searchable: true
     updated_at:
         label: waka.utils::lang.global.updated_at

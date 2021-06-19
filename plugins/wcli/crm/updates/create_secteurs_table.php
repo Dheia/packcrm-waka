@@ -12,8 +12,10 @@ class CreateSecteursTable extends Migration
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('name');
-            $table->string('code');
+            $table->string('slug');
             $table->text('description')->nullable();
+            $table->text('msg_approche')->nullable();
+            $table->text('msg_kpi')->nullable();
             //nested
             $table->integer('parent_id')->unsigned()->nullable();
             $table->integer('nest_left')->unsigned()->nullable();
