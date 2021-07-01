@@ -65,12 +65,15 @@ class Plugin extends PluginBase
      */
     public function registerPermissions()
     {
-        return []; // Remove this line to activate
 
         return [
-            'wcli.crm.some_permission' => [
+            'wcli.crm.user' => [
                 'tab' => 'crm',
-                'label' => 'Some permission'
+                'label' => 'Utilisateur du CRM'
+            ],
+            'wcli.crm.admin' => [
+                'tab' => 'crm',
+                'label' => 'Manager du CRM'
             ],
         ];
     }
@@ -110,13 +113,13 @@ class Plugin extends PluginBase
                         'label' => Lang::get('wcli.crm::lang.menu.commercials'),
                         'icon' => 'icon-users',
                         'url' => Backend::url('wcli/crm/commercials'),
-                        'permissions' => ['wcli.crm.user.*'],
+                        'permissions' => ['wcli.crm.*'],
                     ],
                     'side-menu-ventes' => [
                         'label' => Lang::get('wcli.crm::lang.menu.ventes'),
                         'icon' => 'icon-dollar',
                         'url' => Backend::url('wcli/crm/ventes'),
-                        'permissions' => ['wcli.crm.user.*'],
+                        'permissions' => ['wcli.crm.*'],
                     ],
                 ],
             ],

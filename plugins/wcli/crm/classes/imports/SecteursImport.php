@@ -23,9 +23,9 @@ class SecteursImport implements ToCollection, WithHeadingRow, WithCalculatedForm
             $secteur->name = $row['name'] ?? null;
             $secteur->slug = $row['slug'] ?? null;
             $secteur->description = $row['description'] ?? null;
-            $parentId = $row['parent_id'] ?? null;
-            $parent = Secteur::find($parentId);
-            $secteur->parent = $parent;
+            $secteur->msg_approche = $row['msg_approche'] ?? null;
+            $secteur->msg_kpi = $row['msg_kpi'] ?? null;
+            $secteur->parent_id = $row['parent_id'] ?? null;
             $secteur->save();
         }
     }

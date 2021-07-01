@@ -2,7 +2,7 @@
 #  Form Field Definitions
 # ===================================
 
-fields:    
+fields:
     name:
         label: wcli.crm::client.name
         span: left
@@ -18,10 +18,13 @@ fields:
         label: wcli.crm::client.secteur
         span: left
         type: relation
+        placeholder: waka.utils::lang.global.placeholder
         default: 1
         permissions: [wcli.crm.*]
     commercial:
         label: wcli.crm::client.commercial
         span: right
         type: relation
+        placeholder: waka.utils::lang.global.placeholder
+        nameFrom: name
         permissions: [wcli.crm.*]

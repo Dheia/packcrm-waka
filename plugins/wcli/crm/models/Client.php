@@ -11,6 +11,7 @@ class Client extends Model
     use \Winter\Storm\Database\Traits\Validation;
     use \Waka\Utils\Classes\Traits\ScopePeriodes;
 
+
     /**
      * @var string The database table used by the model.
      */
@@ -20,12 +21,12 @@ class Client extends Model
     /**
      * @var array Guarded fields
      */
-    protected $guarded = ['*'];
+    protected $guarded = ['id'];
 
     /**
      * @var array Fillable fields
      */
-    protected $fillable = [];
+    //protected $fillable = [];
 
     /**
      * @var array Validation rules for attributes

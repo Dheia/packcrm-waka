@@ -2,7 +2,7 @@
 #  Form Field Definitions
 # ===================================
 
-fields:    
+fields:
     first_name:
         label: wcli.crm::commercial.first_name
         span: left

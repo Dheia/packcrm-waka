@@ -2,7 +2,7 @@
 #  Form Field Definitions
 # ===================================
 
-fields:    
+fields:
     name:
         label: wcli.crm::vente.name
         span: left
@@ -11,6 +11,8 @@ fields:
         label: wcli.crm::vente.client
         span: left
         type: relation
+        placeholder: waka.utils::lang.global.placeholder
+        nameFrom: name
         required: true
     sale_at:
         label: wcli.crm::vente.sale_at

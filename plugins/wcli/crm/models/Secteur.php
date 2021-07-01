@@ -11,6 +11,7 @@ class Secteur extends Model
     use \Winter\Storm\Database\Traits\Validation;
     use \Winter\Storm\Database\Traits\NestedTree;
 
+
     /**
      * @var string The database table used by the model.
      */
@@ -20,12 +21,12 @@ class Secteur extends Model
     /**
      * @var array Guarded fields
      */
-    protected $guarded = ['*'];
+    protected $guarded = ['id'];
 
     /**
      * @var array Fillable fields
      */
-    protected $fillable = [];
+    //protected $fillable = [];
 
     /**
      * @var array Validation rules for attributes

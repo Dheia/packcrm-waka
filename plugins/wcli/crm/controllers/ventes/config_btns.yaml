@@ -19,13 +19,13 @@ tool_bar:
     base:
         create: 
             show: true
-            permissions: []
+            permissions: [wcli.crm.admin]
             url: wcli/crm/ventes/create
         reorder: 
             show: false 
         delete: 
             show: true
-            permissions: []
+            permissions: [wcli.crm.admin]
     config_btns:
             format: all
             btns:

@@ -38,7 +38,9 @@ columns:
         sortable: false
     venteAnnee:
         label: wcli.crm::commercial.venteAnnee
-        type: invisible: true
+        searchable: false
+        sortable: false
+        invisible: true
     updated_at:
         label: waka.utils::lang.global.updated_at
         type: timetense

@@ -21,6 +21,8 @@ class Commercials extends Controller
     public $listConfig = 'config_list.yaml';
     public $btnsConfig = 'config_btns.yaml';
     public $relationConfig = 'config_relation.yaml';
+
+    public $requiredPermissions = ['wcli.crm.*'];
     //FIN DE LA CONFIG AUTO
 
     public function __construct()

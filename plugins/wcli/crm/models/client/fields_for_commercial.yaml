@@ -16,6 +16,7 @@ fields:
         label: 'wcli.crm::client.secteur'
         span: left
         type: relation
+        placeholder: 'waka.utils::lang.global.placeholder'
         default: 1
         permissions:
             - 'wcli.crm.*'

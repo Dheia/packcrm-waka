@@ -2,7 +2,7 @@
 #  Form Field Definitions
 # ===================================
 
-fields:    
+fields:
     name:
         label: wcli.crm::secteur.name
         span: left

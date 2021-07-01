@@ -25,6 +25,8 @@ class Secteurs extends Controller
     public $relationConfig = 'config_relation.yaml';
     public $duplicateConfig = 'config_duplicate.yaml';
     public $reorderConfig = 'config_reorder.yaml';
+
+    public $requiredPermissions = ['wcli.crm.admin'];
     //FIN DE LA CONFIG AUTO
 
     public function __construct()
