@@ -41,7 +41,7 @@ body {
   top: 0;
   font-size: 100%;
   font-family: 'Helvetica', sans-serif;
-  color: @color-dark;
+  color: @text-color;
   line-height: 1.5;
 }
 
@@ -55,26 +55,11 @@ body {
 
 @import "mix/grid-system";
 
+@import "mix/img";
 
-
-.container {
+.@{prefix}mx-auto {
   margin-left: auto;
   margin-right: auto;
 }
-
-img {
-  position: relative;
-  width:100%;
-  max-height: initial !important;
-  max-width: initial ! important;
-}
-
-.bg-img-cover {
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
-}
-
-
 
 

@@ -1,13 +1,15 @@
-@import "vars";
+
 
 body, body *:not(html):not(style):not(br):not(tr):not(code) {
   font-family: Avenir, Helvetica, sans-serif;
   box-sizing: border-box;
 }
 
+@import "vars";
 @import "mix/bg_colors";
-
 @import "mix/margin-padding";
+@import "mix/typography";
+@import "mix/img";
 
 body {
   background-color: @body-bg;
@@ -42,64 +44,13 @@ a img {
 
 /* Typography */
 
-h1 {
-  color: @heading-color;
-  font-size: 19px;
-  font-weight: bold;
-  margin-top: 0;
-  text-align: left;
-}
-
-h2 {
-  color: @heading-color;
-  font-size: 16px;
-  font-weight: bold;
-  margin-top: 0;
-  text-align: left;
-}
-
-h3 {
-  color: @heading-color;
-  font-size: 14px;
-  font-weight: bold;
-  margin-top: 0;
-  text-align: left;
-}
-
-p {
-  color: @text-color;
-  font-size: 16px;
-  line-height: 1.5em;
-  margin-top: 0;
-  text-align: left;
-}
-
-code {
-  color: @text-color;
-  font-size: 16px;
-  line-height: 1.5em;
-  word-break: break-all;
-}
-
-p.sub {
-  font-size: 12px;
-}
-.small {
-  font-size: 12px;
-  line-height: 1
-}
-
-img {
-  max-width: 100%;
-}
-
-.break-all, .break-all * {
+.@{prefix}break-all, .@{prefix}break-all * {
   word-break: break-all;
 }
 
 /* Layout */
 
-.wrapper {
+.@{prefix}wrapper {
   background-color: @body-bg;
   margin: 0;
   padding: 0;
@@ -109,7 +60,7 @@ img {
   -premailer-width: 100%;
 }
 
-.content {
+.@{prefix}content {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -120,12 +71,12 @@ img {
 
 /* Header */
 
-.header {
+.@{prefix}header {
   padding: 25px 0;
   text-align: center;
 }
 
-.header a, .header span {
+.@{prefix}header a, .@{prefix}header span {
   color: @header-color;
   font-size: 19px;
   font-weight: bold;
@@ -134,7 +85,7 @@ img {
 
 /* Body */
 
-.body {
+.@{prefix}body {
   background-color: @content-bg;
   border-bottom: 1px solid @body-border-color;
   border-top: 1px solid @body-border-color;
@@ -146,7 +97,7 @@ img {
   -premailer-width: 100%;
 }
 
-.inner-body {
+.@{prefix}inner-body {
   background-color: @content-inner-bg;
   margin: 0 auto;
   padding: 0;
@@ -158,19 +109,19 @@ img {
 
 /* Subcopy */
 
-.subcopy {
+.@{prefix}subcopy {
   border-top: 1px solid @subcopy-border-color;
   margin-top: 25px;
   padding-top: 25px;
 }
 
-.subcopy p {
+.@{prefix}subcopy p {
   font-size: 12px;
 }
 
 /* Footer */
 
-.footer {
+.@{prefix}footer {
   margin: 0 auto;
   padding: 0;
   text-align: center;
@@ -180,7 +131,7 @@ img {
   -premailer-width: 570px;
 }
 
-.footer p {
+.@{prefix}footer p {
   color: @footer-color;
   font-size: 12px;
   text-align: center;
@@ -188,7 +139,7 @@ img {
 
 /* Tables */
 
-.table table {
+.@{prefix}table table {
   border-collapse: collapse;
   margin: 30px auto;
   width: 100%;
@@ -197,29 +148,29 @@ img {
   -premailer-width: 100%;
 }
 
-.table th {
+.@{prefix}table th {
   border-bottom: 1px solid @table-border-color;
   padding-bottom: 8px;
 }
 
-.table td {
+.@{prefix}table td {
   color: @text-color;
   font-size: 15px;
   line-height: 18px;
   padding: 10px 0;
 }
 
-.content-cell {
+.@{prefix}content-cell {
   padding: 35px;
 }
 
-.wrapper.layout-system .content-cell {
+.@{prefix}wrapper.@{prefix}layout-system .@{prefix}content-cell {
   padding: 35px 0;
 }
 
 /* Buttons */
 
-.action {
+.@{prefix}action {
   margin: 30px auto;
   padding: 0;
   text-align: center;
@@ -229,7 +180,7 @@ img {
   -premailer-width: 100%;
 }
 
-.button {
+.@{prefix}button {
   border-radius: 3px;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.16);
   color: @button-text-color;
@@ -238,15 +189,29 @@ img {
   -webkit-text-size-adjust: none;
 }
 
-.button-primary {
+.@{prefix}button-primary {
   background-color: @button-primary-bg;
   border-top: 10px solid @button-primary-bg;
   border-right: 18px solid @button-primary-bg;
   border-bottom: 10px solid @button-primary-bg;
   border-left: 18px solid @button-primary-bg;
 }
+.@{prefix}button-accent {
+  background-color: @button-accent-bg;
+  border-top: 10px solid @button-accent-bg;
+  border-right: 18px solid @button-accent-bg;
+  border-bottom: 10px solid @button-accent-bg;
+  border-left: 18px solid @button-accent-bg;
+}
+.@{prefix}button-secondary {
+  background-color: @button-secondary-bg;
+  border-top: 10px solid @button-secondary-bg;
+  border-right: 18px solid @button-secondary-bg;
+  border-bottom: 10px solid @button-secondary-bg;
+  border-left: 18px solid @button-secondary-bg;
+}
 
-.button-positive {
+.@{prefix}button-positive {
   background-color: @button-positive-bg;
   border-top: 10px solid @button-positive-bg;
   border-right: 18px solid @button-positive-bg;
@@ -254,14 +219,14 @@ img {
   border-left: 18px solid @button-positive-bg;
 }
 
-.button-negative {
+.@{prefix}button-negative {
   background-color: @button-negative-bg;
   border-top: 10px solid @button-negative-bg;
   border-right: 18px solid @button-negative-bg;
   border-bottom: 10px solid @button-negative-bg;
   border-left: 18px solid @button-negative-bg;
 }
-.button-warning {
+.@{prefix}button-warning {
   background-color: @button-warning-bg;
   border-top: 10px solid @button-warning-bg;
   border-right: 18px solid @button-warning-bg;
@@ -271,27 +236,27 @@ img {
 
 /* Panels */
 
-.panel {
+.@{prefix}panel {
   margin: 0 0 21px;
 }
 
-.panel-content {
+.@{prefix}panel-content {
   background-color: @panel-bg;
   padding: 16px;
 }
 
-.panel-item {
+.@{prefix}panel-item {
   padding: 0;
 }
 
-.panel-item p:last-of-type {
+.@{prefix}panel-item p:last-of-type {
   margin-bottom: 0;
   padding-bottom: 0;
 }
 
 /* Promotions */
 
-.promotion {
+.@{prefix}promotion {
   background-color: @promotion-bg;
   border: 2px dashed @promotion-border-color;
   margin: 0;
@@ -304,16 +269,17 @@ img {
   -premailer-width: 100%;
 }
 
-.promotion h1 {
+.@{prefix}promotion h1 {
   text-align: center;
 }
 
-.promotion p {
+.@{prefix}promotion p {
   font-size: 15px;
   text-align: center;
 }
 
-.promotion p:last-of-type {
+.@{prefix}promotion p:last-of-type {
   margin-bottom: 0;
   padding-bottom: 0;
 }
+

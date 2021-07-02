@@ -4,7 +4,7 @@ columns:
         searchable: true
     sale_at:
         label: 'wcli.crm::vente.sale_at'
-        type: date-medium
+        type: date
     amount:
         label: 'wcli.crm::vente.amount'
         searchable: true
