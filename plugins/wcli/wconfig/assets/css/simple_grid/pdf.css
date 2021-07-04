@@ -1,5 +1,5 @@
 html,
-body{height:100%;width:100%;margin:0;padding:0;left:0;top:0;font-size:100%;font-family:'Helvetica',sans-serif;color:#141414;line-height:1.5}.w-keep-together{page-break-inside:avoid}
+body{height:100%;width:100%;margin:0;padding:0;left:0;top:0;font-size:1em;font-family:'Helvetica',sans-serif;color:#141414;line-height:1.5}.w-keep-together{page-break-inside:avoid}
 .w-break-before{page-break-before:always}
 .w-break-after{page-break-after:always}
 .w-color-p{color:#004c54}
@@ -115,13 +115,13 @@ body{height:100%;width:100%;margin:0;padding:0;left:0;top:0;font-size:100%;font-
 .w-pr-4{padding-right:2rem}
 .w-pl-4{padding-left:2rem}
 .w-w-full{width:100%}
-.w-h-full{height:100%}h1{font-size:2.5rem;margin:0.1rem}
-h2{font-size:2rem;margin:0.1rem}
-h3{font-size:1.375rem;margin:0.1rem}
-h4{font-size:1.125rem;margin:0.1rem}
-h5{font-size:1rem;margin:0.1rem}
-h6{font-size:0.875rem;margin:0.1rem}
-p{font-size:1rem;margin:0.1rem}.w-small{font-size:0.8rem}
+.w-h-full{height:100%}h1{font-size:2.5em;margin:0.1rem}
+h2{font-size:2em;margin:0.1rem}
+h3{font-size:1.375em;margin:0.1rem}
+h4{font-size:1.125em;margin:0.1rem}
+h5{font-size:1em;margin:0.1rem}
+h6{font-size:0.875em;margin:0.1rem}
+p{font-size:1em;margin:0.1rem}.w-small{font-size:0.8rem}
 .w-smaller{font-size:0.7rem}
 .w-smallest{font-size:0.5rem}
 .w-medium{font-size:1rem}
@@ -135,7 +135,7 @@ p{font-size:1rem;margin:0.1rem}.w-small{font-size:0.8rem}
 .w-table{display:table;table-layout:fixed;width:100%}
 .w-tb-row{display:table-row;width:100%}
 .w-sg-row{position:relative;width:100%}
-.w-sg-row [class^="col"]{float:left;margin:0.5rem 2%;min-height:0.125rem}
+.w-sg-row [class^="col"]{float:left;margin:0.5rem 2%;min-height:0.125em}
 .w-cel,
 .w-cel-1,
 .w-cel-2,

@@ -113,13 +113,13 @@ body *:not(html):not(style):not(br):not(tr):not(code){font-family:Avenir,Helveti
 .w-pr-4{padding-right:2rem}
 .w-pl-4{padding-left:2rem}
 .w-w-full{width:100%}
-.w-h-full{height:100%}h1{font-size:2.5rem;margin:0.1rem}
-h2{font-size:2rem;margin:0.1rem}
-h3{font-size:1.375rem;margin:0.1rem}
-h4{font-size:1.125rem;margin:0.1rem}
-h5{font-size:1rem;margin:0.1rem}
-h6{font-size:0.875rem;margin:0.1rem}
-p{font-size:1rem;margin:0.1rem}.w-small{font-size:0.8rem}
+.w-h-full{height:100%}h1{font-size:2.5em;margin:0.1rem}
+h2{font-size:2em;margin:0.1rem}
+h3{font-size:1.375em;margin:0.1rem}
+h4{font-size:1.125em;margin:0.1rem}
+h5{font-size:1em;margin:0.1rem}
+h6{font-size:0.875em;margin:0.1rem}
+p{font-size:1em;margin:0.1rem}.w-small{font-size:0.8rem}
 .w-smaller{font-size:0.7rem}
 .w-smallest{font-size:0.5rem}
 .w-medium{font-size:1rem}
@@ -143,12 +143,10 @@ a img{border:none}.w-break-all,
 .w-break-all *{word-break:break-all}.w-wrapper{background-color:#fff;margin:0;padding:0;width:100%;-premailer-cellpadding:0;-premailer-cellspacing:0;-premailer-width:100%}
 .w-content{margin:0;padding:0;width:100%;-premailer-cellpadding:0;-premailer-cellspacing:0;-premailer-width:100%}.w-header{padding:25px 0;text-align:center}
 .w-header a,
-.w-header span{color:#2f4250;font-size:19px;font-weight:bold;text-decoration:none}.w-body{background-color:#fff;border-bottom:1px solid #004c54;border-top:1px solid #004c54;margin:0;padding:0;width:100%;-premailer-cellpadding:0;-premailer-cellspacing:0;-premailer-width:100%}
-.w-inner-body{background-color:#fff;margin:0 auto;padding:0;width:570px;-premailer-cellpadding:0;-premailer-cellspacing:0;-premailer-width:570px}.w-subcopy{border-top:1px solid #e0e0e0;margin-top:25px;padding-top:25px}
-.w-subcopy p{font-size:12px}.w-footer{margin:0 auto;padding:0;text-align:center;width:570px;-premailer-cellpadding:0;-premailer-cellspacing:0;-premailer-width:570px}
-.w-footer p{color:#787978;font-size:12px;text-align:center}.w-table table{border-collapse:collapse;margin:30px auto;width:100%;-premailer-cellpadding:0;-premailer-cellspacing:0;-premailer-width:100%}
+.w-header span{color:#2f4250;font-weight:bold;text-decoration:none}.w-body{background-color:#fff;border-bottom:1px solid #004c54;border-top:1px solid #004c54;margin:0;padding:0;width:100%;-premailer-cellpadding:0;-premailer-cellspacing:0;-premailer-width:100%}
+.w-inner-body{background-color:#fff;margin:0 auto;padding:0;width:570px;-premailer-cellpadding:0;-premailer-cellspacing:0;-premailer-width:570px}.w-table table{border-collapse:collapse;margin:30px auto;width:100%;-premailer-cellpadding:0;-premailer-cellspacing:0;-premailer-width:100%}
 .w-table th{border-bottom:1px solid #fff;padding-bottom:8px}
-.w-table td{color:#141414;font-size:15px;line-height:18px;padding:10px 0}
+.w-table td{padding:10px 0}
 .w-content-cell{padding:35px}
 .w-wrapper.w-layout-system .w-content-cell{padding:35px 0}.w-action{margin:30px auto;padding:0;text-align:center;width:100%;-premailer-cellpadding:0;-premailer-cellspacing:0;-premailer-width:100%}
 .w-button{border-radius:3px;box-shadow:0 2px 3px rgba(0,0,0,0.16);color:#fff;display:inline-block;text-decoration:none;-webkit-text-size-adjust:none}
@@ -162,5 +160,5 @@ a img{border:none}.w-break-all,
 .w-panel-item{padding:0}
 .w-panel-item p:last-of-type{margin-bottom:0;padding-bottom:0}.w-promotion{background-color:#e0e0e0;border:2px dashed #fff;margin:0;margin-bottom:25px;margin-top:25px;padding:24px;width:100%;-premailer-cellpadding:0;-premailer-cellspacing:0;-premailer-width:100%}
 .w-promotion h1{text-align:center}
-.w-promotion p{font-size:15px;text-align:center}
+.w-promotion p{text-align:center}
 .w-promotion p:last-of-type{margin-bottom:0;padding-bottom:0}
