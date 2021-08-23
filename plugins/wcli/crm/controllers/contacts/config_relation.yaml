@@ -7,10 +7,12 @@ client:
     manage:
         form: $/wcli/crm/models/client/fields_for_contact.yaml
         list: $/wcli/crm/models/client/columns_for_contact.yaml
+        showSearch: true
     view:
         form: $/wcli/crm/models/client/fields_for_contact_read.yaml
+        recordUrl: wcli/crm/client/update/:id
         toolbarButtons: create|link|unlink
         defaultSort:
-            column: 1
+            column: name
             direction: asc
 

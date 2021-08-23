@@ -83,14 +83,11 @@ class Commercial extends Model
     /**
      * @var array Relations
      */
-    public $hasOne = [];
+    public $hasOne = [
+    ];
     public $hasMany = [
-        'clients' => [
-            'Wcli\Crm\Models\Client'
-        ],
-        'contacts' => [
-            'Wcli\Crm\Models\Contact'
-        ],
+        'clients' => ['Wcli\Crm\Models\Client'],
+        'contacts' => ['Wcli\Crm\Models\Contact'],
     ];
     public $hasOneThrough = [
     ];

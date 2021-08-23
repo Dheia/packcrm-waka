@@ -11,9 +11,9 @@ columns:
         type: waka-btn-actions
         icon: icon-wrench
         clickable: false
+        width: 25px
         searchable: false
         sortable: false
-        width: 25px
     first_name:
         label: wcli.crm::commercial.first_name
         searchable: true

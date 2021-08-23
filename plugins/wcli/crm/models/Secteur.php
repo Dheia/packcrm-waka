@@ -78,11 +78,10 @@ class Secteur extends Model
     /**
      * @var array Relations
      */
-    public $hasOne = [];
+    public $hasOne = [
+    ];
     public $hasMany = [
-        'clients' => [
-            'Wcli\Crm\Models\Client'
-        ],
+        'clients' => ['Wcli\Crm\Models\Client'],
     ];
     public $hasOneThrough = [
     ];
@@ -100,7 +99,7 @@ class Secteur extends Model
     public $attachOne = [
         'image' => [
             'System\Models\File',
-            'delete' => 'true'
+            'delete' => true
         ],
     ];
     public $attachMany = [

@@ -5,10 +5,11 @@
 clients:
     label: wcli.crm::secteur.clients
     manage:
-        form: $/wcli/crm/models/client/fields_for_secteur.yaml
         list: $/wcli/crm/models/client/columns_for_secteur.yaml
+        1
     view:
         list: $/wcli/crm/models/client/columns_for_secteur.yaml
+        recordUrl: wcli/crm/clients/update/:id
         toolbarButtons: link|unlink
         defaultSort:
             column: name

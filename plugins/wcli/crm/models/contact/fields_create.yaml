@@ -2,7 +2,7 @@
 #  Form Field Definitions
 # ===================================
 
-fields:    
+fields:
     first_name:
         label: wcli.crm::contact.first_name
         span: left
@@ -22,3 +22,5 @@ fields:
         label: wcli.crm::contact.commercial
         span: left
         type: relation
+        placeholder: waka.utils::lang.global.placeholder
+        nameFrom: name

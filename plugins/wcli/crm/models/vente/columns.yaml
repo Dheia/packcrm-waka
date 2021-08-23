@@ -14,8 +14,12 @@ columns:
     sale_at:
         label: wcli.crm::vente.sale_at
         type: date
+        searchable: true
     amount:
         label: wcli.crm::vente.amount
+        searchable: true
+    gamme:
+        label: wcli.crm::vente.gamme
         searchable: true
     updated_at:
         label: waka.utils::lang.global.updated_at

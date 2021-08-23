@@ -7,9 +7,11 @@ contacts:
     manage:
         form: $/wcli/crm/models/contact/fields_for_client.yaml
         list: $/wcli/crm/models/contact/columns_for_client.yaml
+        showSearch: true
     view:
         list: $/wcli/crm/models/contact/columns_for_client.yaml
         toolbarButtons: create|link|unlink|delete
+        showSearch: true
         defaultSort:
             column: name
             direction: asc
@@ -18,10 +20,10 @@ ventes:
     label: wcli.crm::client.ventes
     manage:
         form: $/wcli/crm/models/vente/fields_for_client.yaml
-        list: $/wcli/crm/models/vente/columns_for_client.yaml
     view:
         list: $/wcli/crm/models/vente/columns_for_client.yaml
         toolbarButtons: create|delete
+        showSearch: true
         defaultSort:
             column: name
             direction: asc

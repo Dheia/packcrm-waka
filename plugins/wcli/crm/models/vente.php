@@ -81,7 +81,8 @@ class Vente extends Model
     /**
      * @var array Relations
      */
-    public $hasOne = [];
+    public $hasOne = [
+    ];
     public $hasMany = [
     ];
     public $hasOneThrough = [
@@ -89,9 +90,7 @@ class Vente extends Model
     public $hasManyThrough = [
     ];
     public $belongsTo = [
-       'client' => [
-            'Wcli\Crm\Models\Client'
-        ],
+       'client' => ['Wcli\Crm\Models\Client'],
     ];
     public $belongsToMany = [
     ];        

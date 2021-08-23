@@ -78,15 +78,16 @@ class Client extends Model
     /**
      * @var array Relations
      */
-    public $hasOne = [];
+    public $hasOne = [
+    ];
     public $hasMany = [
         'contacts' => [
             'Wcli\Crm\Models\Contact',
-            'delete' => 'true'
+            'delete' => true
         ],
         'ventes' => [
             'Wcli\Crm\Models\Vente',
-            'delete' => 'true'
+            'delete' => true
         ],
     ];
     public $hasOneThrough = [
@@ -94,12 +95,8 @@ class Client extends Model
     public $hasManyThrough = [
     ];
     public $belongsTo = [
-       'secteur' => [
-            'Wcli\Crm\Models\Secteur'
-        ],
-       'commercial' => [
-            'Wcli\Crm\Models\Commercial'
-        ],
+       'secteur' => ['Wcli\Crm\Models\Secteur'],
+       'commercial' => ['Wcli\Crm\Models\Commercial'],
     ];
     public $belongsToMany = [
     ];        

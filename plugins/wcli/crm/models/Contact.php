@@ -10,6 +10,7 @@ class Contact extends Model
 {
     use \Winter\Storm\Database\Traits\Validation;
 
+
     /**
      * @var string The database table used by the model.
      */
@@ -19,12 +20,12 @@ class Contact extends Model
     /**
      * @var array Guarded fields
      */
-    protected $guarded = ['*'];
+    protected $guarded = ['id'];
 
     /**
      * @var array Fillable fields
      */
-    protected $fillable = [];
+    //protected $fillable = [];
 
     /**
      * @var array Validation rules for attributes
@@ -77,7 +78,8 @@ class Contact extends Model
     /**
      * @var array Relations
      */
-    public $hasOne = [];
+    public $hasOne = [
+    ];
     public $hasMany = [
     ];
     public $hasOneThrough = [
@@ -85,12 +87,8 @@ class Contact extends Model
     public $hasManyThrough = [
     ];
     public $belongsTo = [
-       'client' => [
-            'Wcli\Crm\Models\Client'
-        ],
-       'commercial' => [
-            'Wcli\Crm\Models\Commercial'
-        ],
+       'client' => ['Wcli\Crm\Models\Client'],
+       'commercial' => ['Wcli\Crm\Models\Commercial'],
     ];
     public $belongsToMany = [
     ];        

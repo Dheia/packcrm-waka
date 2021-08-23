@@ -6,14 +6,14 @@ icon: icon-dollar
 attributes:
     name:
         label: wcli.crm::vente.name
-    client:
-        label: wcli.crm::vente.client
     sale_at:
         label: wcli.crm::vente.sale_at
         type: date
     amount:
         label: wcli.crm::vente.amount
         type: euro
+    gamme:
+        label: wcli.crm::vente.gamme
     updated_at:
         label: waka.utils::lang.global.updated_at
         type: date-medium

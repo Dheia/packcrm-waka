@@ -24,3 +24,6 @@ fields:
         label: wcli.crm::vente.amount
         span: left
         required: true
+    gamme:
+        label: wcli.crm::vente.gamme
+        span: left

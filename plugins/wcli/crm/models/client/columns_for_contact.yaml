@@ -7,9 +7,9 @@ columns:
         type: waka-btn-actions
         icon: icon-wrench
         clickable: false
+        width: 25px
         searchable: false
         sortable: false
-        width: 25px
     slug:
         label: 'wcli.crm::client.slug'
         searchable: true

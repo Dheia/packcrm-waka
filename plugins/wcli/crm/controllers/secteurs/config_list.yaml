@@ -38,7 +38,7 @@ treeExpanded: true
 #     direction: desc
 defaultSort:
     column: sort_order
-    direction: asc
+    direction: desc
 # Display checkboxes next to each record
 showCheckboxes: true
 

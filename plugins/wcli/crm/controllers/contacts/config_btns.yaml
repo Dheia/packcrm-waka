@@ -2,7 +2,8 @@
 #  Btn  Behavior Config
 # ===================================
 
-
+Description: >
+    //startKeep/
 modelClass: Wcli\Crm\Models\Contact
 
 workflow: false 
@@ -29,9 +30,9 @@ tool_bar:
     config_btns:
             format: all
             btns:
-                excelImport:
+                importExcel:
                     config: waka.importexport::btns.importExcel
-                excelExport:
+                exportExcel:
                     config: waka.importexport::btns.exportExcel
     config_lot:
         format: all
@@ -42,7 +43,7 @@ tool_bar:
                 group: waka.utils::lang.prod.send
     # partials: #Attention seul les variables modelId et modelClass (class du controller) sont disponible sans les partials.  
     #     testbtns:
-    #         url: $/wcli/crm/controllers/projects/_test_index.htm
+    #         url: $/wcli/crm/controllers/contacts/_test_btns.htm
 
 ###ACTION_BAR Producteurs. Les behavior liée aux boutons doivent êtres instanciés implements = [waka.xxx.behaviors.yyy] dans le controller. 
 action_bar:
@@ -56,12 +57,72 @@ action_bar:
             mail:
                 config: waka.mailer::btns.mail
                 group: waka.utils::lang.prod.send
-            excelExportChild:
-                config: waka.importexport::btns.exportChild
-                group: waka.utils::lang.prod.produce
-            excelImportChild:
-                config: waka.importexport::btns.importChild
-                group: waka.utils::lang.prod.tools
+
     # partials: #Attention seul les variables modelId et modelClass (class du controller) sont disponible sans les partials.  
     #     name:
-    #         url: $/wcli/crm/controllers/projects/_test_update.htm
+    #         url: $/wcli/crm/controllers/contacts/_test_update.htm
+Description: >
+    //endKeep/
+
+
+#     ##### SAUVEGARDE PURE ########
+# # ===================================
+# #  Btn  Behavior Config
+# # ===================================
+
+# modelClass: Wcli\Crm\Models\Contact
+
+# workflow: false 
+
+# ###BREADCRUMP
+# breadcrump:
+#     inSettings: false 
+#     indexUrl: wcli/crm/contacts
+#     indexlabel: wcli.crm::contact.title
+#     title: wcli.crm::contact.form_name
+
+# ###TOOL_BAR
+# tool_bar:
+#     base:
+#         create: 
+#             show: true
+#             permissions: []
+#             url: wcli/crm/contacts/create
+#         reorder: 
+#             show: false#  
+#         delete: 
+#             show: true
+#             permissions: []
+#     config_btns:
+#             format: all
+#             btns:
+# #                 importExcel:
+#                     config: waka.importexport::btns.importExcel
+# # #                 exportExcel:
+#                     config: waka.importexport::btns.exportExcel
+# #     config_lot:
+#         format: all
+#         btns: 
+# # #             
+#             lot_mail:
+#                 config: waka.mailer::btns.lot_mail
+#                 group: waka.utils::lang.prod.send
+# #     # partials: #Attention seul les variables modelId et modelClass (class du controller) sont disponible sans les partials.  
+#     #     testbtns:
+#     #         url: $/wcli/crm/controllers/contacts/_test_btns.htm
+
+# ###ACTION_BAR Producteurs. Les behavior liée aux boutons doivent êtres instanciés implements = [waka.xxx.behaviors.yyy] dans le controller. 
+# action_bar:
+#     config_btns:
+#         format: grouped #unique : un seul bouton, all : tts les boutons
+#         groups:
+#             waka.utils::lang.prod.produce: oc-icon-file-text-o
+#             waka.utils::lang.prod.send: oc-icon-external-link
+#             waka.utils::lang.prod.tools: oc-icon-wrench
+#         btns:
+# # # # # #             mail:
+#                 config: waka.mailer::btns.mail
+#                 group: waka.utils::lang.prod.send
+# # # # #     # partials: #Attention seul les variables modelId et modelClass (class du controller) sont disponible sans les partials.  
+#     #     name:
+#     #         url: $/wcli/crm/controllers/contacts/_test_update.htm
