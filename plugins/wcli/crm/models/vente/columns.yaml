@@ -18,8 +18,10 @@ columns:
     amount:
         label: wcli.crm::vente.amount
         searchable: true
-    gamme:
+    gamme_r:
         label: wcli.crm::vente.gamme
+        relation: gamme
+        select: name
         searchable: true
     updated_at:
         label: waka.utils::lang.global.updated_at

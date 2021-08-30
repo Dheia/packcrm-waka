@@ -10,6 +10,7 @@ class Client extends Model
 {
     use \Winter\Storm\Database\Traits\Validation;
     use \Waka\Utils\Classes\Traits\ScopePeriodes;
+    use \Waka\Segator\Classes\Traits\TagTrait;
 
 
     /**
@@ -43,6 +44,9 @@ class Client extends Model
      * @var array attributes send to datasource for creating document
      */
     public $attributesToDs = [
+        'total_ventes',
+        'total_ventes_n',
+        'total_ventes_m',
     ];
 
     /**
@@ -95,7 +99,6 @@ class Client extends Model
     public $hasManyThrough = [
     ];
     public $belongsTo = [
-       'secteur' => ['Wcli\Crm\Models\Secteur'],
        'commercial' => ['Wcli\Crm\Models\Commercial'],
     ];
     public $belongsToMany = [
@@ -133,6 +136,15 @@ class Client extends Model
     /**
      * GETTERS
      **/
+    public function getTotalVentesAttribute() {
+        return $this->ventes()->sum('amount');
+    }
+    public function getTotalVentesNAttribute() {
+        return $this->ventes()->wakaPeriode('y', 'sale_at')->sum('amount');
+    }
+    public function getTotalVentesMAttribute() {
+        return $this->ventes()->wakaPeriode('m', 'sale_at')->sum('amount');
+    }
 
     /**
      * SCOPES

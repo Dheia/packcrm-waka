@@ -1,0 +1,37 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: wcli.crm::gamme.name
+        span: left
+        required: true
+        permissions: [wcli.crm.*]
+    slug:
+        label: wcli.crm::gamme.slug
+        span: right
+        required: true
+        permissions: [wcli.crm.*]
+    description:
+        label: wcli.crm::gamme.description
+        span: full
+        type: markdown
+        permissions: [wcli.crm.*]
+    image:
+        label: wcli.crm::gamme.image
+        span: auto
+        type: fileupload
+        mode: image
+        imageHeight: 260
+        thumbOptions:
+            mode: auto
+            quality: 90
+            sharpen: 0
+            interlace: false
+            extension: auto
+    couleur:
+        label: wcli.crm::gamme.couleur
+        span: auto
+        type: colorpicker
+        permissions: [wcli.crm.*]

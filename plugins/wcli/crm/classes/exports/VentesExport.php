@@ -74,7 +74,7 @@ class VentesExport implements FromCollection, WithHeadings, ShouldAutoSize, With
 //             'client_id',
 //             'sale_at',
 //             'amount',
-//             'gamme',
+//             'gamme_id',
 //         ];
 //     }
 

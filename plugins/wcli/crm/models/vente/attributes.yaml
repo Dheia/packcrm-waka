@@ -12,8 +12,6 @@ attributes:
     amount:
         label: wcli.crm::vente.amount
         type: euro
-    gamme:
-        label: wcli.crm::vente.gamme
     updated_at:
         label: waka.utils::lang.global.updated_at
         type: date-medium

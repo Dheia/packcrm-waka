@@ -3,5 +3,5 @@
   - create_clients_table.php
   - create_commercials_table.php
   - create_contacts_table.php
-  - create_secteurs_table.php
+  - create_gammes_table.php
   - create_ventes_table.php

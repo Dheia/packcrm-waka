@@ -29,7 +29,7 @@ class VentesImport implements ToCollection, WithHeadingRow, WithCalculatedFormul
             $vente->client_id = $row['client_id'] ?? null;
             $vente->sale_at = DateConvert::excelToDateTimeObject($row['sale_at'] ?? null);
             $vente->amount = $row['amount'] ?? null;
-            $vente->gamme = $row['gamme'] ?? null;
+            $vente->gamme_id = $row['gamme_id'] ?? null;
             $vente->save();
         }
     }
@@ -58,7 +58,7 @@ class VentesImport implements ToCollection, WithHeadingRow, WithCalculatedFormul
 //             $vente->client_id = $row['client_id'] ?? null;
 //             $vente->sale_at = $row['sale_at'] ?? null;
 //             $vente->amount = $row['amount'] ?? null;
-//             $vente->gamme = $row['gamme'] ?? null;
+//             $vente->gamme_id = $row['gamme_id'] ?? null;
 //             $vente->save();
 //         }
 //     }

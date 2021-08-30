@@ -3,16 +3,16 @@
 # ===================================
 
 # Model List Column configuration
-list: $/wcli/crm/models/secteur/columns.yaml
+list: $/wcli/crm/models/gamme/columns.yaml
 
 # Model Class name
-modelClass: Wcli\Crm\Models\Secteur
+modelClass: Wcli\Crm\Models\Gamme
 
 # List Title
-title: wcli.crm::secteur.title
+title: wcli.crm::gamme.title
 
 # Link URL for each record
-recordUrl: wcli/crm/secteurs/update/:id
+recordUrl: wcli/crm/gammes/update/:id
 
 # Message to display if the list is empty
 noRecordsMessage: backend::lang.list.no_records

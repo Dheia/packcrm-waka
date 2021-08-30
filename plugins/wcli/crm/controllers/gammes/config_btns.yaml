@@ -4,16 +4,16 @@
 
 Description: >
     //startKeep/
-modelClass: Wcli\Crm\Models\Secteur
+modelClass: Wcli\Crm\Models\Gamme
 
 workflow: false 
 
 ###BREADCRUMP
 breadcrump:
     inSettings: false 
-    indexUrl: wcli/crm/secteurs
-    indexlabel: wcli.crm::secteur.title
-    title: wcli.crm::secteur.form_name
+    indexUrl: wcli/crm/gammes
+    indexlabel: wcli.crm::gamme.title
+    title: wcli.crm::gamme.form_name
 
 ###TOOL_BAR
 tool_bar:
@@ -21,11 +21,11 @@ tool_bar:
         create: 
             show: true
             permissions: [wcli.crm.admin]
-            url: wcli/crm/secteurs/create
+            url: wcli/crm/gammes/create
         reorder: 
             show: true 
             permissions: []
-            url: wcli/crm/secteurs/reorder
+            url: wcli/crm/gammes/reorder
  
         delete: 
             show: true
@@ -40,13 +40,9 @@ tool_bar:
     config_lot:
         format: all
         btns: 
-            
-            lot_mail:
-                config: waka.mailer::btns.lot_mail
-                group: waka.utils::lang.prod.send
     # partials: #Attention seul les variables modelId et modelClass (class du controller) sont disponible sans les partials.  
     #     testbtns:
-    #         url: $/wcli/crm/controllers/secteurs/_test_btns.htm
+    #         url: $/wcli/crm/controllers/gammes/_test_btns.htm
 
 ###ACTION_BAR Producteurs. Les behavior liée aux boutons doivent êtres instanciés implements = [waka.xxx.behaviors.yyy] dans le controller. 
 action_bar:
@@ -60,13 +56,13 @@ action_bar:
             duplicate:
                 config: waka.utils::btns.duplicate
                 group: waka.utils::lang.prod.tools
-            mail:
-                config: waka.mailer::btns.mail
-                group: waka.utils::lang.prod.send
+            exportChildExcel:
+                config: waka.importexport::btns.exportChildExcel
+                group: waka.utils::lang.prod.produce
 
     # partials: #Attention seul les variables modelId et modelClass (class du controller) sont disponible sans les partials.  
     #     name:
-    #         url: $/wcli/crm/controllers/secteurs/_test_update.htm
+    #         url: $/wcli/crm/controllers/gammes/_test_update.htm
 Description: >
     //endKeep/
 
@@ -76,16 +72,16 @@ Description: >
 # #  Btn  Behavior Config
 # # ===================================
 
-# modelClass: Wcli\Crm\Models\Secteur
+# modelClass: Wcli\Crm\Models\Gamme
 
 # workflow: false 
 
 # ###BREADCRUMP
 # breadcrump:
 #     inSettings: false 
-#     indexUrl: wcli/crm/secteurs
-#     indexlabel: wcli.crm::secteur.title
-#     title: wcli.crm::secteur.form_name
+#     indexUrl: wcli/crm/gammes
+#     indexlabel: wcli.crm::gamme.title
+#     title: wcli.crm::gamme.form_name
 
 # ###TOOL_BAR
 # tool_bar:
@@ -93,11 +89,11 @@ Description: >
 #         create: 
 #             show: true
 #             permissions: [wcli.crm.admin]
-#             url: wcli/crm/secteurs/create
+#             url: wcli/crm/gammes/create
 #         reorder: 
 #             show: true#  
 #             permissions: []
-#             url: wcli/crm/secteurs/reorder
+#             url: wcli/crm/gammes/reorder
 #  
 #         delete: 
 #             show: true
@@ -112,13 +108,9 @@ Description: >
 # #     config_lot:
 #         format: all
 #         btns: 
-# # #             
-#             lot_mail:
-#                 config: waka.mailer::btns.lot_mail
-#                 group: waka.utils::lang.prod.send
-# #     # partials: #Attention seul les variables modelId et modelClass (class du controller) sont disponible sans les partials.  
+# # # #     # partials: #Attention seul les variables modelId et modelClass (class du controller) sont disponible sans les partials.  
 #     #     testbtns:
-#     #         url: $/wcli/crm/controllers/secteurs/_test_btns.htm
+#     #         url: $/wcli/crm/controllers/gammes/_test_btns.htm
 
 # ###ACTION_BAR Producteurs. Les behavior liée aux boutons doivent êtres instanciés implements = [waka.xxx.behaviors.yyy] dans le controller. 
 # action_bar:
@@ -132,9 +124,9 @@ Description: >
 # # # # #             duplicate:
 #                 config: waka.utils::btns.duplicate
 #                 group: waka.utils::lang.prod.tools
-# # #             mail:
-#                 config: waka.mailer::btns.mail
-#                 group: waka.utils::lang.prod.send
-# # # # #     # partials: #Attention seul les variables modelId et modelClass (class du controller) sont disponible sans les partials.  
+# # # # #             exportChildExcel:
+#                 config: waka.importexport::btns.exportChildExcel
+#                 group: waka.utils::lang.prod.produce
+# # #     # partials: #Attention seul les variables modelId et modelClass (class du controller) sont disponible sans les partials.  
 #     #     name:
-#     #         url: $/wcli/crm/controllers/secteurs/_test_update.htm
+#     #         url: $/wcli/crm/controllers/gammes/_test_update.htm

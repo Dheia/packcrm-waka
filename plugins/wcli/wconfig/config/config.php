@@ -27,9 +27,9 @@ return [
             'table' => 'wcli_crm_contacts',
             'truncate' => true,
         ],
-        'secteurs' => [
-            'class' => '\Wcli\Crm\Classes\Imports\SecteursImport',
-            'table' => 'wcli_crm_secteurs',
+        'gammes' => [
+            'class' => '\Wcli\Crm\Classes\Imports\GammesImport',
+            'table' => 'wcli_crm_gammes',
             'truncate' => true,
         ],
         'commercials' => [

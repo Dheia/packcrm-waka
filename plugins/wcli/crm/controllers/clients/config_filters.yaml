@@ -3,8 +3,14 @@
 # ===================================
 
 scopes:
-  commercial:
-    label: Commercial
-    modelClass: Wcli\Crm\Models\Commercial
-    conditions: commercial_id in (:filtered)
-    nameFrom: name
+    commercial:
+        label: Commercial
+        modelClass: Wcli\Crm\Models\Commercial
+        conditions: commercial_id in (:filtered)
+        nameFrom: name
+
+    segmentation:
+        label: Segmentation
+        scope: tagFilter
+        modelClass: Waka\Segator\Models\Tag
+        nameFrom: name

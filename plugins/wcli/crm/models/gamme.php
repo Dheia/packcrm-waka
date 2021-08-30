@@ -3,10 +3,10 @@
 use Model;
 
 /**
- * secteur Model
+ * gamme Model
  */
 
-class Secteur extends Model
+class Gamme extends Model
 {
     use \Winter\Storm\Database\Traits\Validation;
     use \Winter\Storm\Database\Traits\NestedTree;
@@ -15,7 +15,7 @@ class Secteur extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'wcli_crm_secteurs';
+    public $table = 'wcli_crm_gammes';
 
 
     /**
@@ -81,7 +81,7 @@ class Secteur extends Model
     public $hasOne = [
     ];
     public $hasMany = [
-        'clients' => ['Wcli\Crm\Models\Client'],
+        'ventes' => ['Wcli\Crm\Models\Vente'],
     ];
     public $hasOneThrough = [
     ];
@@ -158,5 +158,5 @@ class Secteur extends Model
         }
     }
 
-    //endKeep/
+//endKeep/
 }

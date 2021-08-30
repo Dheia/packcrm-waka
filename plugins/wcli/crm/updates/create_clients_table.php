@@ -13,7 +13,6 @@ class CreateClientsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('slug');
-            $table->integer('secteur_id')->unsigned()->nullable();
             $table->integer('commercial_id')->unsigned()->nullable();
             $table->timestamps();
         });

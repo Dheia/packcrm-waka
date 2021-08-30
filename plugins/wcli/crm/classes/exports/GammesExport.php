@@ -6,9 +6,9 @@ use Maatwebsite\Excel\Concerns\ShouldAutoSize;
 use PhpOffice\PhpSpreadsheet\Worksheet\Worksheet;
 use Maatwebsite\Excel\Concerns\WithStyles;
 //
-use Wcli\Crm\Models\Secteur;
+use Wcli\Crm\Models\Gamme;
 
-class SecteursExport implements FromCollection, WithHeadings, ShouldAutoSize, WithStyles
+class GammesExport implements FromCollection, WithHeadings, ShouldAutoSize, WithStyles
 {
     public $listId;
 
@@ -26,9 +26,7 @@ class SecteursExport implements FromCollection, WithHeadings, ShouldAutoSize, Wi
             'name',
             'slug',
             'description',
-            'msg_approche',
-            'msg_kpi',
-            'parent_id',
+            'couleur',
         ];
     }
 
@@ -36,9 +34,9 @@ class SecteursExport implements FromCollection, WithHeadings, ShouldAutoSize, Wi
     {
         $request;
         if ($this->listId) {
-            $request = Secteur::whereIn('id', $this->listId)->get($this->headings());
+            $request = Gamme::whereIn('id', $this->listId)->get($this->headings());
         } else {
-            $request = Secteur::get($this->headings()); 
+            $request = Gamme::get($this->headings()); 
         }
         $request = $request->map(function ($item) {
                 return $item;
@@ -74,9 +72,7 @@ class SecteursExport implements FromCollection, WithHeadings, ShouldAutoSize, Wi
 //             'name',
 //             'slug',
 //             'description',
-//             'msg_approche',
-//             'msg_kpi',
-//             'parent_id',
+//             'couleur',
 //         ];
 //     }
 
@@ -84,9 +80,9 @@ class SecteursExport implements FromCollection, WithHeadings, ShouldAutoSize, Wi
 //     {
 //         $request;
 //         if ($this->listId) {
-//             $request = Secteur::whereIn('id', $this->listId)->get($this->headings());
+//             $request = Gamme::whereIn('id', $this->listId)->get($this->headings());
 //         } else {
-//             $request = Secteur::get($this->headings()); 
+//             $request = Gamme::get($this->headings()); 
 //         }
 //         $request = $request->map(function ($item) {
 //                 return $item;

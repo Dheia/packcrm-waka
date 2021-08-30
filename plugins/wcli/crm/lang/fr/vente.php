@@ -4,7 +4,7 @@ return [
     'client' => 'Cllient',
     'sale_at' => 'Date de vente',
     'amount' => 'Montant',
-    'gamme' => 'Gamme',
+    'gamme' => 'gamme',
     'title' => 'Gestion vente',
     'update' => 'Modification vente',
     'courriers' => 'Gestion vente',

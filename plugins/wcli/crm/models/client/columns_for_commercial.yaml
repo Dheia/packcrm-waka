@@ -13,11 +13,6 @@ columns:
     slug:
         label: 'wcli.crm::client.slug'
         searchable: true
-    secteur_r:
-        label: 'wcli.crm::client.secteur'
-        relation: secteur
-        select: name
-        searchable: true
     updated_at:
         label: 'waka.utils::lang.global.updated_at'
         type: timetense

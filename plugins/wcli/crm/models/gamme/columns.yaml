@@ -4,10 +4,10 @@
 
 columns:
     name:
-        label: wcli.crm::secteur.name
+        label: wcli.crm::gamme.name
         searchable: true
     slug:
-        label: wcli.crm::secteur.slug
+        label: wcli.crm::gamme.slug
         searchable: true
     updated_at:
         label: waka.utils::lang.global.updated_at

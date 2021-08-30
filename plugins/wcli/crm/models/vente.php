@@ -36,6 +36,7 @@ class Vente extends Model
         'client' => 'required',
         'sale_at' => 'required',
         'amount' => 'required',
+        'gamme' => 'required',
     ];
 
     public $customMessages = [
@@ -91,6 +92,7 @@ class Vente extends Model
     ];
     public $belongsTo = [
        'client' => ['Wcli\Crm\Models\Client'],
+       'gamme' => ['Wcli\Crm\Models\Gamme'],
     ];
     public $belongsToMany = [
     ];        

@@ -33,11 +33,6 @@ client:
         cc: 
             key: email
             relation: contacts
-    relations:
-        secteur:
-            images: true
-            label: Secteur
-            attributes: wcli/crm/models/secteur/attributes.yaml
     # otherRelations:
     #         info:
     #             class: Wcli\Crm\Models\Info
@@ -64,9 +59,9 @@ contact:
             label: Client
             images: true
             attributes: wcli/crm/models/client/attributes.yaml
-        client.secteur: 
+        client.gamme: 
             label: Client
-            attributes: wcli/crm/models/secteur/attributes.yaml
+            attributes: wcli/crm/models/gamme/attributes.yaml
         commercial:
             label: Commercial (du contact)
             attributes: wcli/crm/models/commercial/attributes.yaml
@@ -91,23 +86,23 @@ commercial:
             label: Client
             images: true
             attributes: wcli/crm/models/client/attributes.yaml
-        client.secteur: 
+        client.gamme: 
             label: Client
-            attributes: wcli/crm/models/secteur/attributes.yaml
+            attributes: wcli/crm/models/gamme/attributes.yaml
     emails:
         to: 
             key: email
 
-secteur:
-    label: Secteur
-    code : secteur
+gamme:
+    label: Gamme
+    code : gamme
     test_id: 48
     author: Wcli
     plugin: Crm
-    name : Secteur
-    class: Wcli\Crm\Models\Secteur
-    controller: wcli/crm/secteurs
-    attributes: wcli/crm/models/secteur/attributes.yaml
+    name : Gamme
+    class: Wcli\Crm\Models\Gamme
+    controller: wcli/crm/gammes
+    attributes: wcli/crm/models/gamme/attributes.yaml
 
 vente:
     label: Vente
@@ -119,3 +114,8 @@ vente:
     class: Wcli\Crm\Models\Vente
     controller: wcli/crm/ventes
     attributes: wcli/crm/models/vente/attributes.yaml
+    relations:
+        gamme:
+            images: true
+            label: Gamme
+            attributes: wcli/crm/models/gamme/attributes.yaml

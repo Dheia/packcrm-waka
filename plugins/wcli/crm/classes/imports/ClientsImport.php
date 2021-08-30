@@ -27,7 +27,6 @@ class ClientsImport implements ToCollection, WithHeadingRow, WithCalculatedFormu
             $client->id = $row['id'] ?? null;
             $client->name = $row['name'] ?? null;
             $client->slug = $row['slug'] ?? null;
-            $client->secteur_id = $row['secteur_id'] ?? null;
             $client->commercial_id = $row['commercial_id'] ?? null;
             $client->save();
         }
@@ -55,7 +54,6 @@ class ClientsImport implements ToCollection, WithHeadingRow, WithCalculatedFormu
 //             $client->id = $row['id'] ?? null;
 //             $client->name = $row['name'] ?? null;
 //             $client->slug = $row['slug'] ?? null;
-//             $client->secteur_id = $row['secteur_id'] ?? null;
 //             $client->commercial_id = $row['commercial_id'] ?? null;
 //             $client->save();
 //         }

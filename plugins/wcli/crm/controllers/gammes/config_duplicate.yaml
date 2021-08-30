@@ -4,11 +4,11 @@
 # ATTENTION LE TITRE NE DOIT PAS AVOIR D ESPACE
 
 # Model Class name
-modelClass: Wcli\Crm\Models\Secteur
+modelClass: Wcli\Crm\Models\Gamme
 
-name: secteurs
-title: waka.utils::lang.global.duplicate_theSecteur
-redirect: backend/wcli/crm/secteurs/update/
+name: gammes
+title: waka.utils::lang.global.duplicate_theGamme
+redirect: backend/wcli/crm/gammes/update/
 
 duplication:
     #Les champs dans le tableau relation seront cloné et attaché au nouveau model 
@@ -24,7 +24,7 @@ duplication:
     #Les champs qui seront modifié dans le formulaire du popup 
     fields:
         name:
-          label: wcli.crm::secteur.name 
+          label: wcli.crm::gamme.name 
 
         # _keep:
         #   label: Dupliquer dans ce projet

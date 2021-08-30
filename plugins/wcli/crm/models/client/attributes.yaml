@@ -8,6 +8,12 @@ attributes:
         label: wcli.crm::client.name
     slug:
         label: wcli.crm::client.slug
+    total_ventes:
+        label: wcli.crm::client.total_ventes
+    total_ventes_n:
+        label: wcli.crm::client.total_ventes_n
+    total_ventes_m:
+        label: wcli.crm::client.total_ventes_m
     updated_at:
         label: waka.utils::lang.global.updated_at
         type: date-medium

@@ -3,13 +3,13 @@
 # ===================================
 
 # Reorder Title
-title: Reorder secteurs
+title: Reorder gammes
 
 # Attribute name
 nameFrom: name
 
 # Model Class name
-modelClass: Wcli\Crm\Models\Secteur
+modelClass: Wcli\Crm\Models\Gamme
 
 # Toolbar widget configuration
 #toolbar:

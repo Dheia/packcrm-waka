@@ -5,15 +5,13 @@
 icon: icon-info
 attributes:
     name:
-        label: wcli.crm::secteur.name
+        label: wcli.crm::gamme.name
     slug:
-        label: wcli.crm::secteur.slug
+        label: wcli.crm::gamme.slug
     description:
-        label: wcli.crm::secteur.description
-    msg_approche:
-        label: wcli.crm::secteur.msg_approche
-    msg_kpi:
-        label: wcli.crm::secteur.msg_kpi
+        label: wcli.crm::gamme.description
+    couleur:
+        label: wcli.crm::gamme.couleur
     updated_at:
         label: waka.utils::lang.global.updated_at
         type: date-medium

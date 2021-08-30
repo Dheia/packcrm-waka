@@ -4,16 +4,15 @@ use BackendMenu;
 use Backend\Classes\Controller;
 
 /**
- * Secteur Back-end Controller
+ * Gamme Back-end Controller
  */
-class Secteurs extends Controller
+class Gammes extends Controller
 {
     public $implement = [
         'Backend.Behaviors.FormController',
         'Backend.Behaviors.ListController',
         'Waka.Utils.Behaviors.BtnsBehavior',
         'Backend.Behaviors.RelationController',
-        'Waka.Mailer.Behaviors.MailBehavior',
         'Waka.ImportExport.Behaviors.ExcelImport',
         'Waka.ImportExport.Behaviors.ExcelExport',
         'Backend.Behaviors.ReorderController',
@@ -32,7 +31,7 @@ class Secteurs extends Controller
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('Wcli.Crm', 'crm', 'side-menu-secteurs');
+        BackendMenu::setContext('Wcli.Crm', 'crm', 'side-menu-gammes');
     }
 
     //startKeep/

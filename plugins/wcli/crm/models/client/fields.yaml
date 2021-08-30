@@ -14,13 +14,6 @@ fields:
         required: true
         preset: name
         permissions: [wcli.crm.*]
-    secteur:
-        label: wcli.crm::client.secteur
-        span: left
-        type: relation
-        placeholder: waka.utils::lang.global.placeholder
-        default: 1
-        permissions: [wcli.crm.*]
     commercial:
         label: wcli.crm::client.commercial
         span: right

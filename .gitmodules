@@ -13,3 +13,6 @@
 [submodule "plugins/waka/wakajob"]
 	path = plugins/waka/wakajob
 	url = https://github.com/charlesStOlive/oc-wakajob.git
+[submodule "plugins/waka/segator"]
+	path = plugins/waka/segator
+	url = https://github.com/charlesStOlive/oc-segator.git

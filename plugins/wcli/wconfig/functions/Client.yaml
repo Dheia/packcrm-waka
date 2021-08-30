@@ -6,6 +6,11 @@ ventes:
             label: Choisissez une période
             type: dropdown
             options: fnc::getPeriode
+        gamme:
+            label: Choisissez une gamme (vide = tt gammes)
+            type: dropdown
+            options: list::Wcli\Crm\Models\Gamme
     outputs:
         attributes: 
             main: wcli/crm/models/vente/attributes.yaml
+            gamme: wcli/crm/models/gamme/attributes.yaml

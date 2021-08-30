@@ -8,5 +8,6 @@ return [
         'secteurs' => 'Secteurs',
         'commercials' => 'Commercials',
         'ventes' => 'Ventes',
+        'gammes' => 'Gammes'
     ],
 ];

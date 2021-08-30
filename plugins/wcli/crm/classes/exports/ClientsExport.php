@@ -25,7 +25,6 @@ class ClientsExport implements FromCollection, WithHeadings, ShouldAutoSize, Wit
             'id',
             'name',
             'slug',
-            'secteur_id',
             'commercial_id',
         ];
     }
@@ -71,7 +70,6 @@ class ClientsExport implements FromCollection, WithHeadings, ShouldAutoSize, Wit
 //             'id',
 //             'name',
 //             'slug',
-//             'secteur_id',
 //             'commercial_id',
 //         ];
 //     }

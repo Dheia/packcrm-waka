@@ -15,7 +15,7 @@ class CreateVentesTable extends Migration
             $table->integer('client_id')->unsigned();
             $table->timestamp('sale_at');
             $table->double('amount', 15, 2);
-            $table->string('gamme')->nullable();
+            $table->integer('gamme_id')->unsigned();
             $table->timestamps();
         });
     }

@@ -103,10 +103,10 @@ class Plugin extends PluginBase
                         'icon' => 'icon-building',
                         'url' => Backend::url('wcli/crm/clients'),
                     ],
-                    'side-menu-secteurs' => [
-                        'label' => Lang::get('wcli.crm::lang.menu.secteurs'),
+                    'side-menu-gammes' => [
+                        'label' => Lang::get('wcli.crm::lang.menu.gammes'),
                         'icon' => 'icon-dot-circle-o',
-                        'url' => Backend::url('wcli/crm/secteurs'),
+                        'url' => Backend::url('wcli/crm/gammes'),
                         'permissions' => ['wcli.crm.admin'],
                     ],
                     'side-menu-commercials' => [
