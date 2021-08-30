@@ -75,7 +75,7 @@ contact:
     #     types: 
     #         Waka\Worder\Models\Document: Word
     #         Waka\Pdfer\Models\WakaPdf: Pdf
-Commercial:
+commercial:
     label: Commercial
     code : commercial
     test_id: 48
@@ -98,7 +98,7 @@ Commercial:
         to: 
             key: email
 
-Secteur:
+secteur:
     label: Secteur
     code : secteur
     test_id: 48
@@ -108,3 +108,14 @@ Secteur:
     class: Wcli\Crm\Models\Secteur
     controller: wcli/crm/secteurs
     attributes: wcli/crm/models/secteur/attributes.yaml
+
+vente:
+    label: Vente
+    code : vente
+    test_id: 48
+    author: Wcli
+    plugin: Crm
+    name : Vente
+    class: Wcli\Crm\Models\Vente
+    controller: wcli/crm/ventes
+    attributes: wcli/crm/models/vente/attributes.yaml

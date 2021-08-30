@@ -57,6 +57,9 @@ action_bar:
             mail:
                 config: waka.mailer::btns.mail
                 group: waka.utils::lang.prod.send
+            exportChildExcel:
+                config: waka.importexport::btns.exportChildExcel
+                group: waka.utils::lang.prod.produce
 
     # partials: #Attention seul les variables modelId et modelClass (class du controller) sont disponible sans les partials.  
     #     name:
@@ -123,6 +126,9 @@ Description: >
 # # # # # #             mail:
 #                 config: waka.mailer::btns.mail
 #                 group: waka.utils::lang.prod.send
-# # # # #     # partials: #Attention seul les variables modelId et modelClass (class du controller) sont disponible sans les partials.  
+# # # #             exportChildExcel:
+#                 config: waka.importexport::btns.exportChildExcel
+#                 group: waka.utils::lang.prod.produce
+# # #     # partials: #Attention seul les variables modelId et modelClass (class du controller) sont disponible sans les partials.  
 #     #     name:
 #     #         url: $/wcli/crm/controllers/clients/_test_update.htm

@@ -18,3 +18,5 @@ fields:
         label: 'wcli.crm::contact.commercial'
         span: left
         type: relation
+        placeholder: 'waka.utils::lang.global.placeholder'
+        nameFrom: name

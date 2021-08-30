@@ -28,8 +28,8 @@ class ContactsExport implements FromCollection, WithHeadings, ShouldAutoSize, Wi
             'last_name',
             'tel',
             'email',
-            'client',
-            'commercial',
+            'client_id',
+            'commercial_id',
         ];
     }
 
@@ -77,8 +77,8 @@ class ContactsExport implements FromCollection, WithHeadings, ShouldAutoSize, Wi
 //             'last_name',
 //             'tel',
 //             'email',
-//             'client',
-//             'commercial',
+//             'client_id',
+//             'commercial_id',
 //         ];
 //     }
 

@@ -41,7 +41,6 @@ body *:not(html):not(style):not(br):not(tr):not(code){font-family:Avenir,Helveti
 .w-border-sr{border-right:solid #405261}
 .w-border-st{border-top:solid #405261}
 .w-border-sb{border-bottom:solid #405261}
-.w-mx-auto{margin-left:auto;margin-right:auto}
 .w-ma-0{margin:0rem}
 .w-mx-0{margin-left:0rem;margin-right:0rem}
 .w-my-0{margin-top:0rem;margin-bottom:0rem}
@@ -113,13 +112,13 @@ body *:not(html):not(style):not(br):not(tr):not(code){font-family:Avenir,Helveti
 .w-pr-4{padding-right:2rem}
 .w-pl-4{padding-left:2rem}
 .w-w-full{width:100%}
-.w-h-full{height:100%}h1{font-size:2.5em;margin:0.1rem}
-h2{font-size:2em;margin:0.1rem}
-h3{font-size:1.375em;margin:0.1rem}
-h4{font-size:1.125em;margin:0.1rem}
-h5{font-size:1em;margin:0.1rem}
-h6{font-size:0.875em;margin:0.1rem}
-p{font-size:1em;margin:0.1rem}.w-small{font-size:0.8rem}
+.w-h-full{height:100%}h1{font-size:2.5em;margin-top:2rem;margin-bottom:2rem}
+h2{font-size:2em;margin-top:1.5rem;margin-bottom:1.5rem}
+h3{font-size:1.375em;margin-top:1.25rem;margin-bottom:1.25rem}
+h4{font-size:1.125em;margin-top:1rem;margin-bottom:1rem}
+h5{font-size:1em;margin-top:0.75rem;margin-bottom:0.75rem}
+h6{font-size:0.875em;margin-top:0.5rem;margin-bottom:0.5rem}
+p{font-size:1em;margin:0 0 1rem 0}.w-small{font-size:0.8rem}
 .w-smaller{font-size:0.7rem}
 .w-smallest{font-size:0.5rem}
 .w-medium{font-size:1rem}
@@ -156,7 +155,7 @@ a img{border:none}.w-break-all,
 .w-button-positive{background-color:#008000;border-top:10px solid #008000;border-right:18px solid #008000;border-bottom:10px solid #008000;border-left:18px solid #008000}
 .w-button-negative{background-color:#f00;border-top:10px solid #f00;border-right:18px solid #f00;border-bottom:10px solid #f00;border-left:18px solid #f00}
 .w-button-warning{background-color:#ffa500;border-top:10px solid #ffa500;border-right:18px solid #ffa500;border-bottom:10px solid #ffa500;border-left:18px solid #ffa500}.w-panel{margin:0 0 21px}
-.w-panel-content{background-color:#e0e0e0;padding:16px}
+.w-panel-content{background-color:#e0e0e0;padding:16px;margin-bottom:1rem}
 .w-panel-item{padding:0}
 .w-panel-item p:last-of-type{margin-bottom:0;padding-bottom:0}.w-promotion{background-color:#e0e0e0;border:2px dashed #fff;margin:0;margin-bottom:25px;margin-top:25px;padding:24px;width:100%;-premailer-cellpadding:0;-premailer-cellspacing:0;-premailer-width:100%}
 .w-promotion h1{text-align:center}

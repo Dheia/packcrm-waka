@@ -10,8 +10,10 @@ contacts:
         showSearch: true
     view:
         list: $/wcli/crm/models/contact/columns_for_client.yaml
+        recordUrl: wcli/crm/contacts/update/:id
         toolbarButtons: create|link|unlink|delete
         showSearch: true
+        recordsPerPage: 20
         defaultSort:
             column: name
             direction: asc
@@ -24,6 +26,7 @@ ventes:
         list: $/wcli/crm/models/vente/columns_for_client.yaml
         toolbarButtons: create|delete
         showSearch: true
+        recordsPerPage: 20
         defaultSort:
             column: name
             direction: asc

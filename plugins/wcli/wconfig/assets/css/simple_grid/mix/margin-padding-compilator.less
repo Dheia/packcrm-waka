@@ -2,53 +2,49 @@ each(range(5), {
     @test : @index - 1 ;
  
     .ma-@{test} {
-        margin:'@pm-step*'@test;
+        margin:'@base-margin*'@test;
     };
     .mx-@{test} {
-        margin-left: '@pm-step*'@test;
-        margin-right: '@pm-step*'@test;
+        margin-left: '@base-margin*'@test;
+        margin-right: '@base-margin*'@test;
     };
     .my-@{test} {
-        margin-top:'@pm-step*'@test;
-        margin-bottom: '@pm-step*'@test;
+        margin-top:'@base-margin*'@test;
+        margin-bottom: '@base-margin*'@test;
     }; 
     .mt-@{test} {
-        margin-top: '@pm-step*'@test;
+        margin-top: '@base-margin*'@test;
     };
     .mb-@{test} {
-        margin-bottom: '@pm-step*'@test;
+        margin-bottom: '@base-margin*'@test;
     };
     .ml-@{test} {
-        margin-left: '@pm-step*'@test;
+        margin-left: '@base-margin*'@test;
     }; 
     .mr-@{test} {
-        margin-right: '@pm-step*'@test;
+        margin-right: '@base-margin*'@test;
     }; 
     .pa-@{test} {
-        padding:'@pm-step*'@test;
+        padding:'@base-margin*'@test;
     };
     .px-@{test} {
-        padding-left: '@pm-step*'@test;
-        padding-right: '@pm-step*'@test; 
+        padding-left: '@base-margin*'@test;
+        padding-right: '@base-margin*'@test; 
     };
     .py-@{test} {
-        padding-top: '@pm-step*'@test;
-        padding-bottom: '@pm-step*'@test;
+        padding-top: '@base-margin*'@test;
+        padding-bottom: '@base-margin*'@test;
     };
     .pt-@{test} {
-        padding-top: '@pm-step*'@test;
+        padding-top: '@base-margin*'@test;
     };
     .pb-@{test} {
-        padding-bottom: '@pm-step*'@test;
+        padding-bottom: '@base-margin*'@test;
     };
     .pr-@{test} {
-        padding-right: '@pm-step*'@test; 
+        padding-right: '@base-margin*'@test; 
     };
     .pl-@{test} {
-        padding-left: '@pm-step*'@test;
+        padding-left: '@base-margin*'@test;
     };  
 });
-
-.full {
-    width:100%;
-}
