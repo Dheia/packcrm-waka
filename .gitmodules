@@ -25,3 +25,6 @@
 [submodule "plugins/waka/worder"]
 	path = plugins/waka/worder
 	url = https://github.com/charlesStOlive/oc-worder.git
+[submodule "plugins/waka/charter"]
+	path = plugins/waka/charter
+	url = https://github.com/charlesStOlive/oc-charter.git

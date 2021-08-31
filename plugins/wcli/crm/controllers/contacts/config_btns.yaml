@@ -37,7 +37,6 @@ tool_bar:
     config_lot:
         format: all
         btns: 
-            
             lot_mail:
                 config: waka.mailer::btns.lot_mail
                 group: waka.utils::lang.prod.send
@@ -54,8 +53,14 @@ action_bar:
             waka.utils::lang.prod.send: oc-icon-external-link
             waka.utils::lang.prod.tools: oc-icon-wrench
         btns:
+            word:
+                config: waka.worder::btns.word
+                group: waka.utils::lang.prod.produce
             mail:
                 config: waka.mailer::btns.mail
+                group: waka.utils::lang.prod.send
+            outlook:
+                config: waka.msgraph::btns.outlook
                 group: waka.utils::lang.prod.send
 
     # partials: #Attention seul les variables modelId et modelClass (class du controller) sont disponible sans les partials.  
@@ -120,9 +125,15 @@ Description: >
 #             waka.utils::lang.prod.send: oc-icon-external-link
 #             waka.utils::lang.prod.tools: oc-icon-wrench
 #         btns:
+# #             word:
+#                 config: waka.worder::btns.word
+#                 group: waka.utils::lang.prod.produce
 # # # # # #             mail:
 #                 config: waka.mailer::btns.mail
 #                 group: waka.utils::lang.prod.send
-# # # # #     # partials: #Attention seul les variables modelId et modelClass (class du controller) sont disponible sans les partials.  
+# # # #             outlook:
+#                 config: waka.msgraph::btns.outlook
+#                 group: waka.utils::lang.prod.send
+# # # #     # partials: #Attention seul les variables modelId et modelClass (class du controller) sont disponible sans les partials.  
 #     #     name:
 #     #         url: $/wcli/crm/controllers/contacts/_test_update.htm

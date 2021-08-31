@@ -24,7 +24,7 @@ class ClientsExportVentes implements FromCollection, WithHeadings, ShouldAutoSiz
         return [
             'id',
             'amount',
-            'gamme',
+            'gamme_id',
             'sale_at',
         ];
     }
