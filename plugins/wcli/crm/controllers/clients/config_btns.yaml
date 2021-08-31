@@ -126,7 +126,10 @@ Description: >
 # # # # # #             mail:
 #                 config: waka.mailer::btns.mail
 #                 group: waka.utils::lang.prod.send
-# # # #             exportChildExcel:
+# # # #             outlook:
+#                 config: waka.msgraph::btns.outlook
+#                 group: waka.utils::lang.prod.send
+# # #             exportChildExcel:
 #                 config: waka.importexport::btns.exportChildExcel
 #                 group: waka.utils::lang.prod.produce
 # # #     # partials: #Attention seul les variables modelId et modelClass (class du controller) sont disponible sans les partials.  

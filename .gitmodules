@@ -19,3 +19,9 @@
 [submodule "plugins/waka/msgraph"]
 	path = plugins/waka/msgraph
 	url = https://github.com/charlesStOlive/ws-msgraph.git
+[submodule "plugins/waka/cloud"]
+	path = plugins/waka/cloud
+	url = https://github.com/charlesStOlive/oc-cloud.git
+[submodule "plugins/waka/worder"]
+	path = plugins/waka/worder
+	url = https://github.com/charlesStOlive/oc-worder.git
