@@ -145,6 +145,44 @@ class Client extends Model
     public function getTotalVentesMAttribute() {
         return $this->ventes()->wakaPeriode('m', 'sale_at')->sum('amount');
     }
+    //
+    public function getVentesByGammes($periode) {
+        if(!$periode) {
+            throw new \SystemException('variable periode est null');
+        }
+        $sales = $this->ventes()->wakaPeriode($periode, 'sale_at');
+        if(!$sales) {
+            return null;
+        }
+        $sales =  $sales->select('gamme_id', \Db::raw('COUNT(*) as value'))
+            ->groupBy('gamme_id')->get();
+        $sales = $sales->map(function ($item, $key)  {
+            $mapped = [];
+            if ($item['gamme_id'] != 'autres') {
+                $mapped['labels'] = Gamme::find($item['gamme_id'])->name;
+            }
+            $mapped['value'] = $item['value'];
+            return $mapped;
+        });
+        return $sales;
+
+    }
+    public function getVentesByGammesLabels($attributes) {
+        $periode = $attributes['periode'];
+        $sales =  $this->getVentesByGammes($periode);
+        if(!$sales) {
+            return [];
+        }
+        return $sales->pluck('labels')->toArray();
+    }
+    public function getVentesByGammesValue($attributes) {
+        $periode = $attributes['periode'];
+        $sales =  $this->getVentesByGammes($periode);
+        if(!$sales) {
+            return [];
+        }
+        return $sales->pluck('value')->toArray();
+    }
 
     /**
      * SCOPES

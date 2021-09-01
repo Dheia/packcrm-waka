@@ -9,6 +9,9 @@ return [
         'primaryColor' => "#004C54",
         'secondaryColor' => "#405261",
         'accentColor' => "#F94D2A",
+        'gd' => '#787978',
+        'gl' => '#E0E0E0',
+        'dark' => '#252525',
     ],
     'dataSource' => [
         'src' => 'wcli/wconfig/config/datasources.yaml',

@@ -22,6 +22,11 @@ client:
     controller: wcli/crm/clients
     editFunctions: Wcli\Wconfig\Functions\Client
     attributes: wcli/crm/models/client/attributes.yaml
+    relations:
+        commercial: 
+            label: Commercial
+            images: true
+            attributes: wcli/crm/models/commercial/attributes.yaml
     # publications:
     #     types: 
     #         Waka\Worder\Models\Document: Word
