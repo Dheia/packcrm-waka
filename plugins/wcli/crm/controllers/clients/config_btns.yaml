@@ -37,9 +37,8 @@ tool_bar:
     config_lot:
         format: all
         btns: 
-            
-            lot_mail:
-                config: waka.mailer::btns.lot_mail
+            lot_word:
+                config: waka.cloud::btns.lot_word
                 group: waka.utils::lang.prod.send
     # partials: #Attention seul les variables modelId et modelClass (class du controller) sont disponible sans les partials.  
     #     testbtns:
@@ -59,9 +58,6 @@ action_bar:
                 group: waka.utils::lang.prod.produce
             word_cloud:
                 config: waka.cloud::btns.word
-                group: waka.utils::lang.prod.send
-            mail:
-                config: waka.mailer::btns.mail
                 group: waka.utils::lang.prod.send
             exportChildExcel:
                 config: waka.importexport::btns.exportChildExcel
@@ -112,11 +108,10 @@ Description: >
 # #     config_lot:
 #         format: all
 #         btns: 
-# # #             
-#             lot_mail:
-#                 config: waka.mailer::btns.lot_mail
+# # #             lot_word:
+#                 config: waka.cloud::btns.lot_word
 #                 group: waka.utils::lang.prod.send
-# #     # partials: #Attention seul les variables modelId et modelClass (class du controller) sont disponible sans les partials.  
+# # #     # partials: #Attention seul les variables modelId et modelClass (class du controller) sont disponible sans les partials.  
 #     #     testbtns:
 #     #         url: $/wcli/crm/controllers/clients/_test_btns.htm
 
@@ -135,13 +130,7 @@ Description: >
 # # #             word_cloud:
 #                 config: waka.cloud::btns.word
 #                 group: waka.utils::lang.prod.send
-# # # # #             mail:
-#                 config: waka.mailer::btns.mail
-#                 group: waka.utils::lang.prod.send
-# # # #             outlook:
-#                 config: waka.msgraph::btns.outlook
-#                 group: waka.utils::lang.prod.send
-# # #             exportChildExcel:
+# # # # # # # #             exportChildExcel:
 #                 config: waka.importexport::btns.exportChildExcel
 #                 group: waka.utils::lang.prod.produce
 # # #     # partials: #Attention seul les variables modelId et modelClass (class du controller) sont disponible sans les partials.  
