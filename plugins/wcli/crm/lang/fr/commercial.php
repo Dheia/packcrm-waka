@@ -8,6 +8,7 @@ return [
     'email' => 'Email',
     'clients' => 'Clients',
     'contacts' => 'Contacts',
+    'section_ca' => 'CA',
     'venteMois' => 'Les ventes du mois',
     'venteMois_com' => '30 derniers jours glissant',
     'ventesTotal' => 'Les ventes totals',

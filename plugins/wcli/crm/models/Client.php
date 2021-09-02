@@ -183,6 +183,31 @@ class Client extends Model
         }
         return $sales->pluck('value')->toArray();
     }
+    //
+    public function getVentesByMonth($periode) {
+        $sales = $this->ventes()->wakaPeriode($periode, 'sale_at');
+        $sales =  $sales->select(\Db::raw('SUM(amount) as value'), \DB::raw('MONTH(sale_at) month'), \DB::raw('YEAR(sale_at) year'))
+            ->groupBy('year','month')->get();
+        return $sales;
+    }
+    public function getVentesByMonthLabel($attributes) {
+        $periode = $attributes['periode'];
+        $sales =  $this->getVentesByMonth($periode);
+        if(!$sales) {
+            return [];
+        }
+        trace_log($sales->pluck('month')->toArray());
+        return $sales->pluck('month')->toArray();
+    }
+    public function getVentesByMonthValue($attributes) {
+        $periode = $attributes['periode'];
+        $sales =  $this->getVentesByMonth($periode);
+        if(!$sales) {
+            return [];
+        }
+        trace_log($sales->pluck('value')->toArray());
+        return $sales->pluck('value')->toArray();
+    }
 
     /**
      * SCOPES

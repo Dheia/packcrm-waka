@@ -14,9 +14,12 @@ fields:
             - 'wcli.crm.*'
     commercial:
         label: 'wcli.crm::client.commercial'
-        span: right
+        span: left
         type: relation
         placeholder: 'waka.utils::lang.global.placeholder'
         nameFrom: name
         permissions:
             - 'wcli.crm.*'
+    site:
+        label: 'wcli.crm::client.site'
+        span: left

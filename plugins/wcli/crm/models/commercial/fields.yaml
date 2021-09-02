@@ -3,21 +3,33 @@
 # ===================================
 
 fields:
-    first_name:
-        label: wcli.crm::commercial.first_name
+    chart_1:
+        label: wcli.crm::client.chart_1
         span: left
-        required: true
-    last_name:
-        label: wcli.crm::commercial.last_name
-        span: right
-        required: true
-    tel:
-        label: wcli.crm::commercial.tel
-        span: left
-    email:
-        label: wcli.crm::commercial.email
-        span: right
-        required: true
+        type: chartform
+        chartType: pie_or_doughnut
+        renderType: doughnut
+        labels: getVentesByGammesLabels
+        width: 100%
+        height: 300px
+        attributes:
+            periode: y
+        dataSets:
+            first:
+                fnc: getVentesByGammesValue
+    chart_2:
+            label: "CA des 12 derniers mois"
+            span: right
+            type: chartform
+            chartType: bar_or_line
+            renderType: bar
+            labels: getVentesByMonthLabel
+            attributes:
+                periode: d_365
+            dataSets:
+                first:
+                    label: CA
+                    fnc: getVentesByMonthValue   
     clients:
         label: wcli.crm::commercial.clients
         span: full
@@ -28,3 +40,9 @@ fields:
         span: full
         type: partial
         path: field_contacts
+secondaryTabs:
+    fields:
+        info:
+            type: modelinfo
+            mode: secondary
+            src: /wcli/crm/models/commercial/fields_for_side_bar.yaml

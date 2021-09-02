@@ -1,0 +1,48 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: wcli.crm::commercial.name
+        span: auto
+        required: true
+        infoType: title
+        noUpdate: true
+    first_name:
+        label: wcli.crm::commercial.first_name
+        span: left
+        required: true
+    last_name:
+        label: wcli.crm::commercial.last_name
+        span: right
+        required: true
+    tel:
+        label: wcli.crm::commercial.tel
+        span: left
+    email:
+        label: wcli.crm::commercial.email
+        span: right
+        required: true
+    section_ca:
+        label: wcli.crm::commercial.section_ca
+        span: auto
+        infoType: section
+        noUpdate: true
+    venteMois:
+        label: wcli.crm::commercial.venteMois
+        span: auto
+        commentAbove: wcli.crm::commercial.venteMois_com
+        infoType: euro
+        noUpdate: true
+    ventesTotal:
+        label: wcli.crm::commercial.ventesTotal
+        span: auto
+        infoType: euro
+        noUpdate: true
+    venteAnnee:
+        label: wcli.crm::commercial.venteAnnee
+        span: auto
+        infoType: euro
+        noUpdate: true
+
