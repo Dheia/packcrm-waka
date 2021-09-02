@@ -1,0 +1,26 @@
+fields:
+    name:
+        label: wcli.crm::client.name
+        span: left
+        required: true
+        permissions: [wcli.crm.*]
+        cssInfoClass: sb-h1
+        editable: true
+    slug:
+        label: wcli.crm::client.slug
+        span: right
+        required: true
+        preset: name
+        permissions: [wcli.crm.*]
+        editable: true
+    commercial:
+        label: wcli.crm::client.commercial
+        span: right
+        type: relation
+        value: commercial.name
+        placeholder: waka.utils::lang.global.placeholder
+        nameFrom: name
+        permissions: [wcli.crm.*]
+        infotype: link
+        link: 
+        editable: true

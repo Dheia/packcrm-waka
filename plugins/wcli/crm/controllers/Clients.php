@@ -12,8 +12,8 @@ class Clients extends Controller
         'Backend.Behaviors.FormController',
         'Backend.Behaviors.ListController',
         'Waka.Utils.Behaviors.BtnsBehavior',
+        'Waka.Utils.Behaviors.SideBarUpdate',
         'Backend.Behaviors.RelationController',
-        'Waka.Utils.Behaviors.SidebarInfoBehavior',
         'Waka.Mailer.Behaviors.MailBehavior',
         'Waka.ImportExport.Behaviors.ExcelImport',
         'Waka.ImportExport.Behaviors.ExcelExport',
@@ -24,7 +24,7 @@ class Clients extends Controller
     public $listConfig = 'config_list.yaml';
     public $btnsConfig = 'config_btns.yaml';
     public $relationConfig = 'config_relation.yaml';
-    public $sidebarInfoConfig = 'config_sidebar_info.yaml';
+    public $sideBarUpdateConfig = 'config_side_bar_update.yaml';
 
     public $requiredPermissions = ['wcli.crm.*'];
     //FIN DE LA CONFIG AUTO
@@ -42,7 +42,5 @@ class Clients extends Controller
         $this->bodyClass = 'compact-container';
         return $this->asExtension('FormController')->update($id);
     }
-
         //endKeep/
 }
-

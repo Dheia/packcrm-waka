@@ -1,0 +1,12 @@
+# ===================================
+#  Side Bar Behavior Config
+# ===================================
+
+# Record name
+name: wcli.utils::global.side_bar_update
+
+# Model Form Field configuration
+form: $/wcli/crm/models/client/fields_for_side_bar.yaml
+
+# Model Class name
+modelClass: Wcli\Crm\Models\Client
