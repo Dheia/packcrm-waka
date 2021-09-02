@@ -6,7 +6,7 @@
 title: waka.utils::lang.side_bar_info.update
 
 # Model Form Field configuration
-form: $/wcli/crm/models/client/fields_for_side_bar.yaml
+form: $/wcli/crm/models/commercial/fields_for_side_bar.yaml
 
 # Model Class name
-modelClass: Wcli\Crm\Models\Client
+modelClass: Wcli\Crm\Models\Commercial

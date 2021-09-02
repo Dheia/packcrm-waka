@@ -12,6 +12,7 @@ class CreateClientsTable extends Migration
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('name');
+            $table->string('site')->nullable();
             $table->string('slug');
             $table->integer('commercial_id')->unsigned()->nullable();
             $table->timestamps();

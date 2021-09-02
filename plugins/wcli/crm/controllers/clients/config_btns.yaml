@@ -54,6 +54,12 @@ action_bar:
             waka.utils::lang.prod.send: oc-icon-external-link
             waka.utils::lang.prod.tools: oc-icon-wrench
         btns:
+            word:
+                config: waka.worder::btns.word
+                group: waka.utils::lang.prod.produce
+            word_cloud:
+                config: waka.cloud::btns.word
+                group: waka.utils::lang.prod.send
             mail:
                 config: waka.mailer::btns.mail
                 group: waka.utils::lang.prod.send
@@ -123,7 +129,13 @@ Description: >
 #             waka.utils::lang.prod.send: oc-icon-external-link
 #             waka.utils::lang.prod.tools: oc-icon-wrench
 #         btns:
-# # # # # #             mail:
+# #             word:
+#                 config: waka.worder::btns.word
+#                 group: waka.utils::lang.prod.produce
+# # #             word_cloud:
+#                 config: waka.cloud::btns.word
+#                 group: waka.utils::lang.prod.send
+# # # # #             mail:
 #                 config: waka.mailer::btns.mail
 #                 group: waka.utils::lang.prod.send
 # # # #             outlook:

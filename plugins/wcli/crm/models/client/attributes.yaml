@@ -6,6 +6,8 @@ icon: icon-info
 attributes:
     name:
         label: wcli.crm::client.name
+    site:
+        label: wcli.crm::client.site
     slug:
         label: wcli.crm::client.slug
     total_ventes:

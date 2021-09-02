@@ -1,26 +1,54 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
 fields:
     name:
         label: wcli.crm::client.name
         span: left
         required: true
         permissions: [wcli.crm.*]
-        cssInfoClass: sb-h1
-        editable: true
+        infoType: title
+    site:
+        label: wcli.crm::client.site
+        span: left
+        infoType: link
     slug:
         label: wcli.crm::client.slug
         span: right
         required: true
         preset: name
         permissions: [wcli.crm.*]
-        editable: true
+        noUpdate: true
     commercial:
         label: wcli.crm::client.commercial
-        span: right
+        span: left
         type: relation
-        value: commercial.name
         placeholder: waka.utils::lang.global.placeholder
         nameFrom: name
         permissions: [wcli.crm.*]
-        infotype: link
-        link: 
-        editable: true
+        infoType: link
+        value: commercial.name
+        bkRacine: wcli/crm/commercials/update/
+        linkValue: commercial.id
+    section_ca:
+        label: wcli.crm::client.section_ca
+        span: auto
+        infoType: section
+        noUpdate: true
+    total_ventes:
+        label: wcli.crm::client.total_ventes
+        span: auto
+        infoType: euro
+        noUpdate: true
+    total_ventes_n:
+        label: wcli.crm::client.total_ventes_n
+        span: auto
+        infoType: euro
+        noUpdate: true
+    total_ventes_m:
+        label: wcli.crm::client.total_ventes_m
+        span: auto
+        infoType: euro
+        noUpdate: true
+

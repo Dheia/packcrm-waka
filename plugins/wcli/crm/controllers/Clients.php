@@ -12,8 +12,9 @@ class Clients extends Controller
         'Backend.Behaviors.FormController',
         'Backend.Behaviors.ListController',
         'Waka.Utils.Behaviors.BtnsBehavior',
-        'Waka.Utils.Behaviors.SideBarUpdate',
         'Backend.Behaviors.RelationController',
+        'Waka.Utils.Behaviors.SideBarUpdate',
+        'Waka.Worder.Behaviors.WordBehavior',
         'Waka.Mailer.Behaviors.MailBehavior',
         'Waka.ImportExport.Behaviors.ExcelImport',
         'Waka.ImportExport.Behaviors.ExcelExport',
@@ -44,3 +45,4 @@ class Clients extends Controller
     }
         //endKeep/
 }
+
