@@ -8,6 +8,7 @@ return [
     'contacts' => 'Contacts',
     'ventes' => 'Ventes',
     'chart_1' => 'Ventes par gamme année en cours',
+    'chart_2' => 'CA des 12 derniers mois',
     'section_ca' => 'CA',
     'total_ventes' => 'Total des ventes',
     'total_ventes_n' => 'Total des ventes N',

@@ -109,6 +109,6 @@ Description: >
 #             waka.utils::lang.prod.send: oc-icon-external-link
 #             waka.utils::lang.prod.tools: oc-icon-wrench
 #         btns:
-# # # # # # # # #     # partials: #Attention seul les variables modelId et modelClass (class du controller) sont disponible sans les partials.  
+# # # # # # # # # #     # partials: #Attention seul les variables modelId et modelClass (class du controller) sont disponible sans les partials.  
 #     #     name:
 #     #         url: $/wcli/crm/controllers/ventes/_test_update.htm

@@ -18,9 +18,9 @@ fields:
             first:
                 fnc: getVentesByGammesValue
     chart_2:
-            label: "CA des 12 derniers mois"
-            span: right
-            type: chartform
+        label: wcli.crm::client.chart_2
+        span: right
+        type: chartform
             chartType: bar_or_line
             renderType: bar
             labels: getVentesByMonthLabel
@@ -29,7 +29,7 @@ fields:
             dataSets:
                 first:
                     label: CA
-                    fnc: getVentesByMonthValue   
+                    fnc: getVentesByMonthValue 
     contacts:
         label: wcli.crm::client.contacts
         span: full
