@@ -4,8 +4,8 @@
 
 fields:
     chart_1:
-        label: wcli.crm::client.chart_1
-        span: left
+        label: wcli.crm::commercial.chart_1
+        span: auto
         type: chartform
         chartType: pie_or_doughnut
         renderType: doughnut
@@ -18,18 +18,22 @@ fields:
             first:
                 fnc: getVentesByGammesValue
     chart_2:
-            label: "CA des 12 derniers mois"
-            span: right
-            type: chartform
-            chartType: bar_or_line
-            renderType: bar
-            labels: getVentesByMonthLabel
-            attributes:
-                periode: d_365
-            dataSets:
-                first:
-                    label: CA
-                    fnc: getVentesByMonthValue   
+        label: wcli.crm::commercial.chart_2
+        span: auto
+        type: chartform
+        chartType: bar_or_line
+        renderType: bar
+        labels: getVentesByMonthLabel
+        attributes:
+            periode: y_to_d
+            periode2: y_1_to_d
+        dataSets:
+            first:
+                label: CA
+                fnc: getVentesByMonthValue   
+            second:
+                label: CA (N-1)
+                fnc: getVentesByMonthN1Value 
     clients:
         label: wcli.crm::commercial.clients
         span: full

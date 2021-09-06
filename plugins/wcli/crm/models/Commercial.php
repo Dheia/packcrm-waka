@@ -48,6 +48,9 @@ class Commercial extends Model
         'venteMois',
         'ventesTotal',
         'venteAnnee',
+        'cumul',
+        'cumuln1',
+        'progression',
     ];
 
     /**
@@ -200,7 +203,6 @@ class Commercial extends Model
         if(!$sales) {
             return [];
         }
-        trace_log($sales->pluck('month')->toArray());
         return $sales->pluck('month')->toArray();
     }
     public function getVentesByMonthValue($attributes) {
@@ -209,8 +211,30 @@ class Commercial extends Model
         if(!$sales) {
             return [];
         }
-        trace_log($sales->pluck('value')->toArray());
         return $sales->pluck('value')->toArray();
+    }
+    public function getVentesByMonthN1Value($attributes) {
+        $periode2 = $attributes['periode2'];
+        $sales =  $this->getVentesByMonth($periode2);
+        if(!$sales) {
+            return [];
+        }
+        return $sales->pluck('value')->toArray();
+    }
+    public function getCumulAttribute() {
+        $sales =  $this->getVentesByMonth('y_to_d');
+        return $sales->sum('value');
+
+
+    }
+    public function getCumuln1Attribute() {
+         $sales =  $this->getVentesByMonth('y_1_to_d');
+        return $sales->sum('value');
+    }
+    public function getProgressionAttribute() {
+        $salesn =  $this->getVentesByMonth('y_to_d')->sum('value');
+        $salesn1 =  $this->getVentesByMonth('y_1_to_d')->sum('value');
+        return round(($salesn - $salesn1)/$salesn1*100,2);
     }
 
     

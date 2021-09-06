@@ -45,4 +45,18 @@ fields:
         span: auto
         infoType: euro
         noUpdate: true
+    cumul:
+        label: wcli.crm::commercial.cumul
+        span: auto
+        infoType: euro
+        noUpdate: true
+    cumuln1:
+        label: wcli.crm::commercial.cumuln1
+        span: auto
+        infoType: euro
+        noUpdate: true
+    progression:
+        label: wcli.crm::commercial.progression
+        span: auto
+        noUpdate: true
 

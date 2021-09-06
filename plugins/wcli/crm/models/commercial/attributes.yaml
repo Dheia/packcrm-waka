@@ -23,6 +23,14 @@ attributes:
     venteAnnee:
         label: wcli.crm::commercial.venteAnnee
         type: euro
+    cumul:
+        label: wcli.crm::commercial.cumul
+        type: euro
+    cumuln1:
+        label: wcli.crm::commercial.cumuln1
+        type: euro
+    progression:
+        label: wcli.crm::commercial.progression
     updated_at:
         label: waka.utils::lang.global.updated_at
         type: date-medium

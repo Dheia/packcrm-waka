@@ -28,3 +28,6 @@
 [submodule "plugins/waka/charter"]
 	path = plugins/waka/charter
 	url = https://github.com/charlesStOlive/oc-charter.git
+[submodule "plugins/waka/pdfer"]
+	path = plugins/waka/pdfer
+	url = https://github.com/charlesStOlive/oc-pdfer.git

@@ -8,3 +8,19 @@ ventes:
     outputs:
         attributes: 
             main: wcli/crm/models/vente/attributes.yaml
+chart1:
+    name: Graphique comparatif
+    attributes:
+        width: config::waka.charter::fnc_fields.width 
+        height: config::waka.charter::fnc_fields.height 
+        chartType:
+            label: Type de graphique
+            type: dropdown
+            options: [bar,line]
+        periode: fnc::getPeriodeConfig
+        periode2: fnc::getPeriodeConfig
+    outputs: 
+        values: 
+            chart:
+                label: graphique
+                type: image
