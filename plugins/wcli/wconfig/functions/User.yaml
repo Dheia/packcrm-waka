@@ -1,0 +1,21 @@
+clientsVentes:
+    name: Les ventes des clients
+    attributes:
+        tag:
+            label: Filtrer par Tag
+            type: taglist
+            useKey: true
+            options: fnc::getTagList
+        cut:
+            label: Filtrer sur une valeur
+            type: section
+            comment: Reservé aux administrateur
+        column:
+            label : Filtrer sur une valeur
+        calcul: fnc::getCalculConfig
+        valeur: 
+            label: Valeur
+            span: right
+    outputs:
+        attributes: 
+            main: wcli/crm/models/client/attributes.yaml

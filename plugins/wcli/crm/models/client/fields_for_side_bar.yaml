@@ -51,4 +51,35 @@ fields:
         span: auto
         infoType: euro
         noUpdate: true
+    cumul:
+        label: wcli.crm::client.cumul
+        span: auto
+        infoType: euro
+        noUpdate: true
+    cumuln1:
+        label: wcli.crm::client.cumuln1
+        span: auto
+        infoType: euro
+        noUpdate: true
+    progression:
+        label: wcli.crm::client.progression
+        span: auto
+        noUpdate: true
+    s_coordone:
+        label: wcli.crm::client.s_coordone
+        span: auto
+        infoType: section
+        noUpdate: true
+    adresse:
+        label: wcli.crm::client.adresse
+        span: auto
+    pays:
+        label: wcli.crm::client.pays
+        span: auto
+    ville:
+        label: wcli.crm::client.ville
+        span: auto
+    cp:
+        label: wcli.crm::client.cp
+        span: auto
 

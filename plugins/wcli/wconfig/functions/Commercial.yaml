@@ -8,6 +8,31 @@ ventes:
     outputs:
         attributes: 
             main: wcli/crm/models/vente/attributes.yaml
+            client: wcli/crm/models/client/attributes.yaml
+            gamme: wcli/crm/models/gamme/attributes.yaml
+clientsVentes:
+    name: Les ventes de vos clients
+    attributes:
+        tag:
+            label: Filtrer par Tag
+            type: taglist
+            useKey: true
+            options: fnc::getTagList
+        cut:
+            label: Filtrer sur une valeur
+            type: section
+            comment: Reservé aux administrateur
+        column:
+            label : Filtrer sur une valeur
+        calcul: fnc::getCalculConfig
+        valeur: 
+            label: Valeur
+            span: right  
+    outputs:
+        attributes: 
+            main: wcli/crm/models/client/attributes.yaml
+    
+
 chart1:
     name: Graphique comparatif
     attributes:
@@ -16,9 +41,13 @@ chart1:
         chartType:
             label: Type de graphique
             type: dropdown
-            options: [bar,line]
+            options: 
+                bar: Bar
+                line: Ligne
         periode: fnc::getPeriodeConfig
         periode2: fnc::getPeriodeConfig
+        beginAtZero: config::waka.charter::fnc_fields.beginAtZero 
+        color: config::waka.charter::fnc_fields.color 
     outputs: 
         values: 
             chart:

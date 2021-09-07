@@ -21,15 +21,15 @@ fields:
         label: wcli.crm::client.chart_2
         span: right
         type: chartform
-            chartType: bar_or_line
-            renderType: bar
-            labels: getVentesByMonthLabel
-            attributes:
-                periode: d_365
-            dataSets:
-                first:
-                    label: CA
-                    fnc: getVentesByMonthValue 
+        chartType: bar_or_line
+        renderType: bar
+        labels: getVentesByMonthLabel
+        attributes:
+            periode: d_365
+        dataSets:
+            first:
+                label: CA
+                fnc: getVentesByMonthValue 
     contacts:
         label: wcli.crm::client.contacts
         span: full

@@ -28,6 +28,10 @@ class ClientsImport implements ToCollection, WithHeadingRow, WithCalculatedFormu
             $client->name = $row['name'] ?? null;
             $client->slug = $row['slug'] ?? null;
             $client->commercial_id = $row['commercial_id'] ?? null;
+            $client->adresse = $row['adresse'] ?? null;
+            $client->pays = $row['pays'] ?? null;
+            $client->ville = $row['ville'] ?? null;
+            $client->cp = $row['cp'] ?? null;
             $client->save();
         }
     }
@@ -54,7 +58,14 @@ class ClientsImport implements ToCollection, WithHeadingRow, WithCalculatedFormu
 //             $client->id = $row['id'] ?? null;
 //             $client->name = $row['name'] ?? null;
 //             $client->slug = $row['slug'] ?? null;
-//             $client->commercial_id = $row['commercial_id'] ?? null;
+//             $client->s_coordone = $row['s_coordone'] ?? null;
+//             $client->adresse = $row['adresse'] ?? null;
+//             $client->pays = $row['pays'] ?? null;
+//             $client->ville = $row['ville'] ?? null;
+//             $client->cp = $row['cp'] ?? null;
+//             $client->cumul = $row['cumul'] ?? null;
+//             $client->cumuln1 = $row['cumuln1'] ?? null;
+//             $client->progression = $row['progression'] ?? null;
 //             $client->save();
 //         }
 //     }

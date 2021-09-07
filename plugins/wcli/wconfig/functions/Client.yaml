@@ -1,6 +1,6 @@
 
 ventes:
-    name: Tous les projet actifs OU fermés
+    name: Liste des Ventes
     attributes:
         periode:
             label: Choisissez une période
@@ -8,9 +8,31 @@ ventes:
             options: fnc::getPeriode
         gamme:
             label: Choisissez une gamme (vide = tt gammes)
-            type: dropdown
+            type: taglist
+            useKey: true
             options: list::Wcli\Crm\Models\Gamme
     outputs:
         attributes: 
             main: wcli/crm/models/vente/attributes.yaml
             gamme: wcli/crm/models/gamme/attributes.yaml
+
+chart1:
+    name: Graphique comparatif de CA
+    attributes:
+        width: config::waka.charter::fnc_fields.width 
+        height: config::waka.charter::fnc_fields.height 
+        chartType:
+            label: Type de graphique
+            type: dropdown
+            options: 
+                bar: Bar
+                line: Ligne
+        periode: fnc::getPeriodeConfig
+        periode2: fnc::getPeriodeConfig
+        beginAtZero: config::waka.charter::fnc_fields.beginAtZero 
+        color: config::waka.charter::fnc_fields.color 
+    outputs: 
+        values: 
+            chart:
+                label: graphique
+                type: image

@@ -10,12 +10,28 @@ attributes:
         label: wcli.crm::client.site
     slug:
         label: wcli.crm::client.slug
+    adresse:
+        label: wcli.crm::client.adresse
+    pays:
+        label: wcli.crm::client.pays
+    ville:
+        label: wcli.crm::client.ville
+    cp:
+        label: wcli.crm::client.cp
     total_ventes:
         label: wcli.crm::client.total_ventes
     total_ventes_n:
         label: wcli.crm::client.total_ventes_n
     total_ventes_m:
         label: wcli.crm::client.total_ventes_m
+    cumul:
+        label: wcli.crm::client.cumul
+        type: euro
+    cumuln1:
+        label: wcli.crm::client.cumuln1
+        type: euro
+    progression:
+        label: wcli.crm::client.progression
     updated_at:
         label: waka.utils::lang.global.updated_at
         type: date-medium

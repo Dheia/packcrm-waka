@@ -10,3 +10,5 @@ attributes:
         label: Prenom
     email:
         label: email
+    fullName:
+        label: Nom complet

@@ -47,6 +47,9 @@ class Client extends Model
         'total_ventes',
         'total_ventes_n',
         'total_ventes_m',
+        'cumul',
+        'cumuln1',
+        'progression',
     ];
 
     /**
@@ -207,6 +210,25 @@ class Client extends Model
         }
         trace_log($sales->pluck('value')->toArray());
         return $sales->pluck('value')->toArray();
+    }
+
+    public function getVentesByMonthN1Value($attributes) {
+        $periode2 = $attributes['periode2'];
+        $sales =  $this->getVentesByMonth($periode2);
+        if(!$sales) {
+            return [];
+        }
+        return $sales->pluck('value')->toArray();
+    }
+
+    public function getCumulAttribute() {
+        return  $this->ventes()->wakaPeriode('y_to_d','sale_at')->sum('amount');
+    }
+    public function getCumuln1Attribute() {
+        return  $this->ventes()->wakaPeriode('y_1_to_d', 'sale_at')->sum('amount');
+    }
+    public function getProgressionAttribute() {
+        return round(($this->cumul - $this->cumuln1)/$this->cumuln1*100,2);
     }
 
     /**

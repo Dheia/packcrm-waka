@@ -15,6 +15,10 @@ class CreateClientsTable extends Migration
             $table->string('site')->nullable();
             $table->string('slug');
             $table->integer('commercial_id')->unsigned()->nullable();
+            $table->string('adresse')->nullable();
+            $table->string('pays')->nullable();
+            $table->string('ville')->nullable();
+            $table->string('cp')->nullable();
             $table->timestamps();
         });
     }

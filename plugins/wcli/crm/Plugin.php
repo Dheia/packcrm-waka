@@ -91,7 +91,7 @@ class Plugin extends PluginBase
                 'url'         => Backend::url('wcli/crm/contacts'),
                 'icon'        => 'icon-user',
                 'permissions' => ['wcli.crm.*'],
-                'order'       => 500,
+                'order'       => 010,
                 'sideMenu' => [
                     'side-menu-contacts' => [
                         'label' => Lang::get('wcli.crm::lang.menu.contacts'),

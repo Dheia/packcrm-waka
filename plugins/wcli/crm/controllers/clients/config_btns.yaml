@@ -71,9 +71,6 @@ Description: >
 
 
 #     ##### SAUVEGARDE PURE ########
-# # ===================================
-# #  Btn  Behavior Config
-# # ===================================
 
 # modelClass: Wcli\Crm\Models\Client
 
@@ -111,7 +108,7 @@ Description: >
 # # #             lot_word:
 #                 config: waka.cloud::btns.lot_word
 #                 group: waka.utils::lang.prod.send
-# # #     # partials: #Attention seul les variables modelId et modelClass (class du controller) sont disponible sans les partials.  
+# # # #     # partials: #Attention seul les variables modelId et modelClass (class du controller) sont disponible sans les partials.  
 #     #     testbtns:
 #     #         url: $/wcli/crm/controllers/clients/_test_btns.htm
 
@@ -130,9 +127,10 @@ Description: >
 # # #             word_cloud:
 #                 config: waka.cloud::btns.word
 #                 group: waka.utils::lang.prod.send
-# # # # # # # #             exportChildExcel:
+# # # # # # # # #             exportChildExcel:
 #                 config: waka.importexport::btns.exportChildExcel
 #                 group: waka.utils::lang.prod.produce
-# # #     # partials: #Attention seul les variables modelId et modelClass (class du controller) sont disponible sans les partials.  
+# # 
+#     # partials: #Attention seul les variables modelId et modelClass (class du controller) sont disponible sans les partials.  
 #     #     name:
 #     #         url: $/wcli/crm/controllers/clients/_test_update.htm

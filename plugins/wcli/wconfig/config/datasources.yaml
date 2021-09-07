@@ -86,17 +86,21 @@ commercial:
     controller: wcli/crm/commercials
     editFunctions: Wcli\Wconfig\Functions\Commercial
     attributes: wcli/crm/models/commercial/attributes.yaml
-    relations:
-        client: 
-            label: Client
-            images: true
-            attributes: wcli/crm/models/client/attributes.yaml
-        client.gamme: 
-            label: Client
-            attributes: wcli/crm/models/gamme/attributes.yaml
     emails:
         to: 
             key: email
+
+wakaUser: 
+    label: Utilisateurs
+    code: wakaUser
+    test_id: 1
+    author: Wcli
+    plugin: Wconfig
+    name: WakaUser
+    class: Wcli\Wconfig\Models\WakaUser
+    controller: backend/users
+    editFunctions: Wcli\Wconfig\Functions\User
+
 
 gamme:
     label: Gamme

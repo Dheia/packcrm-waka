@@ -1,6 +1,5 @@
-
 ventes:
-    name: Liste des ventes du client du contact
+    name: Tous les ventes du client 
     attributes:
         periode:
             label: Choisissez une période
@@ -14,4 +13,38 @@ ventes:
     outputs:
         attributes: 
             main: wcli/crm/models/vente/attributes.yaml
-            gamme: wcli/crm/models/gamme/attributes.yaml
+            client: wcli/crm/models/client/attributes.yaml
+
+chart1:
+    name: Graphique comparatif
+    attributes:
+        width: config::waka.charter::fnc_fields.width 
+        height: config::waka.charter::fnc_fields.height 
+        chartType:
+            label: Type de graphique
+            type: dropdown
+            options: 
+                bar: Bar
+                line: Ligne
+        periode: fnc::getPeriodeConfig
+        periode2: fnc::getPeriodeConfig
+        beginAtZero: config::waka.charter::fnc_fields.beginAtZero 
+        color: config::waka.charter::fnc_fields.color 
+    outputs: 
+        values: 
+            chart:
+                label: graphique
+                type: image
+
+
+gammes: 
+    name: Présentation des gammes
+    attributes:
+        gamme:
+            label: Choisissez une gamme (vide = tt gammes)
+            type: taglist
+            useKey: true
+            options: list::Wcli\Crm\Models\Gamme
+    outputs:
+        attributes: 
+            main: wcli/crm/models/gamme/attributes.yaml

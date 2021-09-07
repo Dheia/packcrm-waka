@@ -17,21 +17,46 @@ class Commercial extends FunctionsBase
         if ($attributes['periode'] ?? false) {
             $result = $result->wakaPeriode($attributes['periode'], 'sale_at');
         }
-        $result = $result->orderby('sale_at', 'asc')->with('client')->get();
+        $result = $result->orderby('sale_at', 'asc')->with('client', 'gamme')->get();
 
         return $result->toArray();
+    }
+
+    public function clientsventes($attributes)
+    {
+        $clients = $this->model->clients();
+        if($attributes['tag'] ?? false) {
+            $clients = $clients->tagFilter($attributes['tag']);
+        }
+        
+        $clients = $clients->get();
+        $clients = $this->getAttributesDs($clients);
+
+        if($attributes['column'] && $attributes['calcul'] && $attributes['valeur']) {
+            trace_log("OKOKOK");
+            $clients = $clients->reject(function ($item, $key) use($attributes) {
+                $column = $attributes['column'];
+                $calcul = $attributes['calcul'];
+                $valeur = $attributes['valeur'];
+                return !$this->dynamic_comparison($item[$column], $calcul, $valeur);
+            });
+        }
+        
+
+        return $clients->toArray();
     }
 
     public function chart1($attributes)
     {
         $dataSet = $this->model->getVentesByMonthValue($attributes);
-        $dataSet2 = $this->model->getVentesByMonthValue($attributes);
+        $dataSet2 = $this->model->getVentesByMonthN1Value($attributes);
         $labels = $this->model->getVentesByMonthLabel($attributes);
+
 
         $options = [
             'type' => $attributes['chartType'],
             'beginAtZero' => $attributes['beginAtZero'] ?? false,
-            // 'color' => $attributes['color'],
+            'color' => $attributes['color'],
         ];
         $datas = [
             'labels' => $labels,
@@ -53,6 +78,8 @@ class Commercial extends FunctionsBase
                     ->addChartOptions($options)
                     ->getChartUrl($attributes['width'], $attributes['height']);
 
+        trace_log($chart_url);
+
         $finalResult[0]['chart'] = [
             'path' => $chart_url,
             'width' => $attributes['width'],
@@ -61,6 +88,11 @@ class Commercial extends FunctionsBase
         return $finalResult;
 
         return $result->toArray();
+    }
+
+    public function getTagList()
+    {
+        return \Waka\Segator\Models\Tag::where('data_source', 'client')->lists('name', 'id');
     }
 
 }
