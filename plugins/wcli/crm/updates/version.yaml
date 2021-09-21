@@ -5,3 +5,21 @@
   - create_contacts_table.php
   - create_gammes_table.php
   - create_ventes_table.php
+1.0.2:
+  - 'seeds'
+  # - seed_client_waka_importExport_export101.php
+  # - seed_client_waka_importExport_import101.php
+  # - seed_client_waka_segator_layout101.php
+  - seed_client_waka_worder_document101.php
+  # - seed_commercial_waka_importExport_export101.php
+  # - seed_commercial_waka_importExport_import101.php
+  # - seed_commercial_waka_mailer_wakaMail101.php
+  # - seed_commercial_waka_worder_document101.php
+  # - seed_contact_waka_importExport_export101.php
+  # - seed_contact_waka_importExport_import101.php
+  # - seed_contact_waka_mailer_bloc101.php
+  # - seed_contact_waka_mailer_layout101.php
+  # - seed_contact_waka_mailer_wakaMail101.php
+  # - seed_contact_waka_worder_document101.php
+  # - seed_vente_waka_importExport_export101.php
+  # - seed_vente_waka_importExport_import101.php
