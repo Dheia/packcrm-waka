@@ -3,9 +3,10 @@
 # ===================================
 
 columns:
-    name:
-        label: wcli.crm::commercial.name
-        searchable: true
+    fullName:
+        label: wcli.crm::commercial.fullName
+        searchable: false
+        sortable: false
     action:
         label: wcli.crm::commercial.action
         type: waka-btn-actions
@@ -28,16 +29,23 @@ columns:
     email:
         label: wcli.crm::commercial.email
         searchable: true
-    venteMois:
-        label: wcli.crm::commercial.venteMois
+    total_projet_running:
+        label: wcli.crm::commercial.total_projet_running
+        type: euro
         searchable: false
         sortable: false
-    ventesTotal:
-        label: wcli.crm::commercial.ventesTotal
+    total_projet_prepare:
+        label: wcli.crm::commercial.total_projet_prepare
+        type: euro
         searchable: false
         sortable: false
-    venteAnnee:
-        label: wcli.crm::commercial.venteAnnee
+    nb_projet_retard:
+        label: wcli.crm::commercial.nb_projet_retard
+        searchable: false
+        sortable: false
+    nb_projet_running:
+        label: wcli.crm::commercial.nb_projet_running
+        type: euro
         searchable: false
         sortable: false
         invisible: true

@@ -20,15 +20,15 @@ columns:
     commercial_r:
         label: wcli.crm::client.commercial
         relation: commercial
-        select: name
         searchable: true
-    total_projet:
-        label: wcli.crm::client.total_projet
+        select: concat(first_name, ' ',last_name)
+    total_projet_running:
+        label: wcli.crm::client.total_projet_running
         type: euro
         searchable: false
         sortable: false
-    nb_projet:
-        label: wcli.crm::client.nb_projet
+    nb_projet_running:
+        label: wcli.crm::client.nb_projet_running
         type: euro
         searchable: false
         sortable: false

@@ -1,0 +1,42 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: wcli.crm::projet.name
+        span: left
+        required: true
+    client:
+        label: wcli.crm::projet.client
+        span: left
+        type: relation
+        placeholder: waka.utils::lang.global.placeholder
+        nameFrom: name
+        required: true
+    contact:
+        label: wcli.crm::projet.contact
+        span: left
+        type: dropdown
+        placeholder: waka.utils::lang.global.placeholder
+        dependsOn: client
+        options: listClientContact
+    commercial:
+        label: wcli.crm::projet.commercial
+        span: left
+        type: dropdown
+        placeholder: waka.utils::lang.global.placeholder
+        options: listUser
+    sale_at:
+        label: wcli.crm::projet.sale_at
+        span: left
+        type: datepicker
+        mode: date
+        required: true
+    state:
+        label: wcli.crm::projet.state
+        span: left
+        type: balloon-selector
+        required: true
+        default: Brouillon
+        options: listState

@@ -4,7 +4,11 @@
   - create_commercials_table.php
   - create_contacts_table.php
   - create_gammes_table.php
-  - create_ventes_table.php
+  - create_produits_table.php
+  - create_projet_produits_table.php
+  - create_projets_table.php
+  - SeedSettings.php
+  - seed_produit_.php
 # 1.0.2:
 #   - 'seeds'
 #   - seed_client_waka_importExport_export101.php

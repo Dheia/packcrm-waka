@@ -1,0 +1,125 @@
+# ===================================
+#  Btn  Behavior Config
+# ===================================
+
+Description: >
+    //startKeep/
+modelClass: Wcli\Crm\Models\Produit
+
+workflow: false 
+
+###BREADCRUMP
+breadcrump:
+    inSettings: true 
+    indexUrl: wcli/crm/produits
+    indexlabel: wcli.crm::produit.title
+    title: wcli.crm::produit.form_name
+
+###TOOL_BAR
+tool_bar:
+    base:
+        create: 
+            show: true
+            permissions: [wcli.crm.admin]
+            url: wcli/crm/produits/create
+        reorder: 
+            show: true 
+            permissions: []
+            url: wcli/crm/produits/reorder
+ 
+        delete: 
+            show: true
+            permissions: [wcli.crm.admin]
+    config_btns:
+            format: all
+            permissions: [wcli.crm.admin]
+            btns:
+                importExcel:
+                    config: waka.importexport::btns.importExcel
+                exportExcel:
+                    config: waka.importexport::btns.exportExcel
+    config_lot:
+        format: all
+        btns: 
+    # partials: #Attention seul les variables modelId et modelClass (class du controller) sont disponible sans les partials.  
+    #     testbtns:
+    #         url: $/wcli/crm/controllers/produits/_test_btns.htm
+
+###ACTION_BAR Producteurs. Les behavior liée aux boutons doivent êtres instanciés implements = [waka.xxx.behaviors.yyy] dans le controller. 
+action_bar:
+    config_btns:
+        format: grouped #unique : un seul bouton, all : tts les boutons
+        groups:
+            waka.utils::lang.prod.produce: oc-icon-file-text-o
+            waka.utils::lang.prod.send: oc-icon-external-link
+            waka.utils::lang.prod.tools: oc-icon-wrench
+        btns:
+            duplicate:
+                config: waka.utils::btns.duplicate
+                group: waka.utils::lang.prod.tools
+
+    # partials: #Attention seul les variables modelId et modelClass (class du controller) sont disponible sans les partials.  
+    #     name:
+    #         url: $/wcli/crm/controllers/produits/_test_update.htm
+Description: >
+    //endKeep/
+
+
+#     ##### SAUVEGARDE PURE ########
+
+# modelClass: Wcli\Crm\Models\Produit
+
+# workflow: false 
+
+# ###BREADCRUMP
+# breadcrump:
+#     inSettings: true 
+#     indexUrl: wcli/crm/produits
+#     indexlabel: wcli.crm::produit.title
+#     title: wcli.crm::produit.form_name
+
+# ###TOOL_BAR
+# tool_bar:
+#     base:
+#         create: 
+#             show: true
+#             permissions: [wcli.crm.admin]
+#             url: wcli/crm/produits/create
+#         reorder: 
+#             show: true#  
+#             permissions: []
+#             url: wcli/crm/produits/reorder
+#  
+#         delete: 
+#             show: true
+#             permissions: [wcli.crm.admin]
+#     config_btns:
+#             format: all
+#             btns:
+# #                 importExcel:
+#                     config: waka.importexport::btns.importExcel
+# # #                 exportExcel:
+#                     config: waka.importexport::btns.exportExcel
+# #     config_lot:
+#         format: all
+#         btns: 
+# # # # #     # partials: #Attention seul les variables modelId et modelClass (class du controller) sont disponible sans les partials.  
+#     #     testbtns:
+#     #         url: $/wcli/crm/controllers/produits/_test_btns.htm
+
+# ###ACTION_BAR Producteurs. Les behavior liée aux boutons doivent êtres instanciés implements = [waka.xxx.behaviors.yyy] dans le controller. 
+# action_bar:
+#     config_btns:
+#         format: grouped #unique : un seul bouton, all : tts les boutons
+#         groups:
+#             waka.utils::lang.prod.produce: oc-icon-file-text-o
+#             waka.utils::lang.prod.send: oc-icon-external-link
+#             waka.utils::lang.prod.tools: oc-icon-wrench
+#         btns:
+# # # # # #             duplicate:
+#                 config: waka.utils::btns.duplicate
+#                 group: waka.utils::lang.prod.tools
+# # # # # # 
+#     # partials: #Attention seul les variables modelId et modelClass (class du controller) sont disponible sans les partials.  
+#     #     name:
+#     #         url: $/wcli/crm/controllers/produits/_test_update.htm

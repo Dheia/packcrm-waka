@@ -1,0 +1,26 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    name:
+        label: wcli.crm::produit.name
+        searchable: true
+    code:
+        label: wcli.crm::produit.code
+        searchable: true
+    gamme_r:
+        label: wcli.crm::produit.gamme
+        relation: gamme
+        select: name
+        searchable: true
+    total_ht:
+        label: wcli.crm::produit.total_ht
+        type: euro
+        searchable: true
+    updated_at:
+        label: waka.utils::lang.global.updated_at
+        type: timetense
+    sort_order:
+        label: waka.utils::lang.global.sort_order
+        invisible: true

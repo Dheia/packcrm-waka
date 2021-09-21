@@ -26,6 +26,6 @@ fields:
     commercial:
         label: wcli.crm::contact.commercial
         span: left
-        type: relation
+        type: dropdown
         placeholder: waka.utils::lang.global.placeholder
-        nameFrom: name
+        options: listUser

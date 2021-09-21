@@ -54,7 +54,7 @@ class CommercialsImport implements ToCollection, WithHeadingRow, WithCalculatedF
 //                 $commercial = new Commercial();
 //             }
 //             $commercial->id = $row['id'] ?? null;
-//             $commercial->name = $row['name'] ?? null;
+//             $commercial->fullName = $row['fullName'] ?? null;
 //             $commercial->first_name = $row['first_name'] ?? null;
 //             $commercial->last_name = $row['last_name'] ?? null;
 //             $commercial->tel = $row['tel'] ?? null;

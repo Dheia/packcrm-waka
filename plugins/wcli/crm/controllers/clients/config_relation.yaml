@@ -21,10 +21,11 @@ contacts:
 projets:
     label: wcli.crm::client.projets
     manage:
-        form: $/wcli/crm/models/projet/fields_for_client.yaml
     view:
         list: $/wcli/crm/models/projet/columns_for_client.yaml
-        toolbarButtons: create|delete
+        recordUrl: wcli/crm/projets/update/:id
+        toolbarButtons: false
+        showCheckboxes: false
         showSearch: true
         recordsPerPage: 20
         defaultSort:

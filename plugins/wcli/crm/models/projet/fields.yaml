@@ -1,0 +1,33 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    state:
+        label: wcli.crm::projet.state
+        span: left
+        type: balloon-selector
+        required: true
+        default: Brouillon
+        options: listState
+    Description:
+        label: wcli.crm::projet.Description
+        span: full
+        type: richeditor
+    projetProduits:
+        label: wcli.crm::projet.projetProduits
+        span: full
+        type: partial
+        path: field_projetProduits
+    sale_at:
+        label: wcli.crm::projet.sale_at
+        span: left
+        type: datepicker
+        mode: date
+        required: true
+secondaryTabs:
+    fields:
+        info:
+            type: modelinfo
+            mode: secondary
+            src: /wcli/crm/models/projet/fields_for_side_bar.yaml

@@ -1,0 +1,46 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: wcli.crm::projetproduit.name
+        span: left
+        required: true
+        permissions: [wcli.crm.*]
+    code:
+        label: wcli.crm::projetproduit.code
+        span: right
+        permissions: [wcli.crm.*]
+    gamme:
+        label: wcli.crm::projetproduit.gamme
+        span: full
+        type: relation
+        placeholder: waka.utils::lang.global.placeholder
+        nameFrom: name
+    description:
+        label: wcli.crm::projetproduit.description
+        span: full
+        type: markdown
+        permissions: [wcli.crm.*]
+    cu:
+        label: wcli.crm::projetproduit.cu
+        span: full
+        required: true
+    qty:
+        label: wcli.crm::projetproduit.qty
+        span: full
+        required: true
+        default: 1
+    tva:
+        label: wcli.crm::projetproduit.tva
+        span: full
+        type: dropdown
+        placeholder: waka.utils::lang.global.placeholder
+        required: true
+        default: 1.2
+        options: listTva
+    total_ht:
+        label: wcli.crm::projetproduit.total_ht
+        span: full
+        dependsOn: ['tva','qty','cu']

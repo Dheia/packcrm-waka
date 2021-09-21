@@ -1,0 +1,83 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: wcli.crm::projet.name
+        span: left
+        required: true
+        infoType: title
+    code:
+        label: wcli.crm::projet.code
+        span: auto
+        required: true
+    state:
+        label: wcli.crm::projet.state
+        span: left
+        type: balloon-selector
+        required: true
+        default: Brouillon
+        options: listState
+    client:
+        label: wcli.crm::projet.client
+        span: left
+        type: relation
+        placeholder: waka.utils::lang.global.placeholder
+        nameFrom: name
+        required: true
+        infoType: link
+        value: client.name
+        bkRacine: wcli/crm/clients/update/
+        linkValue: client.id
+    contact:
+        label: wcli.crm::projet.contact
+        span: left
+        type: dropdown
+        placeholder: waka.utils::lang.global.placeholder
+        dependsOn: client
+        options: listClientContact
+        infoType: link
+        value: contact.name
+        bkRacine: wcli/crm/contacts/update/
+        linkValue: contact.id
+    commercial:
+        label: wcli.crm::projet.commercial
+        span: left
+        type: dropdown
+        placeholder: waka.utils::lang.global.placeholder
+        options: listUser
+        infoType: link
+        value: commercial.login
+        bkRacine: wcli/crm/commercials/update/
+        linkValue: commercial.id
+    s_finance:
+        label: wcli.crm::projet.s_finance
+        span: auto
+        infoType: section
+        noUpdate: true
+    total_ht:
+        label: wcli.crm::projet.total_ht
+        span: auto
+        infoType: euro
+    tva:
+        label: wcli.crm::projet.tva
+        span: auto
+        infoType: euro
+        noUpdate: true
+    total_ttc:
+        label: wcli.crm::projet.total_ttc
+        span: auto
+        infoType: euro
+        noUpdate: true
+    total_remise:
+        label: wcli.crm::projet.total_remise
+        span: auto
+        infoType: euro
+        noUpdate: true
+    total_avant_remise:
+        label: wcli.crm::projet.total_avant_remise
+        span: auto
+        infoType: euro
+        noUpdate: true
+

@@ -1,0 +1,11 @@
+produits:
+    name: Liste des produits
+    attributes:
+        gamme:
+            label: Choisissez une gamme (vide = tt gammes)
+            type: taglist
+            useKey: true
+            options: list::Wcli\Crm\Models\Gamme
+    outputs:
+        attributes: 
+            main: wcli/crm/models/projetProduit/attributes.yaml

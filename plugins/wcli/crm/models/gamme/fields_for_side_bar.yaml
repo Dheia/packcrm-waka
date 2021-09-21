@@ -1,0 +1,30 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    s_ca:
+        label: wcli.crm::gamme.s_ca
+        span: auto
+        infoType: section
+        noUpdate: true
+    name:
+        label: wcli.crm::gamme.name
+        span: left
+        required: true
+        permissions: [wcli.crm.*]
+        infoType: title
+    slug:
+        label: wcli.crm::gamme.slug
+        span: right
+        required: true
+        permissions: [wcli.crm.*]
+    nb_produits:
+        label: wcli.crm::gamme.nb_produits
+        span: auto
+        noUpdate: true
+    montant_produits:
+        label: wcli.crm::gamme.montant_produits
+        span: auto
+        noUpdate: true
+

@@ -58,7 +58,7 @@ class Client extends FunctionsBase
                     ->addChartOptions($options)
                     ->getChartUrl($attributes['width'], $attributes['height']);
 
-        trace_log($chart_url);
+        //trace_log($chart_url);
 
         $finalResult[0]['chart'] = [
             'path' => $chart_url,

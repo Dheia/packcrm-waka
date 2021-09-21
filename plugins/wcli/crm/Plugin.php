@@ -98,13 +98,19 @@ class Plugin extends PluginBase
                         'icon' => 'icon-address-card',
                         'url' => Backend::url('wcli/crm/contacts'),
                     ],
+                    'side-menu-projets' => [
+                        'label' => Lang::get('wcli.crm::lang.menu.projets'),
+                        'icon' => 'icon-dot-circle-o',
+                        'url' => Backend::url('wcli/crm/projets'),
+                        'permissions' => ['wcli.crm.*'],
+                    ],
                     'side-menu-clients' => [
                         'label' => Lang::get('wcli.crm::lang.menu.clients'),
                         'icon' => 'icon-building',
                         'url' => Backend::url('wcli/crm/clients'),
                     ],
-                    'side-menu-projets' => [
-                        'label' => Lang::get('wcli.crm::lang.menu.projets'),
+                    'side-menu-gammes' => [
+                        'label' => Lang::get('wcli.crm::lang.menu.gammes'),
                         'icon' => 'icon-dot-circle-o',
                         'url' => Backend::url('wcli/crm/gammes'),
                         'permissions' => ['wcli.crm.admin'],
@@ -113,7 +119,7 @@ class Plugin extends PluginBase
                         'label' => Lang::get('wcli.crm::lang.menu.commercials'),
                         'icon' => 'icon-users',
                         'url' => Backend::url('wcli/crm/commercials'),
-                        'permissions' => ['wcli.crm.*'],
+                        'permissions' => ['wcli.crm.admin'],
                     ],
                 ],
             ],
@@ -123,14 +129,23 @@ class Plugin extends PluginBase
     public function registerSettings()
     {
         return [
-            'tags' => [
+            'produits' => [
                 'label' => Lang::get('waka.crm::lang.menu.label'),
                 'description' => Lang::get('waka.crm::lang.menu.description'),
                 'category' => Lang::get('waka.utils::lang.menu.settings_category_model'),
                 'icon' => 'icon-filter',
                 'permissions' => ['waka.crm.admin.*'],
-                'url' => Backend::url('waka/crm/produits'),
+                'url' => Backend::url('wcli/crm/produits'),
                 'order' => 180,
+            ],
+            'crm_settings' => [
+                'label' => Lang::get('wcli.crm::lang.settings.label'),
+                'description' => Lang::get('wcli.crm::lang.settings.description'),
+                'category' => Lang::get('waka.utils::lang.menu.settings_category'),
+                'icon' => 'icon-cog',
+                'class' => 'Wcli\Crm\Models\Settings',
+                'order' => 001,
+                'permissions' => ['wcli.crm.admin'],
             ],
         ];
     }

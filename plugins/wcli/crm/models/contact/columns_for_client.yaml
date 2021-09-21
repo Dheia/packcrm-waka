@@ -19,8 +19,8 @@ columns:
     commercial_r:
         label: 'wcli.crm::contact.commercial'
         relation: commercial
-        select: name
         searchable: true
+        select: 'concat(first_name, '' '',last_name)'
     first_name:
         label: 'wcli.crm::contact.first_name'
         searchable: true

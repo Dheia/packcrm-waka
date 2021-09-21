@@ -23,12 +23,12 @@ fields:
     commercial:
         label: wcli.crm::client.commercial
         span: left
-        type: relation
+        type: dropdown
         placeholder: waka.utils::lang.global.placeholder
-        nameFrom: name
+        options: listUser
         permissions: [wcli.crm.*]
         infoType: link
-        value: commercial.name
+        value: commercial.login
         bkRacine: wcli/crm/commercials/update/
         linkValue: commercial.id
     section_ca:
@@ -36,13 +36,21 @@ fields:
         span: auto
         infoType: section
         noUpdate: true
-    nb_projet:
-        label: wcli.crm::client.nb_projet
+    nb_projet_running:
+        label: wcli.crm::client.nb_projet_running
+        span: auto
+        noUpdate: true
+    total_projet_running:
+        label: wcli.crm::client.total_projet_running
         span: auto
         infoType: euro
         noUpdate: true
-    total_projet:
-        label: wcli.crm::client.total_projet
+    nb_projet_prepare:
+        label: wcli.crm::client.nb_projet_prepare
+        span: auto
+        noUpdate: true
+    total_projet_prepare:
+        label: wcli.crm::client.total_projet_prepare
         span: auto
         infoType: euro
         noUpdate: true

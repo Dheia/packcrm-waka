@@ -15,11 +15,23 @@ fields:
     commercial:
         label: 'wcli.crm::client.commercial'
         span: left
-        type: relation
+        type: dropdown
         placeholder: 'waka.utils::lang.global.placeholder'
-        nameFrom: name
+        options: listUser
         permissions:
             - 'wcli.crm.*'
     site:
         label: 'wcli.crm::client.site'
         span: left
+    adresse:
+        label: 'wcli.crm::client.adresse'
+        span: auto
+    pays:
+        label: 'wcli.crm::client.pays'
+        span: auto
+    ville:
+        label: 'wcli.crm::client.ville'
+        span: auto
+    cp:
+        label: 'wcli.crm::client.cp'
+        span: auto

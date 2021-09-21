@@ -4,8 +4,10 @@
 
 icon: icon-info
 attributes:
-    name:
-        label: wcli.crm::commercial.name
+    login:
+        label: wcli.crm::commercial.login
+    fullName:
+        label: wcli.crm::commercial.fullName
     first_name:
         label: wcli.crm::commercial.first_name
     last_name:
@@ -14,23 +16,16 @@ attributes:
         label: wcli.crm::commercial.tel
     email:
         label: wcli.crm::commercial.email
-    venteMois:
-        label: wcli.crm::commercial.venteMois
-        type: euro
-    ventesTotal:
-        label: wcli.crm::commercial.ventesTotal
-        type: euro
-    venteAnnee:
-        label: wcli.crm::commercial.venteAnnee
-        type: euro
-    cumul:
-        label: wcli.crm::commercial.cumul
-        type: euro
-    cumuln1:
-        label: wcli.crm::commercial.cumuln1
-        type: euro
-    progression:
-        label: wcli.crm::commercial.progression
+    nb_projet_running:
+        label: wcli.crm::commercial.nb_projet_running
+    total_projet_running:
+        label: wcli.crm::commercial.total_projet_running
+    nb_projet_prepare:
+        label: wcli.crm::commercial.nb_projet_prepare
+    total_projet_prepare:
+        label: wcli.crm::commercial.total_projet_prepare
+    nb_projet_retard:
+        label: wcli.crm::commercial.nb_projet_retard
     updated_at:
         label: waka.utils::lang.global.updated_at
         type: date-medium

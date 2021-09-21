@@ -11,6 +11,7 @@ class Client extends Model
     use \Winter\Storm\Database\Traits\Validation;
     use \Waka\Utils\Classes\Traits\ScopePeriodes;
     use \Waka\Segator\Classes\Traits\TagTrait;
+    use \Waka\Utils\Classes\Traits\DbUtils;
 
 
     /**
@@ -44,8 +45,10 @@ class Client extends Model
      * @var array attributes send to datasource for creating document
      */
     public $attributesToDs = [
-        'nb_projet',
-        'total_projet',
+        'nb_projet_running',
+        'total_projet_running',
+        'nb_projet_prepare',
+        'total_projet_prepare',
     ];
 
     /**
@@ -98,7 +101,7 @@ class Client extends Model
     public $hasManyThrough = [
     ];
     public $belongsTo = [
-       'commercial' => ['Wcli\Crm\Models\Commercial'],
+       'commercial' => ['Backend\Models\User'],
     ];
     public $belongsToMany = [
     ];        
@@ -131,10 +134,39 @@ class Client extends Model
     /**
      * LISTS
      **/
+    public function listUser() {
+        $users = \Backend\Models\User::get();
+        //fonction dans dbUtils
+        return $this->CollectionConcatId($users);
+    }
 
     /**
      * GETTERS
      **/
+    public function getNbprojetAttribute() {
+        
+    }
+
+    public function getTotalprojetAttribute() {
+        
+    }
+
+     public function getNbProjetRunningAttribute() {
+        return $this->projets->count();
+
+    }
+
+    public function getTotalProjetRunningAttribute() {
+        return $this->projets->sum('total_ht');
+    }
+
+    public function getNbProjetPrepareAttribute() {
+        return $this->projets->count();
+    }
+
+    public function getTotalProjetPrepareAttribute() {
+        return $this->projets->sum('total_ht');
+    }
 
     /**
      * SCOPES
@@ -149,9 +181,7 @@ class Client extends Model
      */
     public function filterFields($fields, $context = null)
     {
-        if (!isset($fields->name)) {
-            return;
-        }
+        
     }
 
 

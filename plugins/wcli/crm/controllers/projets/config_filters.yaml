@@ -1,0 +1,20 @@
+# ===================================
+#  Config filter
+# ===================================
+
+scopes:
+    commercial:
+        label: Commercial
+        modelClass: Wcli\Crm\Models\Commercial
+        conditions: commercial_id in (:filtered)
+        nameFrom: fullName
+    scope_active:
+        label: wcli.crm::projet.scope_active
+        scope: active
+        type: checkbox
+        default: true
+    scope_late:
+        label: wcli.crm::projet.scope_late
+        scope: late
+        type: checkbox
+        default: false

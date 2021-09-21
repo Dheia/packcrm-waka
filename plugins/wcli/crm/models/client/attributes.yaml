@@ -18,10 +18,14 @@ attributes:
         label: wcli.crm::client.ville
     cp:
         label: wcli.crm::client.cp
-    nb_projet:
-        label: wcli.crm::client.nb_projet
-    total_projet:
-        label: wcli.crm::client.total_projet
+    nb_projet_running:
+        label: wcli.crm::client.nb_projet_running
+    total_projet_running:
+        label: wcli.crm::client.total_projet_running
+    nb_projet_prepare:
+        label: wcli.crm::client.nb_projet_prepare
+    total_projet_prepare:
+        label: wcli.crm::client.total_projet_prepare
     updated_at:
         label: waka.utils::lang.global.updated_at
         type: date-medium

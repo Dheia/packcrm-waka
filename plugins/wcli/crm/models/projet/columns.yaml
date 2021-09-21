@@ -1,0 +1,39 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    name:
+        label: wcli.crm::projet.name
+        searchable: true
+    code:
+        label: wcli.crm::projet.code
+        searchable: true
+    state:
+        label: wcli.crm::projet.state
+        searchable: true
+    client_r:
+        label: wcli.crm::projet.client
+        relation: client
+        select: name
+        searchable: true
+    contact_r:
+        label: wcli.crm::projet.contact
+        relation: contact
+        searchable: true
+        invisible: true
+    commercial_r:
+        label: wcli.crm::projet.commercial
+        relation: commercial
+        searchable: true
+        select: concat(first_name, ' ',last_name)
+    sale_at:
+        label: wcli.crm::projet.sale_at
+        type: date
+        searchable: true
+    total_ht:
+        label: wcli.crm::projet.total_ht
+        searchable: true
+    updated_at:
+        label: waka.utils::lang.global.updated_at
+        type: timetense

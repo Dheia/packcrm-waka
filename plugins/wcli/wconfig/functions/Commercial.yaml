@@ -1,55 +1,14 @@
-ventes:
-    name: Tous les ventes de ses clients
+projets:
+    name: Vos projets
     attributes:
-        periode:
-            label: Choisissez une période
-            type: dropdown
-            options: fnc::getPeriode
-    outputs:
-        attributes: 
-            main: wcli/crm/models/vente/attributes.yaml
-            client: wcli/crm/models/client/attributes.yaml
-            gamme: wcli/crm/models/gamme/attributes.yaml
-clientsVentes:
-    name: Les ventes de vos clients
-    attributes:
-        tag:
-            label: Filtrer par Tag
-            type: taglist
-            useKey: true
-            options: fnc::getTagList
-        cut:
-            label: Filtrer sur une valeur
-            type: section
-            comment: Reservé aux administrateur
-        column:
-            label : Filtrer sur une valeur
-        calcul: fnc::getCalculConfig
-        valeur: 
-            label: Valeur
-            span: right  
-    outputs:
-        attributes: 
-            main: wcli/crm/models/client/attributes.yaml
-    
-
-chart1:
-    name: Graphique comparatif
-    attributes:
-        width: config::waka.charter::fnc_fields.width 
-        height: config::waka.charter::fnc_fields.height 
-        chartType:
-            label: Type de graphique
+        scope:
+            label: Scope projet
             type: dropdown
             options: 
-                bar: Bar
-                line: Ligne
-        periode: fnc::getPeriodeConfig
-        periode2: fnc::getPeriodeConfig
-        beginAtZero: config::waka.charter::fnc_fields.beginAtZero 
-        color: config::waka.charter::fnc_fields.color 
-    outputs: 
-        values: 
-            chart:
-                label: graphique
-                type: image
+                late: en retard
+                notSigned: En préparation
+                validated: validé
+    outputs:
+        attributes: 
+            main: wcli/crm/models/projet/attributes.yaml
+            client: wcli/crm/models/client/attributes.yaml

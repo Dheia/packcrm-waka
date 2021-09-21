@@ -2,14 +2,14 @@ columns:
     name:
         label: 'wcli.crm::contact.name'
         searchable: true
-    action:
-        label: 'wcli.crm::contact.action'
-        type: waka-btn-actions
-        icon: icon-wrench
-        clickable: false
-        width: 25px
-        searchable: false
-        sortable: false
+    # action:
+    #     label: 'wcli.crm::contact.action'
+    #     type: waka-btn-actions
+    #     icon: icon-wrench
+    #     clickable: false
+    #     width: 25px
+    #     searchable: false
+    #     sortable: false
     tel:
         label: 'wcli.crm::contact.tel'
         searchable: true

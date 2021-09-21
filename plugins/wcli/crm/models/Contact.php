@@ -9,6 +9,7 @@ use Model;
 class Contact extends Model
 {
     use \Winter\Storm\Database\Traits\Validation;
+    use \Waka\Utils\Classes\Traits\DbUtils;
 
 
     /**
@@ -88,7 +89,7 @@ class Contact extends Model
     ];
     public $belongsTo = [
        'client' => ['Wcli\Crm\Models\Client'],
-       'commercial' => ['Wcli\Crm\Models\Commercial'],
+       'commercial' => ['Backend\Models\User'],
     ];
     public $belongsToMany = [
     ];        
@@ -121,6 +122,11 @@ class Contact extends Model
     /**
      * LISTS
      **/
+    public function listUser() {
+        $users = \Backend\Models\User::get();
+        //fonction dans dbUtils
+        return $this->CollectionConcatId($users);
+    }
 
     /**
      * GETTERS

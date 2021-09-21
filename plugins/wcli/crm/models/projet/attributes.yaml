@@ -1,0 +1,36 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+icon: icon-dollar
+attributes:
+    name:
+        label: wcli.crm::projet.name
+    code:
+        label: wcli.crm::projet.code
+    state:
+        label: wcli.crm::projet.state
+    Description:
+        label: wcli.crm::projet.Description
+        type: htm
+    sale_at:
+        label: wcli.crm::projet.sale_at
+        type: date
+    total_ht:
+        label: wcli.crm::projet.total_ht
+        type: euro
+    tva:
+        label: wcli.crm::projet.tva
+        type: euro
+    total_ttc:
+        label: wcli.crm::projet.total_ttc
+        type: euro
+    total_remise:
+        label: wcli.crm::projet.total_remise
+        type: euro
+    total_avant_remise:
+        label: wcli.crm::projet.total_avant_remise
+        type: euro
+    updated_at:
+        label: waka.utils::lang.global.updated_at
+        type: date-medium

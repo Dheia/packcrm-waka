@@ -7,7 +7,7 @@ scopes:
         label: Commercial
         modelClass: Wcli\Crm\Models\Commercial
         conditions: commercial_id in (:filtered)
-        nameFrom: name
+        nameFrom: fullName
 
     segmentation:
         label: Segmentation

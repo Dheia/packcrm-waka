@@ -1,0 +1,23 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    name:
+        label: wcli.crm::gamme.name
+        searchable: true
+    slug:
+        label: wcli.crm::gamme.slug
+        searchable: true
+    nb_produits:
+        label: wcli.crm::gamme.nb_produits
+        searchable: false
+        sortable: false
+    montant_produits:
+        label: wcli.crm::gamme.montant_produits
+        type: euro
+        searchable: false
+        sortable: false
+    updated_at:
+        label: waka.utils::lang.global.updated_at
+        type: timetense

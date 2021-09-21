@@ -13,19 +13,13 @@ columns:
     slug:
         label: 'wcli.crm::client.slug'
         searchable: true
-    total_ventes_n:
-        label: 'wcli.crm::client.total_ventes_n'
+    total_projet_running:
+        label: 'wcli.crm::client.total_projet_running'
         type: euro
         searchable: false
         sortable: false
-    total_ventes:
-        label: 'wcli.crm::client.total_ventes'
-        type: euro
-        searchable: false
-        sortable: false
-        invisible: true
-    total_ventes_m:
-        label: 'wcli.crm::client.total_ventes_m'
+    nb_projet_running:
+        label: 'wcli.crm::client.nb_projet_running'
         type: euro
         searchable: false
         sortable: false

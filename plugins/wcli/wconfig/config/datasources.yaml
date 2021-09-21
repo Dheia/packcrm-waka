@@ -89,29 +89,75 @@ commercial:
     emails:
         to: 
             key: email
+    
 
-wakaUser: 
-    label: Utilisateurs
-    code: wakaUser
+commercial: 
+    label: Commercial
+    code: commercial
     test_id: 1
     author: Wcli
-    plugin: Wconfig
-    name: WakaUser
-    class: Wcli\Wconfig\Models\WakaUser
-    controller: backend/users
-    editFunctions: Wcli\Wconfig\Functions\User
-
+    plugin: Crm
+    name: Commercial
+    class: Wcli\Crm\Models\Commercial
+    controller: wcli/crm/commercials
+    editFunctions: Wcli\Wconfig\Functions\Commercial
 
 gamme:
     label: Gamme
     code : gamme
-    test_id: 48
     author: Wcli
     plugin: Crm
     name : Gamme
     class: Wcli\Crm\Models\Gamme
     controller: wcli/crm/gammes
     attributes: wcli/crm/models/gamme/attributes.yaml
+
+projet:
+    label: Projet
+    code : projet
+    author: Wcli
+    plugin: Crm
+    name : Projet
+    class: Wcli\Crm\Models\Projet
+    controller: wcli/crm/projets
+    editFunctions: Wcli\Wconfig\Functions\Projet
+    attributes: wcli/crm/models/projet/attributes.yaml
+    relations:
+        client: 
+            label: Client
+            images: true
+            attributes: wcli/crm/models/client/attributes.yaml
+        commercial: 
+            label: Commercial
+            images: false
+            attributes: wcli/crm/models/commercial/attributes.yaml
+        contact: 
+            label: Contact
+            images: false
+            attributes: wcli/crm/models/contact/attributes.yaml
+    emails:
+        to: 
+            key: email
+            relation: contact
+        cc: 
+            key: email
+            relation: client.contacts
+        # client.gamme: 
+        #     label: Client
+        #     attributes: wcli/crm/models/gamme/attributes.yaml
+        # commercial:
+        #     label: Commercial (du contact)
+        #     attributes: wcli/crm/models/commercial/attributes.yaml
+
+projetProduit:
+    label: Produits d'un projet
+    code : projetProduit
+    author: Wcli
+    plugin: Crm
+    name : ProjetProduit
+    class: Wcli\Crm\Models\ProjetProduit
+    controller: wcli/crm/projetproduits
+    attributes: wcli/crm/models/projetproduit/attributes.yaml
 
 vente:
     label: Vente

@@ -70,7 +70,7 @@ class CommercialsExport implements FromCollection, WithHeadings, ShouldAutoSize,
 //     {
 //         return [
 //             'id',
-//             'name',
+//             'fullName',
 //             'first_name',
 //             'last_name',
 //             'tel',

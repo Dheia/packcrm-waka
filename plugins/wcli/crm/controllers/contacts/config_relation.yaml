@@ -13,6 +13,6 @@ client:
         recordUrl: wcli/crm/client/update/:id
         toolbarButtons: create|link|unlink
         defaultSort:
-            column: name
+            column: 1
             direction: asc
 

@@ -1,0 +1,28 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+icon: icon-info
+attributes:
+    name:
+        label: wcli.crm::projetproduit.name
+    code:
+        label: wcli.crm::projetproduit.code
+    description:
+        label: wcli.crm::projetproduit.description
+    cu:
+        label: wcli.crm::projetproduit.cu
+        type: euro
+    qty:
+        label: wcli.crm::projetproduit.qty
+    tva:
+        label: wcli.crm::projetproduit.tva
+    tva_m:
+        label: wcli.crm::projetproduit.tva_m
+        type: euro
+    total_ht:
+        label: wcli.crm::projetproduit.total_ht
+        type: euro
+    updated_at:
+        label: waka.utils::lang.global.updated_at
+        type: date-medium

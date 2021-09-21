@@ -1,0 +1,18 @@
+# ===================================
+#  Reorder Behavior Config
+# ===================================
+
+# Reorder Title
+title: Reorder projets
+
+# Attribute name
+nameFrom: name
+
+# Model Class name
+modelClass: Wcli\Crm\Models\ProjetProduit
+modelSource: Wcli\Crm\Model\Projet
+
+# Toolbar widget configuration
+#toolbar:
+    # Partial for toolbar buttons
+    # buttons: reorder_toolbar

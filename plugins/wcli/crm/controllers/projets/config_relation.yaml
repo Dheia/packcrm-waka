@@ -1,0 +1,18 @@
+# ===================================
+# Relation Behavior Config
+# ===================================
+
+projetProduits:
+    label: wcli.crm::projet.projetProduits
+    manage:
+        form: $/wcli/crm/models/projetproduit/fields_for_projet.yaml
+        list: $/wcli/crm/models/projetproduit/columns_for_projet.yaml
+        filter: config_filters_for_projetProduits.yaml
+    view:
+        list: $/wcli/crm/models/projetproduit/columns_for_projet.yaml
+        toolbarButtons: create|delete|addProduit|reorder
+        filter: config_filters_for_projetProduits.yaml
+        defaultSort:
+            column: sort_order
+            direction: asc
+

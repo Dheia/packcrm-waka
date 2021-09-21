@@ -3,11 +3,15 @@
 # ===================================
 
 fields:
-    name:
-        label: wcli.crm::commercial.name
+    fullName:
+        label: wcli.crm::commercial.fullName
         span: auto
-        required: true
         infoType: title
+        noUpdate: true
+        noUpdate: true
+    login:
+        label: wcli.crm::commercial.login
+        span: auto
         noUpdate: true
     first_name:
         label: wcli.crm::commercial.first_name
@@ -20,6 +24,7 @@ fields:
     tel:
         label: wcli.crm::commercial.tel
         span: left
+        noUpdate: true
     email:
         label: wcli.crm::commercial.email
         span: right
@@ -29,34 +34,26 @@ fields:
         span: auto
         infoType: section
         noUpdate: true
-    venteMois:
-        label: wcli.crm::commercial.venteMois
+    nb_projet_running:
+        label: wcli.crm::commercial.nb_projet_running
         span: auto
-        commentAbove: wcli.crm::commercial.venteMois_com
-        infoType: euro
         noUpdate: true
-    ventesTotal:
-        label: wcli.crm::commercial.ventesTotal
+    total_projet_running:
+        label: wcli.crm::commercial.total_projet_running
         span: auto
         infoType: euro
         noUpdate: true
-    venteAnnee:
-        label: wcli.crm::commercial.venteAnnee
+    nb_projet_prepare:
+        label: wcli.crm::commercial.nb_projet_prepare
+        span: auto
+        noUpdate: true
+    total_projet_prepare:
+        label: wcli.crm::commercial.total_projet_prepare
         span: auto
         infoType: euro
         noUpdate: true
-    cumul:
-        label: wcli.crm::commercial.cumul
-        span: auto
-        infoType: euro
-        noUpdate: true
-    cumuln1:
-        label: wcli.crm::commercial.cumuln1
-        span: auto
-        infoType: euro
-        noUpdate: true
-    progression:
-        label: wcli.crm::commercial.progression
+    nb_projet_retard:
+        label: wcli.crm::commercial.nb_projet_retard
         span: auto
         noUpdate: true
 

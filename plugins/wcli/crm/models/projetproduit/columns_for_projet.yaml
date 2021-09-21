@@ -1,0 +1,19 @@
+columns:
+    name:
+        label: 'wcli.crm::projetproduit.name'
+        searchable: true
+    gamme_r:
+        label: 'wcli.crm::projetproduit.gamme'
+        relation: gamme
+        select: name
+        searchable: true
+    total_ht:
+        label: 'wcli.crm::projetproduit.total_ht'
+        type: euro
+        searchable: true
+    updated_at:
+        label: 'waka.utils::lang.global.updated_at'
+        type: timetense
+    sort_order:
+        label: 'waka.utils::lang.global.sort_order'
+        invisible: true

@@ -1,0 +1,27 @@
+<?php
+return [
+    'name' => 'Nom projet',
+    'code' => 'Code du projet',
+    'state' => 'Etat',
+    'Description' => 'Description',
+    'projetProduits' => 'Produits',
+    'client' => 'Client',
+    'contact' => 'Contact',
+    'commercial' => 'Commercial',
+    'sale_at' => 'Lancement du projet',
+    's_finance' => 'Budget',
+    'total_ht' => 'Montant HT',
+    'tva' => 'TVA',
+    'total_ttc' => 'Montant TTC',
+    'total_remise' => 'Total Remise',
+    'total_avant_remise' => 'Total avant remise',
+    'scope_late' => 'Projet en retard',
+    'scope_active' => 'Projet actif',
+    'title' => 'Gestion projet',
+    'update' => 'Modification projet',
+    'courriers' => 'Gestion projet',
+    'create' => 'Créer projet',
+    'edit' => 'Editer projet',
+    'form_name' => 'Gestion projet',
+    'preview_name' => 'Voir projet'
+];

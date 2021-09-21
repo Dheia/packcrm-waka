@@ -11,6 +11,7 @@ clients:
         toolbarButtons: false
         showCheckboxes: false
         showSearch: true
+        recordsPerPage: 10
         defaultSort:
             column: name
             direction: asc
@@ -24,6 +25,21 @@ contacts:
         toolbarButtons: false
         showCheckboxes: false
         showSearch: true
+        recordsPerPage: 10
+        defaultSort:
+            column: name
+            direction: asc
+
+projets:
+    label: wcli.crm::commercial.projets
+    manage:
+    view:
+        list: $/wcli/crm/models/projet/columns_for_commercial.yaml
+        recordUrl: wcli/crm/projets/update/:id
+        toolbarButtons: false
+        showCheckboxes: false
+        showSearch: true
+        recordsPerPage: 10
         defaultSort:
             column: name
             direction: asc

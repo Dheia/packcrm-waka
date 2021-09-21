@@ -1,0 +1,29 @@
+<div id="relationManagePopup"
+     data-request-data="_relation_field: 'projetProduits', _relation_mode: 'list', manageId:<?=$manageId?>">
+    <?= Form::open() ?>
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="popup">&times;</button>
+        <h4 class="modal-title">Ajouter à partir d'un produit pré configuré</h4>
+    </div>
+
+    <div class="list-flush">
+        <?php if ($relationSearchWidget ?? false): ?>
+        <?= $relationSearchWidget->render() ?>
+        <?php endif ?>
+        <?php if ($missionTemplatesFilterWidget ?? false): ?>
+        <?= $produitFilterWidget->render() ?>
+        <?php endif ?>
+        <?= $produitListWidget->render() ?>
+    </div>
+
+    <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-request="onAddproduitsValidation" data-dismiss="popup"
+                data-stripe-load-indicator>
+            <?= e(trans('backend::lang.relation.add_selected')) ?>
+        </button>
+        <button type="button" class="btn btn-default" data-dismiss="popup">
+            <?= e(trans('backend::lang.relation.cancel')) ?>
+        </button>
+    </div>
+    <?= Form::close() ?>
+</div>

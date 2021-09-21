@@ -1,0 +1,31 @@
+tabs:
+    stretch: true
+    defaultTab: Programation
+    fields:
+        time_programmation:
+            label: Heure de calcul
+            type: datepicker
+            mode: time
+            span: left
+        tvas:
+            label: TVA
+            tab: fincance
+            type: repeater
+            form:
+                fields:
+                    name:
+                        label: Nom
+                        span: auto
+                    calcul:
+                        label: calcul
+                        span: auto
+        projetState:
+            label: Etat des projets
+            permissions: ['onlySuperUser']
+            tab: Projets
+            type: repeater
+            form:
+                fields:
+                    code:
+                        label: Code Nom
+                        span: full

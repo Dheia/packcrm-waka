@@ -26,7 +26,7 @@ tool_bar:
             show: false 
         delete: 
             show: true
-            permissions: []
+            permissions: [wcli.crm.admin]
     config_btns:
             format: all
             btns:
@@ -36,7 +36,12 @@ tool_bar:
                     config: waka.importexport::btns.exportExcel
     config_lot:
         format: all
+        permissions: [wcli.crm.admin]
         btns: 
+            lot_outlook:
+                config: waka.msgraph::btns.lot_outlook
+                group: waka.utils::lang.prod.send
+            
             lot_mail:
                 config: waka.mailer::btns.lot_mail
                 group: waka.utils::lang.prod.send
@@ -71,9 +76,6 @@ Description: >
 
 
 #     ##### SAUVEGARDE PURE ########
-# # ===================================
-# #  Btn  Behavior Config
-# # ===================================
 
 # modelClass: Wcli\Crm\Models\Contact
 
@@ -108,7 +110,10 @@ Description: >
 # #     config_lot:
 #         format: all
 #         btns: 
-# # #             
+# # # #             lot_outlook:
+#                 config: waka.msgraph::btns.lot_outlook
+#                 group: waka.utils::lang.prod.send
+# #             
 #             lot_mail:
 #                 config: waka.mailer::btns.lot_mail
 #                 group: waka.utils::lang.prod.send
@@ -128,12 +133,13 @@ Description: >
 # #             word:
 #                 config: waka.worder::btns.word
 #                 group: waka.utils::lang.prod.produce
-# # # # # #             mail:
+# # # # # # #             mail:
 #                 config: waka.mailer::btns.mail
 #                 group: waka.utils::lang.prod.send
 # # # #             outlook:
 #                 config: waka.msgraph::btns.outlook
 #                 group: waka.utils::lang.prod.send
-# # # #     # partials: #Attention seul les variables modelId et modelClass (class du controller) sont disponible sans les partials.  
+# # # 
+#     # partials: #Attention seul les variables modelId et modelClass (class du controller) sont disponible sans les partials.  
 #     #     name:
 #     #         url: $/wcli/crm/controllers/contacts/_test_update.htm

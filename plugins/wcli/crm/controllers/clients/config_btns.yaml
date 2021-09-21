@@ -26,7 +26,7 @@ tool_bar:
             show: false 
         delete: 
             show: true
-            permissions: []
+            permissions: [wcli.crm.admin]
     config_btns:
             format: all
             btns:
@@ -36,6 +36,7 @@ tool_bar:
                     config: waka.importexport::btns.exportExcel
     config_lot:
         format: all
+        permissions: [wcli.crm.admin]
         btns: 
             lot_word:
                 config: waka.cloud::btns.lot_word
@@ -91,7 +92,7 @@ Description: >
 #             show: false#  
 #         delete: 
 #             show: true
-#             permissions: []
+#             permissions: [wcli.crm.admin]
 #     config_btns:
 #             format: all
 #             btns:

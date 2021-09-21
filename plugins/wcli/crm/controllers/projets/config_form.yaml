@@ -1,0 +1,32 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: wcli.crm::projet.form_name
+
+# Model Form Field configuration
+form: $/wcli/crm/models/projet/fields.yaml
+
+# Model Class name
+modelClass: Wcli\Crm\Models\Projet
+
+# Default redirect location
+defaultRedirect: wcli/crm/projets
+
+# Create page
+create:
+    title: wcli.crm::projet.create
+    redirect: wcli/crm/projets/update/:id
+    redirectClose: wcli/crm/projets
+    form: $/wcli/crm/models/projet/fields_create.yaml
+
+# Update page
+update:
+    title: wcli.crm::projet.update
+    redirect: wcli/crm/projets/update/:id
+    redirectClose: wcli/crm/projets
+
+# Preview page
+preview:
+    title: wcli.crm::projet.preview_name

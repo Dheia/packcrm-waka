@@ -40,11 +40,6 @@ return [
             'table' => 'wcli_crm_commercials',
             'truncate' => true,
         ],
-        'ventes' => [
-            'class' => '\Wcli\Crm\Classes\Imports\VentesImport',
-            'table' => 'wcli_crm_ventes',
-            'truncate' => true,
-        ],
     ],
     'cloud' => [ //obligatoire si utilisation du cloud et du plugin lot
         //'class' => 'Waka\Cloud\Classes\Cloud\Gd',
