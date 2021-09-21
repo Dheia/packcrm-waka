@@ -1,5 +1,8 @@
 # ===================================
-#  Config filter
+#  Form Field Definitions
 # ===================================
 
-scopes:
+fields:
+    id:
+        label: id
+

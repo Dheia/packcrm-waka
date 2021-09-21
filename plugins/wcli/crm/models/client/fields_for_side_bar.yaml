@@ -36,34 +36,15 @@ fields:
         span: auto
         infoType: section
         noUpdate: true
-    total_ventes:
-        label: wcli.crm::client.total_ventes
+    nb_projet:
+        label: wcli.crm::client.nb_projet
         span: auto
         infoType: euro
         noUpdate: true
-    total_ventes_n:
-        label: wcli.crm::client.total_ventes_n
+    total_projet:
+        label: wcli.crm::client.total_projet
         span: auto
         infoType: euro
-        noUpdate: true
-    total_ventes_m:
-        label: wcli.crm::client.total_ventes_m
-        span: auto
-        infoType: euro
-        noUpdate: true
-    cumul:
-        label: wcli.crm::client.cumul
-        span: auto
-        infoType: euro
-        noUpdate: true
-    cumuln1:
-        label: wcli.crm::client.cumuln1
-        span: auto
-        infoType: euro
-        noUpdate: true
-    progression:
-        label: wcli.crm::client.progression
-        span: auto
         noUpdate: true
     s_coordone:
         label: wcli.crm::client.s_coordone

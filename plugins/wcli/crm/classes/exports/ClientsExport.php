@@ -30,9 +30,6 @@ class ClientsExport implements FromCollection, WithHeadings, ShouldAutoSize, Wit
             'pays',
             'ville',
             'cp',
-            'cumul',
-            'cumuln1',
-            'progression',
         ];
     }
 
@@ -82,9 +79,6 @@ class ClientsExport implements FromCollection, WithHeadings, ShouldAutoSize, Wit
 //             'pays',
 //             'ville',
 //             'cp',
-//             'cumul',
-//             'cumuln1',
-//             'progression',
 //         ];
 //     }
 

@@ -63,9 +63,6 @@ class ClientsImport implements ToCollection, WithHeadingRow, WithCalculatedFormu
 //             $client->pays = $row['pays'] ?? null;
 //             $client->ville = $row['ville'] ?? null;
 //             $client->cp = $row['cp'] ?? null;
-//             $client->cumul = $row['cumul'] ?? null;
-//             $client->cumuln1 = $row['cumuln1'] ?? null;
-//             $client->progression = $row['progression'] ?? null;
 //             $client->save();
 //         }
 //     }

@@ -3,44 +3,17 @@
 # ===================================
 
 fields:
-    chart_1:
-        label: wcli.crm::client.chart_1
-        span: left
-        type: chartform
-        chartType: pie_or_doughnut
-        renderType: doughnut
-        labels: getVentesByGammesLabels
-        width: 100%
-        height: 300px
-        attributes:
-            periode: y
-        dataSets:
-            first:
-                fnc: getVentesByGammesValue
-    chart_2:
-        label: wcli.crm::client.chart_2
-        span: right
-        type: chartform
-        chartType: bar_or_line
-        renderType: bar
-        labels: getVentesByMonthLabel
-        attributes:
-            periode: d_365
-        dataSets:
-            first:
-                label: CA
-                fnc: getVentesByMonthValue 
     contacts:
         label: wcli.crm::client.contacts
         span: full
         type: partial
         path: field_contacts
         permissions: [wcli.crm.*]
-    ventes:
-        label: wcli.crm::client.ventes
+    projets:
+        label: wcli.crm::client.projets
         span: full
         type: partial
-        path: field_ventes
+        path: field_projets
         permissions: [wcli.crm.*]
 secondaryTabs:
     fields:

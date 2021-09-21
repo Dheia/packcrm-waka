@@ -44,12 +44,8 @@ class Client extends Model
      * @var array attributes send to datasource for creating document
      */
     public $attributesToDs = [
-        'total_ventes',
-        'total_ventes_n',
-        'total_ventes_m',
-        'cumul',
-        'cumuln1',
-        'progression',
+        'nb_projet',
+        'total_projet',
     ];
 
     /**
@@ -92,8 +88,8 @@ class Client extends Model
             'Wcli\Crm\Models\Contact',
             'delete' => true
         ],
-        'ventes' => [
-            'Wcli\Crm\Models\Vente',
+        'projets' => [
+            'Wcli\Crm\Models\Projet',
             'delete' => true
         ],
     ];
@@ -139,97 +135,6 @@ class Client extends Model
     /**
      * GETTERS
      **/
-    public function getTotalVentesAttribute() {
-        return $this->ventes()->sum('amount');
-    }
-    public function getTotalVentesNAttribute() {
-        return $this->ventes()->wakaPeriode('y', 'sale_at')->sum('amount');
-    }
-    public function getTotalVentesMAttribute() {
-        return $this->ventes()->wakaPeriode('m', 'sale_at')->sum('amount');
-    }
-    //
-    public function getVentesByGammes($periode) {
-        if(!$periode) {
-            throw new \SystemException('variable periode est null');
-        }
-        $sales = $this->ventes()->wakaPeriode($periode, 'sale_at');
-        if(!$sales) {
-            return null;
-        }
-        $sales =  $sales->select('gamme_id', \Db::raw('COUNT(*) as value'))
-            ->groupBy('gamme_id')->get();
-        $sales = $sales->map(function ($item, $key)  {
-            $mapped = [];
-            if ($item['gamme_id'] != 'autres') {
-                $mapped['labels'] = Gamme::find($item['gamme_id'])->name;
-            }
-            $mapped['value'] = $item['value'];
-            return $mapped;
-        });
-        return $sales;
-
-    }
-    public function getVentesByGammesLabels($attributes) {
-        $periode = $attributes['periode'];
-        $sales =  $this->getVentesByGammes($periode);
-        if(!$sales) {
-            return [];
-        }
-        return $sales->pluck('labels')->toArray();
-    }
-    public function getVentesByGammesValue($attributes) {
-        $periode = $attributes['periode'];
-        $sales =  $this->getVentesByGammes($periode);
-        if(!$sales) {
-            return [];
-        }
-        return $sales->pluck('value')->toArray();
-    }
-    //
-    public function getVentesByMonth($periode) {
-        $sales = $this->ventes()->wakaPeriode($periode, 'sale_at');
-        $sales =  $sales->select(\Db::raw('SUM(amount) as value'), \DB::raw('MONTH(sale_at) month'), \DB::raw('YEAR(sale_at) year'))
-            ->groupBy('year','month')->get();
-        return $sales;
-    }
-    public function getVentesByMonthLabel($attributes) {
-        $periode = $attributes['periode'];
-        $sales =  $this->getVentesByMonth($periode);
-        if(!$sales) {
-            return [];
-        }
-        trace_log($sales->pluck('month')->toArray());
-        return $sales->pluck('month')->toArray();
-    }
-    public function getVentesByMonthValue($attributes) {
-        $periode = $attributes['periode'];
-        $sales =  $this->getVentesByMonth($periode);
-        if(!$sales) {
-            return [];
-        }
-        trace_log($sales->pluck('value')->toArray());
-        return $sales->pluck('value')->toArray();
-    }
-
-    public function getVentesByMonthN1Value($attributes) {
-        $periode2 = $attributes['periode2'];
-        $sales =  $this->getVentesByMonth($periode2);
-        if(!$sales) {
-            return [];
-        }
-        return $sales->pluck('value')->toArray();
-    }
-
-    public function getCumulAttribute() {
-        return  $this->ventes()->wakaPeriode('y_to_d','sale_at')->sum('amount');
-    }
-    public function getCumuln1Attribute() {
-        return  $this->ventes()->wakaPeriode('y_1_to_d', 'sale_at')->sum('amount');
-    }
-    public function getProgressionAttribute() {
-        return round(($this->cumul - $this->cumuln1)/$this->cumuln1*100,2);
-    }
 
     /**
      * SCOPES
@@ -254,5 +159,5 @@ class Client extends Model
      * OTHERS
      */
 
-    //endKeep/
+//endKeep/
 }

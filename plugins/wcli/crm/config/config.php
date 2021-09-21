@@ -2,8 +2,8 @@
 
 return [
     'seeds' => [
-        'gamme' => [
-                'class' => 'Wcli\Crm\Models\Gamme',
+        'produit' => [
+                'class' => 'Wcli\Crm\Models\Produit',
                 'files' => [
                     ['attribute' => 'image','mode' => 'copyUpload'],
                 ]

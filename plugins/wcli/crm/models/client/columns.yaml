@@ -22,19 +22,13 @@ columns:
         relation: commercial
         select: name
         searchable: true
-    total_ventes_n:
-        label: wcli.crm::client.total_ventes_n
+    total_projet:
+        label: wcli.crm::client.total_projet
         type: euro
         searchable: false
         sortable: false
-    total_ventes:
-        label: wcli.crm::client.total_ventes
-        type: euro
-        searchable: false
-        sortable: false
-        invisible: true
-    total_ventes_m:
-        label: wcli.crm::client.total_ventes_m
+    nb_projet:
+        label: wcli.crm::client.nb_projet
         type: euro
         searchable: false
         sortable: false

@@ -17,7 +17,6 @@ class Clients extends Controller
         'Waka.Worder.Behaviors.WordBehavior',
         'Waka.ImportExport.Behaviors.ExcelImport',
         'Waka.ImportExport.Behaviors.ExcelExport',
-        'Waka.MsGraph.Behaviors.OutlookBehavior',
         'Waka.Cloud.Behaviors.CloudWord',
     ];
     public $formConfig = 'config_form.yaml';

@@ -103,8 +103,8 @@ class Plugin extends PluginBase
                         'icon' => 'icon-building',
                         'url' => Backend::url('wcli/crm/clients'),
                     ],
-                    'side-menu-gammes' => [
-                        'label' => Lang::get('wcli.crm::lang.menu.gammes'),
+                    'side-menu-projets' => [
+                        'label' => Lang::get('wcli.crm::lang.menu.projets'),
                         'icon' => 'icon-dot-circle-o',
                         'url' => Backend::url('wcli/crm/gammes'),
                         'permissions' => ['wcli.crm.admin'],
@@ -115,13 +115,22 @@ class Plugin extends PluginBase
                         'url' => Backend::url('wcli/crm/commercials'),
                         'permissions' => ['wcli.crm.*'],
                     ],
-                    'side-menu-ventes' => [
-                        'label' => Lang::get('wcli.crm::lang.menu.ventes'),
-                        'icon' => 'icon-dollar',
-                        'url' => Backend::url('wcli/crm/ventes'),
-                        'permissions' => ['wcli.crm.*'],
-                    ],
                 ],
+            ],
+        ];
+    }
+
+    public function registerSettings()
+    {
+        return [
+            'tags' => [
+                'label' => Lang::get('waka.crm::lang.menu.label'),
+                'description' => Lang::get('waka.crm::lang.menu.description'),
+                'category' => Lang::get('waka.utils::lang.menu.settings_category_model'),
+                'icon' => 'icon-filter',
+                'permissions' => ['waka.crm.admin.*'],
+                'url' => Backend::url('waka/crm/produits'),
+                'order' => 180,
             ],
         ];
     }
