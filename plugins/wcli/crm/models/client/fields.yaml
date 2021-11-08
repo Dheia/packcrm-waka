@@ -29,7 +29,7 @@ fields:
         dataSets:
             first:
                 label: CA
-                fnc: getVentesByMonthValue 
+                fnc: getVentesByMonthValue
     contacts:
         label: wcli.crm::client.contacts
         span: full
@@ -44,7 +44,10 @@ fields:
         permissions: [wcli.crm.*]
 secondaryTabs:
     fields:
-        info:
+        infos:
+            label: wcli.crm::client.infos
+            span: full
             type: modelinfo
-            mode: secondary
-            src: /wcli/crm/models/client/fields_for_side_bar.yaml
+            editPermissions: [wcli.crm.admin.*]
+            tab: wcli.crm::client.tab_base
+            src: wcli/crm/models/client/fields_for_side_bar.yaml

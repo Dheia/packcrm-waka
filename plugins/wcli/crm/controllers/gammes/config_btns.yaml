@@ -68,9 +68,6 @@ Description: >
 
 
 #     ##### SAUVEGARDE PURE ########
-# # ===================================
-# #  Btn  Behavior Config
-# # ===================================
 
 # modelClass: Wcli\Crm\Models\Gamme
 
@@ -108,7 +105,7 @@ Description: >
 # #     config_lot:
 #         format: all
 #         btns: 
-# # # #     # partials: #Attention seul les variables modelId et modelClass (class du controller) sont disponible sans les partials.  
+# # # # #     # partials: #Attention seul les variables modelId et modelClass (class du controller) sont disponible sans les partials.  
 #     #     testbtns:
 #     #         url: $/wcli/crm/controllers/gammes/_test_btns.htm
 
@@ -121,12 +118,13 @@ Description: >
 #             waka.utils::lang.prod.send: oc-icon-external-link
 #             waka.utils::lang.prod.tools: oc-icon-wrench
 #         btns:
-# # # # #             duplicate:
+# # # # # #             duplicate:
 #                 config: waka.utils::btns.duplicate
 #                 group: waka.utils::lang.prod.tools
-# # # # #             exportChildExcel:
+# # # # # #             exportChildExcel:
 #                 config: waka.importexport::btns.exportChildExcel
 #                 group: waka.utils::lang.prod.produce
-# # #     # partials: #Attention seul les variables modelId et modelClass (class du controller) sont disponible sans les partials.  
+# # 
+#     # partials: #Attention seul les variables modelId et modelClass (class du controller) sont disponible sans les partials.  
 #     #     name:
 #     #         url: $/wcli/crm/controllers/gammes/_test_update.htm

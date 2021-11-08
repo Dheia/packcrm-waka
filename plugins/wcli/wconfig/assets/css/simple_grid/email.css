@@ -110,9 +110,7 @@ body *:not(html):not(style):not(br):not(tr):not(code){font-family:Avenir,Helveti
 .w-pt-4{padding-top:2rem}
 .w-pb-4{padding-bottom:2rem}
 .w-pr-4{padding-right:2rem}
-.w-pl-4{padding-left:2rem}
-.w-w-full{width:100%}
-.w-h-full{height:100%}h1{font-size:2.5em;margin-top:2rem;margin-bottom:2rem}
+.w-pl-4{padding-left:2rem}h1{font-size:2.5em;margin-top:2rem;margin-bottom:2rem}
 h2{font-size:2em;margin-top:1.5rem;margin-bottom:1.5rem}
 h3{font-size:1.375em;margin-top:1.25rem;margin-bottom:1.25rem}
 h4{font-size:1.125em;margin-top:1rem;margin-bottom:1rem}

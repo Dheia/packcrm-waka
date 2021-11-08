@@ -1,7 +1,6 @@
 # ===================================
 #  Form Field Definitions
 # ===================================
-
 fields:
     name:
         label: wcli.crm::client.name

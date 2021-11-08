@@ -41,6 +41,7 @@ class Plugin extends PluginBase
      */
     public function boot()
     {
+        \DataSources::registerDataSources(plugins_path().'/wcli/crm/config/datasources.yaml');
 
     }
 

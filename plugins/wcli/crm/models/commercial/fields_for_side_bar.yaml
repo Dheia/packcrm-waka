@@ -1,7 +1,6 @@
 # ===================================
 #  Form Field Definitions
 # ===================================
-
 fields:
     name:
         label: wcli.crm::commercial.name
@@ -32,7 +31,7 @@ fields:
     venteMois:
         label: wcli.crm::commercial.venteMois
         span: auto
-        commentAbove: wcli.crm::commercial.venteMois_com
+        comment: wcli.crm::commercial.venteMois_com
         infoType: euro
         noUpdate: true
     ventesTotal:

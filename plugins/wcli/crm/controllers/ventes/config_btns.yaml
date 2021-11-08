@@ -59,9 +59,6 @@ Description: >
 
 
 #     ##### SAUVEGARDE PURE ########
-# # ===================================
-# #  Btn  Behavior Config
-# # ===================================
 
 # modelClass: Wcli\Crm\Models\Vente
 
@@ -96,7 +93,7 @@ Description: >
 # #     config_lot:
 #         format: all
 #         btns: 
-# # # #     # partials: #Attention seul les variables modelId et modelClass (class du controller) sont disponible sans les partials.  
+# # # # #     # partials: #Attention seul les variables modelId et modelClass (class du controller) sont disponible sans les partials.  
 #     #     testbtns:
 #     #         url: $/wcli/crm/controllers/ventes/_test_btns.htm
 
@@ -109,6 +106,7 @@ Description: >
 #             waka.utils::lang.prod.send: oc-icon-external-link
 #             waka.utils::lang.prod.tools: oc-icon-wrench
 #         btns:
-# # # # # # # # # #     # partials: #Attention seul les variables modelId et modelClass (class du controller) sont disponible sans les partials.  
+# # # # # # # # # # 
+#     # partials: #Attention seul les variables modelId et modelClass (class du controller) sont disponible sans les partials.  
 #     #     name:
 #     #         url: $/wcli/crm/controllers/ventes/_test_update.htm

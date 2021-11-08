@@ -1,15 +1,15 @@
 <?php
 return [
-    'name' => 'Nom vente',
-    'client' => 'Cllient',
-    'sale_at' => 'Date de vente',
     'amount' => 'Montant',
-    'gamme' => 'gamme',
-    'title' => 'Gestion vente',
-    'update' => 'Modification vente',
+    'client' => 'Cllient',
     'courriers' => 'Gestion vente',
     'create' => 'Créer vente',
     'edit' => 'Editer vente',
     'form_name' => 'Gestion vente',
-    'preview_name' => 'Voir vente'
+    'gamme' => 'gamme',
+    'name' => 'Nom vente',
+    'preview_name' => 'Voir vente',
+    'sale_at' => 'Date de vente',
+    'title' => 'Gestion vente',
+    'update' => 'Modification vente'
 ];

@@ -1,0 +1,118 @@
+datasource: 
+    client:
+        label: Client
+        code: client
+        test_id: 9
+        author: Wcli
+        plugin: Crm
+        name : Client
+        class: Wcli\Crm\Models\Client
+        controller: wcli/crm/clients
+        editFunctions: Wcli\Wconfig\Functions\Client
+        attributes: wcli/crm/models/client/attributes.yaml
+        relations:
+            commercial: 
+                label: Commercial
+                images: true
+                attributes: wcli/crm/models/commercial/attributes.yaml
+        # publications:
+        #     types: 
+        #         Waka\Worder\Models\Document: Word
+        #         Waka\Pdfer\Models\WakaPdf: Pdf
+        emails:
+            to: 
+                key: email
+                relation: contacts
+            cc: 
+                key: email
+                relation: contacts
+        # otherRelations:
+        #         info:
+        #             class: Wcli\Crm\Models\Info
+        #             label: Info
+    contact:
+        label: Contact
+        code : contact
+        test_id: 48
+        author: Wcli
+        plugin: Crm
+        name : Contact
+        class: Wcli\Crm\Models\Contact
+        controller: wcli/crm/contacts
+        editFunctions: Wcli\Wconfig\Functions\Contact
+        attributes: wcli/crm/models/contact/attributes.yaml
+        emails:
+            to: 
+                key: email
+            cc: 
+                key: email
+                relation: client.contacts
+        relations:
+            client: 
+                label: Client
+                images: true
+                attributes: wcli/crm/models/client/attributes.yaml
+            client.gamme: 
+                label: Client
+                attributes: wcli/crm/models/gamme/attributes.yaml
+            commercial:
+                label: Commercial (du contact)
+                attributes: wcli/crm/models/commercial/attributes.yaml
+
+        # publications:
+        #     types: 
+        #         Waka\Worder\Models\Document: Word
+        #         Waka\Pdfer\Models\WakaPdf: Pdf
+    commercial:
+        label: Commercial
+        code : commercial
+        test_id: 48
+        author: Wcli
+        plugin: Crm
+        name : Commercial
+        class: Wcli\Crm\Models\Commercial
+        controller: wcli/crm/commercials
+        editFunctions: Wcli\Wconfig\Functions\Commercial
+        attributes: wcli/crm/models/commercial/attributes.yaml
+        emails:
+            to: 
+                key: email
+
+    wakaUser: 
+        label: Utilisateurs
+        code: wakaUser
+        test_id: 1
+        author: Wcli
+        plugin: Wconfig
+        name: WakaUser
+        class: Wcli\Wconfig\Models\WakaUser
+        controller: backend/users
+        editFunctions: Wcli\Wconfig\Functions\User
+
+
+    gamme:
+        label: Gamme
+        code : gamme
+        test_id: 48
+        author: Wcli
+        plugin: Crm
+        name : Gamme
+        class: Wcli\Crm\Models\Gamme
+        controller: wcli/crm/gammes
+        attributes: wcli/crm/models/gamme/attributes.yaml
+
+    vente:
+        label: Vente
+        code : vente
+        test_id: 48
+        author: Wcli
+        plugin: Crm
+        name : Vente
+        class: Wcli\Crm\Models\Vente
+        controller: wcli/crm/ventes
+        attributes: wcli/crm/models/vente/attributes.yaml
+        relations:
+            gamme:
+                images: true
+                label: Gamme
+                attributes: wcli/crm/models/gamme/attributes.yaml

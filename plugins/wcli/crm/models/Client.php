@@ -52,6 +52,7 @@ class Client extends Model
         'progression',
     ];
 
+
     /**
      * @var array Attributes to be cast to native types
      */

@@ -66,9 +66,6 @@ Description: >
 
 
 #     ##### SAUVEGARDE PURE ########
-# # ===================================
-# #  Btn  Behavior Config
-# # ===================================
 
 # modelClass: Wcli\Crm\Models\Commercial
 
@@ -103,7 +100,7 @@ Description: >
 # #     config_lot:
 #         format: all
 #         btns: 
-# # #             
+# # # #             
 #             lot_mail:
 #                 config: waka.mailer::btns.lot_mail
 #                 group: waka.utils::lang.prod.send
@@ -120,9 +117,10 @@ Description: >
 #             waka.utils::lang.prod.send: oc-icon-external-link
 #             waka.utils::lang.prod.tools: oc-icon-wrench
 #         btns:
-# # # # # #             mail:
+# # # # # # #             mail:
 #                 config: waka.mailer::btns.mail
 #                 group: waka.utils::lang.prod.send
-# # # # # #     # partials: #Attention seul les variables modelId et modelClass (class du controller) sont disponible sans les partials.  
+# # # # # 
+#     # partials: #Attention seul les variables modelId et modelClass (class du controller) sont disponible sans les partials.  
 #     #     name:
 #     #         url: $/wcli/crm/controllers/commercials/_test_update.htm

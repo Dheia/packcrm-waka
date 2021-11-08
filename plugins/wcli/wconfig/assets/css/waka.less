@@ -1,0 +1,53 @@
+@import "mix_waka/style";
+@import "mix_waka/media";
+@import "mix_waka/leftbar";
+@import "mix_waka/leftbar";
+//
+@import "simple_grid/mix/bg_colors";
+@import "simple_grid/mix/margin-padding";
+@import "simple_grid/mix/typography";
+@import "simple_grid/mix/img";
+
+
+.txt_memo > textarea {
+    background-color : #fbface;
+}
+.txt_warning > textarea {
+    background-color : #fccf95;
+}
+.txt_success > textarea {
+    background-color : #c9faa0;
+}
+
+.w-toolbar {
+    display:flex;
+}
+.w-actionbar {
+    align-items: flex-start; 
+    display:inline-flex;
+}
+
+@media (max-width: @screen-sm) {
+    .w-toolbar {
+        display:block;
+    }
+    .w-toolbar > .dropdown, .w-toolbar > div > button {
+        margin-top: 5px;
+    }
+    .w-actionbar {
+        display:block;
+    }
+    .w-actionbar > .dropdown {
+        margin-top: 5px;
+    }
+    .w-actionbar > .dropdown, .w-actionbar > button {
+        margin-top: 5px;
+    }
+}
+
+.w-reset-this-root {
+    all: initial;
+    * {
+        all: unset;
+    }
+}

@@ -33,7 +33,7 @@ fields:
                 fnc: getVentesByMonthValue   
             second:
                 label: CA (N-1)
-                fnc: getVentesByMonthN1Value 
+                fnc: getVentesByMonthN1Value
     clients:
         label: wcli.crm::commercial.clients
         span: full
@@ -46,7 +46,10 @@ fields:
         path: field_contacts
 secondaryTabs:
     fields:
-        info:
+        infos:
+            label: wcli.crm::commercial.infos
+            span: full
             type: modelinfo
-            mode: secondary
-            src: /wcli/crm/models/commercial/fields_for_side_bar.yaml
+            editPermissions: [wcli.crm.admin.*]
+            tab: wcli.crm::commercial.tab_base
+            src: wcli/crm/models/commercial/fields_for_side_bar.yaml

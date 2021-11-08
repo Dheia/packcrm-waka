@@ -16,11 +16,9 @@ columns:
         sortable: false
     first_name:
         label: wcli.crm::commercial.first_name
-        searchable: true
         invisible: true
     last_name:
         label: wcli.crm::commercial.last_name
-        searchable: true
         invisible: true
     tel:
         label: wcli.crm::commercial.tel
