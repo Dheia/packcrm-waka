@@ -1,0 +1,13 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+fields:
+    gammes:
+        label: Choisissez une gamme (vide = tt gammes)
+        type: taglist
+        useKey: true
+        options: listGammes
+outputs:
+    attributes: 
+        main: wcli/crm/models/gamme/attributes.yaml

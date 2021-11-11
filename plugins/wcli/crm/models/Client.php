@@ -171,7 +171,7 @@ class Client extends Model
         return $sales;
 
     }
-    public function getVentesByGammesLabels($attributes) {
+    public function getLbVentesByGammes($attributes) {
         $periode = $attributes['periode'];
         $sales =  $this->getVentesByGammes($periode);
         if(!$sales) {
@@ -179,7 +179,7 @@ class Client extends Model
         }
         return $sales->pluck('labels')->toArray();
     }
-    public function getVentesByGammesValue($attributes) {
+    public function getCcVentesByGammes($attributes) {
         $periode = $attributes['periode'];
         $sales =  $this->getVentesByGammes($periode);
         if(!$sales) {
@@ -194,26 +194,26 @@ class Client extends Model
             ->groupBy('year','month')->get();
         return $sales;
     }
-    public function getVentesByMonthLabel($attributes) {
+    public function getLbVentesByMonth($attributes) {
         $periode = $attributes['periode'];
         $sales =  $this->getVentesByMonth($periode);
         if(!$sales) {
             return [];
         }
-        trace_log($sales->pluck('month')->toArray());
+        //trace_log($sales->pluck('month')->toArray());
         return $sales->pluck('month')->toArray();
     }
-    public function getVentesByMonthValue($attributes) {
+    public function getCcVentesByMonth($attributes) {
         $periode = $attributes['periode'];
         $sales =  $this->getVentesByMonth($periode);
         if(!$sales) {
             return [];
         }
-        trace_log($sales->pluck('value')->toArray());
+        //trace_log($sales->pluck('value')->toArray());
         return $sales->pluck('value')->toArray();
     }
 
-    public function getVentesByMonthN1Value($attributes) {
+    public function getCcVentesByMonthN1($attributes) {
         $periode2 = $attributes['periode2'];
         $sales =  $this->getVentesByMonth($periode2);
         if(!$sales) {

@@ -28,9 +28,9 @@ class Client extends FunctionsBase
 
     public function chart1($attributes)
     {
-        $dataSet = $this->model->getVentesByMonthValue($attributes);
-        $dataSet2 = $this->model->getVentesByMonthN1Value($attributes);
-        $labels = $this->model->getVentesByMonthLabel($attributes);
+        $dataSet = $this->model->getCcVentesByMonthValue($attributes);
+        $dataSet2 = $this->model->getCcVentesByMonthN1Value($attributes);
+        $labels = $this->model->getLbVentesByMonthLabel($attributes);
 
 
         $options = [
@@ -58,7 +58,7 @@ class Client extends FunctionsBase
                     ->addChartOptions($options)
                     ->getChartUrl($attributes['width'], $attributes['height']);
 
-        trace_log($chart_url);
+        //trace_log($chart_url);
 
         $finalResult[0]['chart'] = [
             'path' => $chart_url,

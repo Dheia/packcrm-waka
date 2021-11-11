@@ -33,7 +33,7 @@ class Commercial extends FunctionsBase
         $clients = $this->getAttributesDs($clients);
 
         if($attributes['column'] && $attributes['calcul'] && $attributes['valeur']) {
-            trace_log("OKOKOK");
+            //trace_log("OKOKOK");
             $clients = $clients->reject(function ($item, $key) use($attributes) {
                 $column = $attributes['column'];
                 $calcul = $attributes['calcul'];
@@ -78,7 +78,7 @@ class Commercial extends FunctionsBase
                     ->addChartOptions($options)
                     ->getChartUrl($attributes['width'], $attributes['height']);
 
-        trace_log($chart_url);
+        //trace_log($chart_url);
 
         $finalResult[0]['chart'] = [
             'path' => $chart_url,
@@ -86,8 +86,6 @@ class Commercial extends FunctionsBase
             'height' => $attributes['height'],
         ];
         return $finalResult;
-
-        return $result->toArray();
     }
 
     public function getTagList()

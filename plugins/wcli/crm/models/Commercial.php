@@ -163,7 +163,7 @@ class Commercial extends Model
         }
         $sales =  $sales->select('gamme_id', \Db::raw('COUNT(gamme_id) as value'))
             ->groupBy('laravel_through_key','gamme_id')->get();
-            trace_log($sales->toArray());
+            //trace_log($sales->toArray());
         $sales = $sales->map(function ($item, $key)  {
             $mapped = [];
             if ($item['gamme_id'] != 'autres') {
@@ -175,7 +175,7 @@ class Commercial extends Model
         return $sales;
 
     }
-    public function getVentesByGammesLabels($attributes) {
+    public function getLbVentesByGammes($attributes) {
         $periode = $attributes['periode'];
         $sales =  $this->getVentesByGammes($periode);
         if(!$sales) {
@@ -183,7 +183,7 @@ class Commercial extends Model
         }
         return $sales->pluck('labels')->toArray();
     }
-    public function getVentesByGammesValue($attributes) {
+    public function getCcVentesByGammes($attributes) {
         $periode = $attributes['periode'];
         $sales =  $this->getVentesByGammes($periode);
         if(!$sales) {
@@ -198,7 +198,7 @@ class Commercial extends Model
             ->groupBy('laravel_through_key', 'year','month')->get();
         return $sales;
     }
-    public function getVentesByMonthLabel($attributes) {
+    public function getLbVentesByMonth($attributes) {
         $periode = $attributes['periode'];
         $sales =  $this->getVentesByMonth($periode);
         if(!$sales) {
@@ -206,7 +206,7 @@ class Commercial extends Model
         }
         return $sales->pluck('month')->toArray();
     }
-    public function getVentesByMonthValue($attributes) {
+    public function getCcVentesByMonth($attributes) {
         $periode = $attributes['periode'];
         $sales =  $this->getVentesByMonth($periode);
         if(!$sales) {
@@ -214,14 +214,29 @@ class Commercial extends Model
         }
         return $sales->pluck('value')->toArray();
     }
-    public function getVentesByMonthN1Value($attributes) {
-        $periode2 = $attributes['periode2'];
-        $sales =  $this->getVentesByMonth($periode2);
+    public function getVentesByWeek($periode) {
+        $sales = $this->ventes()->wakaPeriode($periode, 'sale_at');
+        $sales =  $sales->select(\Db::raw('SUM(amount) as value'), \DB::raw('WEEK(sale_at) week'), \DB::raw('YEAR(sale_at) year'))
+            ->groupBy('laravel_through_key', 'year','week')->get();
+        return $sales;
+    }
+    public function getLbVentesByWeek($attributes) {
+        $periode = $attributes['periode'];
+        $sales =  $this->getVentesByWeek($periode);
+        if(!$sales) {
+            return [];
+        }
+        return $sales->pluck('week')->toArray();
+    }
+    public function getCcVentesByWeek($attributes) {
+        $periode = $attributes['periode'];
+        $sales =  $this->getVentesByWeek($periode);
         if(!$sales) {
             return [];
         }
         return $sales->pluck('value')->toArray();
     }
+    
     public function getCumulAttribute() {
         $sales =  $this->getVentesByMonth('y_to_d');
         return $sales->sum('value');

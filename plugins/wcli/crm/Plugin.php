@@ -59,6 +59,18 @@ class Plugin extends PluginBase
         ];
     }
 
+    public function registerWakaRules()
+    {
+        return [
+            'asks' => [],
+            'fncs' => [
+                ['Wcli\Crm\WakaRules\Fncs\Ventes'],
+                ['Wcli\Crm\WakaRules\Fncs\EtatClients'],
+                ['Wcli\Crm\WakaRules\Fncs\Gammes'],
+            ],
+        ];
+    }
+
     /**
      * Registers any back-end permissions used by this plugin.
      *

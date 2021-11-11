@@ -1,0 +1,44 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+fields:
+    tags:
+        label: Filtrer par Tags
+        type: taglist
+        useKey: true
+        options: getTagList
+    is_filter_field:
+        label: Filtrer sur une valeur
+        type: switch
+    field:
+        label : Filtrer sur une valeur/champ
+        span: storm
+        cssClass: col-md-4
+        trigger:
+            field: is_filter_field
+            action: show
+            condition: checked
+    calcul:
+        label: Operateur
+        type: dropdown
+        options: listCalculConfig
+        span: storm
+        cssClass: col-md-4
+        trigger:
+            field: is_filter_field
+            action: show
+            condition: checked
+    valeur: 
+        label: Valeur
+        span: storm
+        cssClass: col-md-4
+        trigger:
+            field: is_filter_field
+            action: show
+            condition: checked
+
+outputs:
+    attributes: 
+        main: wcli/crm/models/client/attributes.yaml
+

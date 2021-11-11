@@ -9,27 +9,27 @@ fields:
         type: chartform
         chartType: pie_or_doughnut
         renderType: doughnut
-        labels: getVentesByGammesLabels
+        labels: getLbVentesByGammes
         width: 100%
         height: 300px
-        attributes:
-            periode: y
         dataSets:
             first:
-                fnc: getVentesByGammesValue
+                fnc: getCcVentesByGammes
+                attributes:
+                    periode: y
     chart_2:
         label: wcli.crm::client.chart_2
         span: right
         type: chartform
         chartType: bar_or_line
         renderType: bar
-        labels: getVentesByMonthLabel
-        attributes:
-            periode: d_365
+        labels: getLbVentesByMonth
         dataSets:
             first:
                 label: CA
-                fnc: getVentesByMonthValue
+                fnc: getCcVentesByMonth
+                attributes:
+                    periode: d_365
     contacts:
         label: wcli.crm::client.contacts
         span: full

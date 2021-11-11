@@ -1,0 +1,19 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+fields:
+    periode:
+        label: Choisissez une période
+        type: dropdown
+        options: listPeriode
+    gammes:
+        label: Choisissez une gamme (vide = tt gammes)
+        type: taglist
+        useKey: true
+        options: listGammes
+outputs:
+    attributes: 
+        main: wcli/crm/models/vente/attributes.yaml
+        gamme: wcli/crm/models/gamme/attributes.yaml
+
