@@ -3,6 +3,8 @@
 # ===================================
 
 fields:
+    title:
+        label: Titre
     periode:
         label: Choisissez une période
         type: dropdown

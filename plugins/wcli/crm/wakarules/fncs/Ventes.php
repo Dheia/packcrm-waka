@@ -44,7 +44,14 @@ class Ventes extends FncBase implements FncInterface
 
     public function getText()
     {
-        return "Liste des ventes";
+        //trace_log('getText HTMLASK---');
+        $hostObj = $this->host;
+        //trace_log($hostObj->config_data);
+        $title = $hostObj->config_data['title'] ?? null;
+        if($title) {
+            return $title;
+        }
+        return parent::getText();
     }
 
     public function listGammes() {
@@ -63,6 +70,10 @@ class Ventes extends FncBase implements FncInterface
             $query = $query->whereIn('gamme_id', $gammes);
         }
         $query = $query->orderby('sale_at', 'asc')->with('client', 'gamme')->get();
-        return $query->toArray();
+        return [
+            'title' => $this->getConfig('title'),
+            'datas' => $query->toArray(),
+            'show' => $query->count(),
+        ];
     }
 }

@@ -41,7 +41,14 @@ class Gammes extends FncBase implements FncInterface
 
     public function getText()
     {
-        return "Liste des gammes";
+        //trace_log('getText HTMLASK---');
+        $hostObj = $this->host;
+        //trace_log($hostObj->config_data);
+        $title = $hostObj->config_data['title'] ?? null;
+        if($title) {
+            return $title;
+        }
+        return parent::getText();
     }
 
     public function listGammes() {
@@ -55,6 +62,10 @@ class Gammes extends FncBase implements FncInterface
         } else {
             $gamme =  \Wcli\Crm\Models\Gamme::get();
         }
-        return $gamme->toArray();
+        return [
+            'title' => $this->getConfig('title'),
+            'datas' => $gamme->toArray(),
+            'show' => $gamme->count(),
+        ];
     }
 }

@@ -3,6 +3,8 @@
 # ===================================
 
 fields:
+    title:
+        label: Titre
     gammes:
         label: Choisissez une gamme (vide = tt gammes)
         type: taglist

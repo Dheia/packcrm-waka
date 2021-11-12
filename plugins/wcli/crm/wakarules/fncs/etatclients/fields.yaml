@@ -3,6 +3,8 @@
 # ===================================
 
 fields:
+    title:
+        label: Titre
     tags:
         label: Filtrer par Tags
         type: taglist

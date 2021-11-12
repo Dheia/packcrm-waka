@@ -39,7 +39,14 @@ class EtatClients extends FncBase implements FncInterface
 
     public function getText()
     {
-        return "Liste des ventes";
+        //trace_log('getText HTMLASK---');
+        $hostObj = $this->host;
+        //trace_log($hostObj->config_data);
+        $title = $hostObj->config_data['title'] ?? null;
+        if($title) {
+            return $title;
+        }
+        return parent::getText();
     }
 
     public function listGammes() {
@@ -83,7 +90,12 @@ class EtatClients extends FncBase implements FncInterface
             $query =  $this->rejectIf($query);
         }
 
-        return $query->toArray();
+
+        return [
+            'title' => $this->getConfig('title'),
+            'datas' => $gamme->toArray(),
+            'show' => $gamme->count(),
+        ];
     }
 
     public function rejectIf($collection) {
