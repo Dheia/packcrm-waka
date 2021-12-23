@@ -2,7 +2,7 @@
 
 return [
     'menu' => [
-        'title' => 'CRM',
+        'title' => 'Suivi clients/collabs',
         'clients' => 'Clients',
         'contacts' => 'Contacts',
         'secteurs' => 'Secteurs',

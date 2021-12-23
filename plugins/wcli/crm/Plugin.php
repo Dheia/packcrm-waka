@@ -100,7 +100,7 @@ class Plugin extends PluginBase
     {
         return [
             'crm' => [
-                'label'       => 'CRM',
+                'label'       => Lang::get('wcli.crm::lang.menu.title'),
                 'url'         => Backend::url('wcli/crm/contacts'),
                 'icon'        => 'icon-user',
                 'permissions' => ['wcli.crm.*'],

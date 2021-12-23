@@ -93,8 +93,8 @@ class EtatClients extends FncBase implements FncInterface
 
         return [
             'title' => $this->getConfig('title'),
-            'datas' => $gamme->toArray(),
-            'show' => $gamme->count(),
+            'datas' => $query->toArray(),
+            'show' => $query->count(),
         ];
     }
 

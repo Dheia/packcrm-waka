@@ -1,0 +1,47 @@
+{
+    "name": "winter/wn-drivers-plugin",
+    "type": "winter-plugin",
+    "description": "Winter CMS plugin integrating the AWS, Pheanstak, Iron MQ, Predis, Rackspace, and Guzzle drivers",
+    "homepage": "https://github.com/wintercms/wn-drivers-plugin",
+    "keywords": ["winter", "cms", "drivers", "plugin"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alexey Bobkov",
+            "email": "aleksey.bobkov@gmail.com",
+            "role": "Original Author"
+        },
+        {
+            "name": "Samuel Georges",
+            "email": "daftspunky@gmail.com",
+            "role": "Original Author"
+        },
+        {
+            "name": "Winter CMS Maintainers",
+            "homepage": "https://wintercms.com",
+            "role": "Maintainer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/wintercms/wn-drivers-plugin/issues",
+        "discord": "https://discord.gg/D5MFSPH6Ux",
+        "source": "https://github.com/wintercms/wn-drivers-plugin"
+    },
+    "require": {
+        "php": ">=7.0",
+        "composer/installers": "~1.0",
+
+        "aws/aws-sdk-php": "~3.1",
+        "pda/pheanstalk": "~3.0",
+        "iron-io/iron_mq": "~1.5",
+        "predis/predis": "~1.0",
+
+        "league/flysystem-rackspace": "~1.0",
+        "league/flysystem-aws-s3-v3": "~1.0",
+
+        "guzzlehttp/guzzle": "~6.3 || ~7.0"
+    },
+    "extra": {
+        "installer-name": "drivers"
+    }
+}
