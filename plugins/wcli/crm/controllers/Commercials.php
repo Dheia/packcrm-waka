@@ -17,6 +17,9 @@ class Commercials extends Controller
         'Waka.Mailer.Behaviors.MailBehavior',
         'Waka.ImportExport.Behaviors.ExcelImport',
         'Waka.ImportExport.Behaviors.ExcelExport',
+        'Waka.MsGraph.Behaviors.OutlookBehavior',
+        'Waka.Cloud.Behaviors.CloudPdf',
+        'Waka.Cloud.Behaviors.CloudWord',
     ];
     public $formConfig = 'config_form.yaml';
     public $listConfig = 'config_list.yaml';

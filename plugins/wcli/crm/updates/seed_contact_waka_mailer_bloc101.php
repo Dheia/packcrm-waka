@@ -16,7 +16,7 @@ class SeedContactWakaMailerBloc101 extends Seeder
                 'contenu' => '<table class="w-bg-gl w-w-full w-pa-4 w-mt-4" align="center" cellpadding="0" cellspacing="0">
     <tr class="w-w-full">
         <td  align="center">
-            <img  src="{{ \'themes/wakatailwind/assets/images/logo.png\' |app }}" alt="logo" height="40px" width="auto" />
+            <img  src="{{ \'themes/wakatailwind/assets/images/logo.png\' |app }}" alt="logo" style="height:auto;width:150px" />
 
         </td>
         <td class="" align="center">

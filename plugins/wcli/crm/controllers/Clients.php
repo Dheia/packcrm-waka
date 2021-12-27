@@ -15,9 +15,10 @@ class Clients extends Controller
         'Backend.Behaviors.RelationController',
         'Waka.Utils.Behaviors.SideBarUpdate',
         'Waka.Worder.Behaviors.WordBehavior',
+        'Waka.Pdfer.Behaviors.PdfBehavior',
         'Waka.ImportExport.Behaviors.ExcelImport',
         'Waka.ImportExport.Behaviors.ExcelExport',
-        'Waka.MsGraph.Behaviors.OutlookBehavior',
+        'Waka.Cloud.Behaviors.CloudPdf',
         'Waka.Cloud.Behaviors.CloudWord',
     ];
     public $formConfig = 'config_form.yaml';
@@ -36,12 +37,6 @@ class Clients extends Controller
     }
 
     //startKeep/
-
-    public function update($id)
-    {
-        $this->bodyClass = 'compact-container';
-        return $this->asExtension('FormController')->update($id);
-    }
 
         //endKeep/
 }

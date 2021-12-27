@@ -37,6 +37,15 @@ tool_bar:
     config_lot:
         format: all
         btns: 
+            lot_pdf:
+                config: waka.cloud::btns.lot_pdf
+                group: waka.utils::lang.prod.send
+            lot_word:
+                config: waka.cloud::btns.lot_word
+                group: waka.utils::lang.prod.send
+            lot_outlook:
+                config: waka.msgraph::btns.lot_outlook
+                group: waka.utils::lang.prod.send
             
             lot_mail:
                 config: waka.mailer::btns.lot_mail
@@ -56,6 +65,9 @@ action_bar:
         btns:
             mail:
                 config: waka.mailer::btns.mail
+                group: waka.utils::lang.prod.send
+            outlook:
+                config: waka.msgraph::btns.outlook
                 group: waka.utils::lang.prod.send
 
     # partials: #Attention seul les variables modelId et modelClass (class du controller) sont disponible sans les partials.  
@@ -100,7 +112,16 @@ Description: >
 # #     config_lot:
 #         format: all
 #         btns: 
-# # # #             
+# #             lot_pdf:
+#                 config: waka.cloud::btns.lot_pdf
+#                 group: waka.utils::lang.prod.send
+# # #             lot_word:
+#                 config: waka.cloud::btns.lot_word
+#                 group: waka.utils::lang.prod.send
+# # #             lot_outlook:
+#                 config: waka.msgraph::btns.lot_outlook
+#                 group: waka.utils::lang.prod.send
+# #             
 #             lot_mail:
 #                 config: waka.mailer::btns.lot_mail
 #                 group: waka.utils::lang.prod.send
@@ -120,7 +141,10 @@ Description: >
 # # # # # # #             mail:
 #                 config: waka.mailer::btns.mail
 #                 group: waka.utils::lang.prod.send
-# # # # # 
+# # # #             outlook:
+#                 config: waka.msgraph::btns.outlook
+#                 group: waka.utils::lang.prod.send
+# # # 
 #     # partials: #Attention seul les variables modelId et modelClass (class du controller) sont disponible sans les partials.  
 #     #     name:
 #     #         url: $/wcli/crm/controllers/commercials/_test_update.htm

@@ -37,6 +37,9 @@ tool_bar:
     config_lot:
         format: all
         btns: 
+            lot_pdf:
+                config: waka.cloud::btns.lot_pdf
+                group: waka.utils::lang.prod.send
             lot_word:
                 config: waka.cloud::btns.lot_word
                 group: waka.utils::lang.prod.send
@@ -58,6 +61,12 @@ action_bar:
                 group: waka.utils::lang.prod.produce
             word_cloud:
                 config: waka.cloud::btns.word
+                group: waka.utils::lang.prod.send
+            pdf:
+                config: waka.pdfer::btns.pdf
+                group: waka.utils::lang.prod.produce
+            pdf_cloud:
+                config: waka.cloud::btns.pdf
                 group: waka.utils::lang.prod.send
             exportChildExcel:
                 config: waka.importexport::btns.exportChildExcel
@@ -105,13 +114,13 @@ Description: >
 # #     config_lot:
 #         format: all
 #         btns: 
+# #             lot_pdf:
+#                 config: waka.cloud::btns.lot_pdf
+#                 group: waka.utils::lang.prod.send
 # # #             lot_word:
 #                 config: waka.cloud::btns.lot_word
 #                 group: waka.utils::lang.prod.send
-# # #             lot_outlook:
-#                 config: waka.msgraph::btns.lot_outlook
-#                 group: waka.utils::lang.prod.send
-# # #     # partials: #Attention seul les variables modelId et modelClass (class du controller) sont disponible sans les partials.  
+# # # #     # partials: #Attention seul les variables modelId et modelClass (class du controller) sont disponible sans les partials.  
 #     #     testbtns:
 #     #         url: $/wcli/crm/controllers/clients/_test_btns.htm
 
@@ -130,10 +139,13 @@ Description: >
 # # #             word_cloud:
 #                 config: waka.cloud::btns.word
 #                 group: waka.utils::lang.prod.send
-# # # # # # # #             outlook:
-#                 config: waka.msgraph::btns.outlook
+# # #             pdf:
+#                 config: waka.pdfer::btns.pdf
+#                 group: waka.utils::lang.prod.produce
+# # #             pdf_cloud:
+#                 config: waka.cloud::btns.pdf
 #                 group: waka.utils::lang.prod.send
-# # #             exportChildExcel:
+# # # # # # #             exportChildExcel:
 #                 config: waka.importexport::btns.exportChildExcel
 #                 group: waka.utils::lang.prod.produce
 # # 

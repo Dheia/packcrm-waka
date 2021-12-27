@@ -37,6 +37,10 @@ tool_bar:
     config_lot:
         format: all
         btns: 
+            lot_outlook:
+                config: waka.msgraph::btns.lot_outlook
+                group: waka.utils::lang.prod.send
+            
             lot_mail:
                 config: waka.mailer::btns.lot_mail
                 group: waka.utils::lang.prod.send
