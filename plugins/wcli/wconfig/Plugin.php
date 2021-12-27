@@ -26,6 +26,18 @@ class Plugin extends PluginBase
     }
 
     /**
+     * @var array Plugin dependencies
+     */
+    public $require = [
+        'Waka.Utils',
+        'Waka.Informer',
+        'Waka.Mailer',
+        'Waka.Worder',
+        'Waka.Pdfer',
+        'Waka.MsGraph',
+    ];
+
+    /**
      * Register method, called when the plugin is first registered.
      *
      * @return void
