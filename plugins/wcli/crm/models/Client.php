@@ -149,8 +149,20 @@ class Client extends Model
     public function getTotalVentesMAttribute() {
         return $this->ventes()->wakaPeriode('m', 'sale_at')->sum('amount');
     }
-    //
-    public function getVentesByGammes($periode) {
+    public function getCumulAttribute() {
+        return  $this->ventes()->wakaPeriode('y_to_now','sale_at')->sum('amount');
+    }
+    public function getCumuln1Attribute() {
+        return  $this->ventes()->wakaPeriode('y-1_to_now&y-1', 'sale_at')->sum('amount');
+    }
+    public function getProgressionAttribute() {
+        return round(($this->cumul - $this->cumuln1)/$this->cumuln1*100,2);
+    }
+    /**
+     * DATA SET 
+     */
+    public function getVentesByGammesDataSet($attributes) {
+        $periode = $attributes['periode'];
         if(!$periode) {
             throw new \SystemException('variable periode est null');
         }
@@ -168,68 +180,23 @@ class Client extends Model
             $mapped['value'] = $item['value'];
             return $mapped;
         });
-        return $sales;
+        return $sales->pluck('value', 'labels')->toArray();;
 
     }
-    public function getLbVentesByGammes($attributes) {
+    public function getVentesByMonthDataSet($attributes) {
         $periode = $attributes['periode'];
-        $sales =  $this->getVentesByGammes($periode);
-        if(!$sales) {
-            return [];
-        }
-        return $sales->pluck('labels')->toArray();
-    }
-    public function getCcVentesByGammes($attributes) {
-        $periode = $attributes['periode'];
-        $sales =  $this->getVentesByGammes($periode);
-        if(!$sales) {
-            return [];
-        }
-        return $sales->pluck('value')->toArray();
-    }
-    //
-    public function getVentesByMonth($periode) {
         $sales = $this->ventes()->wakaPeriode($periode, 'sale_at');
         $sales =  $sales->select(\Db::raw('SUM(amount) as value'), \DB::raw('MONTH(sale_at) month'), \DB::raw('YEAR(sale_at) year'))
             ->groupBy('year','month')->get();
-        return $sales;
+        return $sales->pluck('value', 'month')->toArray();;
     }
-    public function getLbVentesByMonth($attributes) {
-        $periode = $attributes['periode'];
-        $sales =  $this->getVentesByMonth($periode);
-        if(!$sales) {
-            return [];
-        }
-        //trace_log($sales->pluck('month')->toArray());
-        return $sales->pluck('month')->toArray();
-    }
-    public function getCcVentesByMonth($attributes) {
-        $periode = $attributes['periode'];
-        $sales =  $this->getVentesByMonth($periode);
-        if(!$sales) {
-            return [];
-        }
-        //trace_log($sales->pluck('value')->toArray());
-        return $sales->pluck('value')->toArray();
-    }
-
     public function getCcVentesByMonthN1($attributes) {
         $periode2 = $attributes['periode2'];
-        $sales =  $this->getVentesByMonth($periode2);
+        $sales =  $this->getVentesByMonthDataSet($periode2);
         if(!$sales) {
             return [];
         }
         return $sales->pluck('value')->toArray();
-    }
-
-    public function getCumulAttribute() {
-        return  $this->ventes()->wakaPeriode('y_to_d','sale_at')->sum('amount');
-    }
-    public function getCumuln1Attribute() {
-        return  $this->ventes()->wakaPeriode('y_1_to_d', 'sale_at')->sum('amount');
-    }
-    public function getProgressionAttribute() {
-        return round(($this->cumul - $this->cumuln1)/$this->cumuln1*100,2);
     }
 
     /**

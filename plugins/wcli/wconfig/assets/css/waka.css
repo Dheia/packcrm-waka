@@ -320,6 +320,14 @@
 .sb-h3{font-size:1.2rem;font-weight:bold}
 #sidebar_info h3,
 h4{padding-top:10px}
+.txt_memo>textarea{background-color:#fbface}
+.txt_warning>textarea{background-color:#fccf95}
+.txt_success>textarea{background-color:#c9faa0}
+.w-toolbar{display:flex}
+.w-actionbar{align-items:flex-start;display:inline-flex}
+@media (max-width:768px){.w-toolbar{display:block}.w-toolbar>.dropdown,.w-toolbar>div>button{margin-top:5px}.w-actionbar{display:block}.w-actionbar>.dropdown{margin-top:5px}.w-actionbar>.dropdown,.w-actionbar>button{margin-top:5px}}
+.w-reset-this-root{all:initial}
+.w-reset-this-root *{all:unset}
 .w-color-p{color:#143d59}
 .w-color-a{color:#f4b41a}
 .w-color-s{color:#787978}
@@ -450,11 +458,3 @@ p{font-size:1em;margin:0 0 1rem 0}.w-small{font-size:0.8rem}
 img .w-original{object-fit:contain;max-height:initial !important;max-width:initial !important}
 img{position:relative;object-fit:contain}
 .bg-img-cover{background-position:center;background-repeat:no-repeat;background-size:cover}
-.txt_memo>textarea{background-color:#fbface}
-.txt_warning>textarea{background-color:#fccf95}
-.txt_success>textarea{background-color:#c9faa0}
-.w-toolbar{display:flex}
-.w-actionbar{align-items:flex-start;display:inline-flex}
-@media (max-width:768px){.w-toolbar{display:block}.w-toolbar>.dropdown,.w-toolbar>div>button{margin-top:5px}.w-actionbar{display:block}.w-actionbar>.dropdown{margin-top:5px}.w-actionbar>.dropdown,.w-actionbar>button{margin-top:5px}}
-.w-reset-this-root{all:initial}
-.w-reset-this-root *{all:unset}

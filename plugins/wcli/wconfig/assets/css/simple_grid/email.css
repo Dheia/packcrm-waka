@@ -41,7 +41,6 @@ body *:not(html):not(style):not(br):not(tr):not(code){font-family:Avenir,Helveti
 .w-border-sr{border-right:solid #405261}
 .w-border-st{border-top:solid #405261}
 .w-border-sb{border-bottom:solid #405261}
-.w-full{width:100% !important}
 .w-ma-0{margin:0rem}
 .w-mx-0{margin-left:0rem;margin-right:0rem}
 .w-my-0{margin-top:0rem;margin-bottom:0rem}

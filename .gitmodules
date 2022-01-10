@@ -31,3 +31,6 @@
 [submodule "plugins/waka/pdfer"]
 	path = plugins/waka/pdfer
 	url = https://github.com/charlesStOlive/oc-pdfer.git
+[submodule "plugins/waka/tbser"]
+	path = plugins/waka/tbser
+	url = https://github.com/charlesStOlive/ws-tbser.git

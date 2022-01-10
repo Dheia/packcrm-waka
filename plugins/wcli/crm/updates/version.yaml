@@ -10,7 +10,7 @@
   # - seed_client_waka_importExport_export101.php
   # - seed_client_waka_importExport_import101.php
   # - seed_client_waka_segator_layout101.php
-  - seed_client_waka_worder_document101.php
+  # - seed_client_waka_worder_document101.php
   # - seed_commercial_waka_importExport_export101.php
   # - seed_commercial_waka_importExport_import101.php
   # - seed_commercial_waka_mailer_wakaMail101.php

@@ -4,13 +4,13 @@ use Seeder;
 
 
 
-class SeedClientWakaSegatorLayout101 extends Seeder
+class SeedContactWakaSegatorLayout extends Seeder
 {
     public function run()
     {
         \Waka\Segator\Models\Tag::truncate();
             
-        $inject = \Waka\Segator\Models\Tag::create([
+        $inject_0 = \Waka\Segator\Models\Tag::create([
                 'name' => 'Acheteur Gamme A',
                 'slug' => 'acheteur_gamme_a',
                 'is_active' => 1,
@@ -39,7 +39,11 @@ class SeedClientWakaSegatorLayout101 extends Seeder
                 'created_at' => '2021-08-30 15:29:08',
                 'updated_at' => '2021-08-30 16:15:10'
             ]);
-        $inject = \Waka\Segator\Models\Tag::create([
+        
+
+        $inject_0->save();
+
+        $inject_1 = \Waka\Segator\Models\Tag::create([
                 'name' => 'Client important',
                 'slug' => 'client-important',
                 'is_active' => 1,
@@ -52,8 +56,8 @@ class SeedClientWakaSegatorLayout101 extends Seeder
                 'parent_excs' => null,
                 'calculs' => [
                     [
-                        'name' => 'Tague si NB ventes supérieures à XX sur les gammes ',
-                        'nb' => '200',
+                        'name' => 'Tague si NB ventes supérieures à 120 sur les gammes ',
+                        'nb' => '210',
                         'periode' => 'all',
                         'calculCode' => 'nbVentesGammes',
                         'tagId' => '612d055df04ff'
@@ -61,8 +65,12 @@ class SeedClientWakaSegatorLayout101 extends Seeder
                 ],
                 'sort_order' => 3,
                 'created_at' => '2021-08-30 16:20:28',
-                'updated_at' => '2021-08-30 16:21:38'
+                'updated_at' => '2021-12-23 16:07:58'
             ]);
+        
+
+        $inject_1->save();
+
  
     }
 

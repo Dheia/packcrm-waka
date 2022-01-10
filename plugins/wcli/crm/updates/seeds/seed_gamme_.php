@@ -4,13 +4,13 @@ use Seeder;
 
 
 
-class SeedGamme101 extends Seeder
+class SeedGamme extends Seeder
 {
     public function run()
     {
         \Wcli\Crm\Models\Gamme::truncate();
             
-        $inject = \Wcli\Crm\Models\Gamme::create([
+        $inject_0 = \Wcli\Crm\Models\Gamme::create([
                 'name' => 'Gamme A',
                 'slug' => 'gamme-a',
                 'description' => 'Description de Gamme A',
@@ -19,14 +19,14 @@ class SeedGamme101 extends Seeder
                 'nest_left' => 1,
                 'nest_right' => 8,
                 'nest_depth' => 0,
-                'created_at' => '2021-09-07 14:20:39',
-                'updated_at' => '2021-09-20 13:23:07'
+                'created_at' => '2021-12-23 15:44:27',
+                'updated_at' => '2021-12-23 15:44:27'
             ]);
-        $inject->image = plugins_path('wcli/crm/updates/files/g_a-8.png');
-        $inject->save();
+        
 
- 
-        $inject = \Wcli\Crm\Models\Gamme::create([
+        $inject_0->save();
+
+        $inject_1 = \Wcli\Crm\Models\Gamme::create([
                 'name' => 'A1',
                 'slug' => 'a1',
                 'description' => 'Description de A1',
@@ -35,14 +35,14 @@ class SeedGamme101 extends Seeder
                 'nest_left' => 2,
                 'nest_right' => 3,
                 'nest_depth' => 1,
-                'created_at' => '2021-09-07 14:20:39',
-                'updated_at' => '2021-09-20 13:23:07'
+                'created_at' => '2021-12-23 15:44:27',
+                'updated_at' => '2021-12-23 15:44:27'
             ]);
-        $inject->image = plugins_path('wcli/crm/updates/files/g_a_1-8.png');
-        $inject->save();
+        
 
- 
-        $inject = \Wcli\Crm\Models\Gamme::create([
+        $inject_1->save();
+
+        $inject_2 = \Wcli\Crm\Models\Gamme::create([
                 'name' => 'A2',
                 'slug' => 'a2',
                 'description' => 'Description de A2',
@@ -51,14 +51,14 @@ class SeedGamme101 extends Seeder
                 'nest_left' => 4,
                 'nest_right' => 5,
                 'nest_depth' => 1,
-                'created_at' => '2021-09-07 14:20:39',
-                'updated_at' => '2021-09-20 13:23:07'
+                'created_at' => '2021-12-23 15:44:27',
+                'updated_at' => '2021-12-23 15:44:27'
             ]);
-        $inject->image = plugins_path('wcli/crm/updates/files/g_a_2-8.png');
-        $inject->save();
+        
 
- 
-        $inject = \Wcli\Crm\Models\Gamme::create([
+        $inject_2->save();
+
+        $inject_3 = \Wcli\Crm\Models\Gamme::create([
                 'name' => 'A3',
                 'slug' => 'a3',
                 'description' => 'Description de A3',
@@ -67,14 +67,14 @@ class SeedGamme101 extends Seeder
                 'nest_left' => 6,
                 'nest_right' => 7,
                 'nest_depth' => 1,
-                'created_at' => '2021-09-07 14:20:39',
-                'updated_at' => '2021-09-20 13:23:07'
+                'created_at' => '2021-12-23 15:44:27',
+                'updated_at' => '2021-12-23 15:44:27'
             ]);
-        $inject->image = plugins_path('wcli/crm/updates/files/g_a_3-8.png');
-        $inject->save();
+        
 
- 
-        $inject = \Wcli\Crm\Models\Gamme::create([
+        $inject_3->save();
+
+        $inject_4 = \Wcli\Crm\Models\Gamme::create([
                 'name' => 'Gamme B',
                 'slug' => 'gamme-b',
                 'description' => 'Description de Gamme B',
@@ -83,46 +83,46 @@ class SeedGamme101 extends Seeder
                 'nest_left' => 9,
                 'nest_right' => 14,
                 'nest_depth' => 0,
-                'created_at' => '2021-09-07 14:20:39',
-                'updated_at' => '2021-09-20 13:23:07'
+                'created_at' => '2021-12-23 15:44:27',
+                'updated_at' => '2021-12-23 15:44:27'
             ]);
-        $inject->image = plugins_path('wcli/crm/updates/files/g_b-8.png');
-        $inject->save();
+        
 
- 
-        $inject = \Wcli\Crm\Models\Gamme::create([
+        $inject_4->save();
+
+        $inject_5 = \Wcli\Crm\Models\Gamme::create([
                 'name' => 'B1',
                 'slug' => 'b1',
                 'description' => 'Description de B1',
                 'couleur' => null,
-                'parent_id' => 8,
+                'parent_id' => 2,
                 'nest_left' => 10,
                 'nest_right' => 11,
                 'nest_depth' => 1,
-                'created_at' => '2021-09-07 14:20:39',
-                'updated_at' => '2021-09-20 13:23:07'
+                'created_at' => '2021-12-23 15:44:27',
+                'updated_at' => '2021-12-23 15:44:27'
             ]);
-        $inject->image = plugins_path('wcli/crm/updates/files/g_b_1-8.png');
-        $inject->save();
+        
 
- 
-        $inject = \Wcli\Crm\Models\Gamme::create([
+        $inject_5->save();
+
+        $inject_6 = \Wcli\Crm\Models\Gamme::create([
                 'name' => 'B2',
                 'slug' => 'b2',
                 'description' => 'Description de B2',
                 'couleur' => null,
-                'parent_id' => 8,
+                'parent_id' => 2,
                 'nest_left' => 12,
                 'nest_right' => 13,
                 'nest_depth' => 1,
-                'created_at' => '2021-09-07 14:20:39',
-                'updated_at' => '2021-09-20 13:23:07'
+                'created_at' => '2021-12-23 15:44:27',
+                'updated_at' => '2021-12-23 15:44:27'
             ]);
-        $inject->image = plugins_path('wcli/crm/updates/files/g_b_2-8.png');
-        $inject->save();
+        
 
- 
-        $inject = \Wcli\Crm\Models\Gamme::create([
+        $inject_6->save();
+
+        $inject_7 = \Wcli\Crm\Models\Gamme::create([
                 'name' => 'Gamme C',
                 'slug' => 'gamme-c',
                 'description' => 'Description de Gamme C',
@@ -131,29 +131,29 @@ class SeedGamme101 extends Seeder
                 'nest_left' => 15,
                 'nest_right' => 18,
                 'nest_depth' => 0,
-                'created_at' => '2021-09-07 14:20:39',
-                'updated_at' => '2021-09-20 13:22:59'
+                'created_at' => '2021-12-23 15:44:27',
+                'updated_at' => '2021-12-23 15:44:27'
             ]);
-        $inject->image = plugins_path('wcli/crm/updates/files/g_c-8.png');
-        $inject->save();
+        
 
- 
-        $inject = \Wcli\Crm\Models\Gamme::create([
+        $inject_7->save();
+
+        $inject_8 = \Wcli\Crm\Models\Gamme::create([
                 'name' => 'C1',
                 'slug' => 'c1',
                 'description' => 'Description de C1',
                 'couleur' => null,
-                'parent_id' => 9,
+                'parent_id' => 3,
                 'nest_left' => 16,
                 'nest_right' => 17,
                 'nest_depth' => 1,
-                'created_at' => '2021-09-07 14:20:39',
-                'updated_at' => '2021-09-20 13:22:59'
+                'created_at' => '2021-12-23 15:44:27',
+                'updated_at' => '2021-12-23 15:44:27'
             ]);
-        $inject->image = plugins_path('wcli/crm/updates/files/g_c_1-8.png');
-        $inject->save();
+        
 
- 
+        $inject_8->save();
+
  
     }
 

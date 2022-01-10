@@ -29,6 +29,7 @@ class Commercials extends Controller
 
     public $requiredPermissions = ['wcli.crm.*'];
     //FIN DE LA CONFIG AUTO
+    //startKeep/
 
     public function __construct()
     {
@@ -36,14 +37,12 @@ class Commercials extends Controller
         BackendMenu::setContext('Wcli.Crm', 'crm', 'side-menu-commercials');
     }
 
-    //startKeep/
-
     public function update($id)
     {
         $this->bodyClass = 'compact-container';
         return $this->asExtension('FormController')->update($id);
     }
 
-        //endKeep/
+    //endKeep/
 }
 

@@ -2,8 +2,8 @@
 return [
     'action' => 'Action',
     'adresse' => 'Adresse',
-    'chart_1' => 'Ventes par gamme année en cours',
-    'chart_2' => 'CA des 12 derniers mois',
+    'chart_1' => 'Nb Ventes par gamme 6 derniers mois glissants',
+    'chart_2' => 'Comparatif CA 6 derniers mois glissants N et N-1',
     'commercial' => 'Commercial',
     'contacts' => 'Contacts',
     'courriers' => 'Gestion client',

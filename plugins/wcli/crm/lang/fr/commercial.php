@@ -1,8 +1,9 @@
 <?php
 return [
     'action' => 'Action',
-    'chart_1' => 'Répartition gamme N',
+    'chart_1' => 'Répartition ventes/gamme 30 dernier jours glissants',
     'chart_2' => 'Comparatif N et N-1',
+    'chart_3' => 'CA Ventes/semaines 365j glissants',
     'clients' => 'Clients',
     'contacts' => 'Contacts',
     'courriers' => 'Gestion commercial',

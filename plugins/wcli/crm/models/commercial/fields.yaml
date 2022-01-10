@@ -9,48 +9,48 @@ fields:
         type: chartform
         chartType: pie_or_doughnut
         renderType: doughnut
-        labels: getLbVentesByGammes
-        fnc: getCcVentesByGammes
+        # labels: getLbVentesByGammes
+        fnc: getVentesByGammesDataSet
         width: 100%
         height: 300px
         dataSets:
             first:
                 attributes:
-                    periode: m
+                    periode: d-30_to_now
     chart_2:
         label: wcli.crm::commercial.chart_2
         span: auto
         type: chartform
         chartType: bar_or_line
         renderType: bar
-        labels: getLbVentesByMonth
-        fnc: getCcVentesByMonth
+        # labels: getLbVentesByMonth
+        fnc: getVentesByMonthDataSet
         dataSets:
-            first:
-                label: CA
-                attributes:
-                    periode: y_to_d
             second:
                 label: CA (N-1)
                 attributes:
-                    periode: y_1_to_d
+                    periode: y-1_to_now&y-1
+            first:
+                label: CA
+                attributes:
+                    periode: y_to_now
     chart_3:
         label: wcli.crm::commercial.chart_3
         span: full
         type: chartform
         chartType: bar_or_line
         renderType: bar
-        labels: getLbVentesByWeek
-        fnc: getCcVentesByWeek
+        # labels: getLbVentesByWeek
+        fnc: getVentesByWeekDataSet
         dataSets:
-            first:
-                label: CA
-                attributes:
-                    periode: y_to_d
             second:
                 label: CA (N-1)
                 attributes:
-                    periode: y_1_to_d
+                    periode: d-365&y-1_to_now&y-1
+            first:
+                label: CA
+                attributes:
+                    periode: d-365_to_now
     clients:
         label: wcli.crm::commercial.clients
         span: full

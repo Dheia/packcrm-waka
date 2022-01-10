@@ -29,15 +29,17 @@ class Clients extends Controller
 
     public $requiredPermissions = ['wcli.crm.*'];
     //FIN DE LA CONFIG AUTO
-
+    //startKeep/
     public function __construct()
     {
         parent::__construct();
         BackendMenu::setContext('Wcli.Crm', 'crm', 'side-menu-clients');
     }
-
-    //startKeep/
-
-        //endKeep/
+    public function update($id)
+    {
+        $this->bodyClass = 'compact-container';
+        return $this->asExtension('FormController')->update($id);
+    }
+    //endKeep/
 }
 

@@ -4,19 +4,19 @@ use Seeder;
 
 
 
-class SeedContactWakaMailerBloc101 extends Seeder
+class SeedContactWakaMailerBloc extends Seeder
 {
     public function run()
     {
         \Waka\Mailer\Models\Bloc::truncate();
             
-        $inject = \Waka\Mailer\Models\Bloc::create([
+        $inject_0 = \Waka\Mailer\Models\Bloc::create([
                 'name' => 'base footer',
                 'slug' => 'base_footer',
-                'contenu' => '<table class="w-bg-gl w-w-full w-pa-4 w-mt-4" align="center" cellpadding="0" cellspacing="0">
+                'contenu' => '<table class="w-bg-gl w-full w-mx-0 w-mt-4" align="center" cellpadding="0" cellspacing="0">
     <tr class="w-w-full">
         <td  align="center">
-            <img  src="{{ \'themes/wakatailwind/assets/images/logo.png\' |app }}" alt="logo" style="height:auto;width:150px" />
+            <img  src="{{ \'themes/wakatailwind/assets/images/logo.png\' |app }}" alt="logo" style="height:auto;width:100px"  width="100" />
 
         </td>
         <td class="" align="center">
@@ -31,9 +31,13 @@ class SeedContactWakaMailerBloc101 extends Seeder
                 'description' => 'Footer pour le template de base',
                 'sort_order' => 1,
                 'created_at' => '2021-06-23 10:21:51',
-                'updated_at' => '2021-07-04 09:35:50'
+                'updated_at' => '2021-12-27 11:24:59'
             ]);
-        $inject = \Waka\Mailer\Models\Bloc::create([
+        
+
+        $inject_0->save();
+
+        $inject_1 = \Waka\Mailer\Models\Bloc::create([
                 'name' => 'testr',
                 'slug' => 'terdssd',
                 'contenu' => null,
@@ -42,6 +46,10 @@ class SeedContactWakaMailerBloc101 extends Seeder
                 'created_at' => '2021-09-08 14:15:03',
                 'updated_at' => '2021-09-08 14:15:03'
             ]);
+        
+
+        $inject_1->save();
+
  
     }
 
