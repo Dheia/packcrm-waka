@@ -62,15 +62,15 @@ class Ventes extends FncBase implements FncInterface
         $query = $this->getBridgeQuery($modelSrc, $poductorDs);
         
         //
-        trace_log($query->count());
+        //trace_log($query->count());
         if ($periode = $this->getConfig('periode')) {
             $query = $query->wakaPeriode($periode, 'sale_at');
         }
-        trace_log($query->count());
+        //trace_log($query->count());
         if ($gammes = $this->getConfig('gammes')) {
             $query = $query->whereIn('gamme_id', $gammes);
         }
-        trace_log($query->count());
+        //trace_log($query->count());
         $query = $query->orderby('sale_at', 'asc')->with('client', 'gamme')->get();
         return [
             'title' => $this->getConfig('title'),
