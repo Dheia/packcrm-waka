@@ -8,6 +8,7 @@ fields:
     tags:
         label: Filtrer par Tags
         type: taglist
+        mode: array
         useKey: true
         options: getTagList
     is_filter_field:

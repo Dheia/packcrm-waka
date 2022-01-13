@@ -13,7 +13,7 @@ class EtatClients extends FncBase implements FncInterface
 
     public $jsonable = ['tags'];
     //
-    public function fncDetails()
+    public function subFormDetails()
     {
         return [
             'name'        =>  'Etats des ventes des clients',

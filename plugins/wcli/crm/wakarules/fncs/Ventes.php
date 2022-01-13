@@ -13,7 +13,7 @@ class Ventes extends FncBase implements FncInterface
 
     public $jsonable = ['gammes'];
     //
-    public function fncDetails()
+    public function subFormDetails()
     {
         return [
             'name'        =>  'Ventes',
