@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fca9c422a6afcd0dc3d590fe196dd46b",
+    "content-hash": "72a927756d4ef6a8587b563b8444bfec",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -58,16 +58,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.209.1",
+            "version": "3.209.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "3a418a7a9beae4675685efe7bb426ee0ae338a40"
+                "reference": "fc4ac03c6ec4acea81c01e8b785c8606943d1fd6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/3a418a7a9beae4675685efe7bb426ee0ae338a40",
-                "reference": "3a418a7a9beae4675685efe7bb426ee0ae338a40",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/fc4ac03c6ec4acea81c01e8b785c8606943d1fd6",
+                "reference": "fc4ac03c6ec4acea81c01e8b785c8606943d1fd6",
                 "shasum": ""
             },
             "require": {
@@ -143,9 +143,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.209.1"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.209.6"
             },
-            "time": "2022-01-07T19:12:55+00:00"
+            "time": "2022-01-14T19:29:33+00:00"
         },
         {
             "name": "barryvdh/laravel-snappy",
@@ -993,32 +993,28 @@
         },
         {
             "name": "doctrine/lexer",
-            "version": "1.2.1",
+            "version": "1.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/lexer.git",
-                "reference": "e864bbf5904cb8f5bb334f99209b48018522f042"
+                "reference": "9c50f840f257bbb941e6f4a0e94ccf5db5c3f76c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/lexer/zipball/e864bbf5904cb8f5bb334f99209b48018522f042",
-                "reference": "e864bbf5904cb8f5bb334f99209b48018522f042",
+                "url": "https://api.github.com/repos/doctrine/lexer/zipball/9c50f840f257bbb941e6f4a0e94ccf5db5c3f76c",
+                "reference": "9c50f840f257bbb941e6f4a0e94ccf5db5c3f76c",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.2 || ^8.0"
+                "php": "^7.1 || ^8.0"
             },
             "require-dev": {
-                "doctrine/coding-standard": "^6.0",
-                "phpstan/phpstan": "^0.11.8",
-                "phpunit/phpunit": "^8.2"
+                "doctrine/coding-standard": "^9.0",
+                "phpstan/phpstan": "1.3",
+                "phpunit/phpunit": "^7.5 || ^8.5 || ^9.5",
+                "vimeo/psalm": "^4.11"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.2.x-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "Doctrine\\Common\\Lexer\\": "lib/Doctrine/Common/Lexer"
@@ -1053,7 +1049,7 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/lexer/issues",
-                "source": "https://github.com/doctrine/lexer/tree/1.2.1"
+                "source": "https://github.com/doctrine/lexer/tree/1.2.2"
             },
             "funding": [
                 {
@@ -1069,7 +1065,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-05-25T17:44:05+00:00"
+            "time": "2022-01-12T08:27:12+00:00"
         },
         {
             "name": "dragonmantank/cron-expression",
@@ -1485,7 +1481,7 @@
         },
         {
             "name": "google/apiclient-services",
-            "version": "v0.229.0",
+            "version": "v0.230.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/google-api-php-client-services.git",
@@ -1523,7 +1519,7 @@
             ],
             "support": {
                 "issues": "https://github.com/googleapis/google-api-php-client-services/issues",
-                "source": "https://github.com/googleapis/google-api-php-client-services/tree/v0.229.0"
+                "source": "https://github.com/googleapis/google-api-php-client-services/tree/v0.230.0"
             },
             "time": "2021-12-21T12:26:12+00:00"
         },
@@ -2101,47 +2097,6 @@
             "time": "2015-02-12T15:38:54+00:00"
         },
         {
-            "name": "juanmiguelbesada/mjml-php",
-            "version": "dev-dev-waka",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/charlesStOlive/mjml-php.git",
-                "reference": "8b16ec971a6b6bbea1f98a543fa97170c9e4c184"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/charlesStOlive/mjml-php/zipball/8b16ec971a6b6bbea1f98a543fa97170c9e4c184",
-                "reference": "8b16ec971a6b6bbea1f98a543fa97170c9e4c184",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.2"
-            },
-            "require-dev": {
-                "friendsofphp/php-cs-fixer": "^2.12"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Mjml\\": "src/"
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Juan Miguel Besada",
-                    "email": "juanmiguelbesada@gmail.com"
-                }
-            ],
-            "description": "A simple php library to consume use MJML rest API",
-            "support": {
-                "source": "https://github.com/charlesStOlive/mjml-php/tree/dev-waka"
-            },
-            "time": "2020-03-12T09:54:46+00:00"
-        },
-        {
             "name": "knplabs/knp-snappy",
             "version": "v1.4.1",
             "source": {
@@ -2279,16 +2234,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v6.20.43",
+            "version": "v6.20.44",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "103df9fafbeeac620305874d54a01288c6f1586b"
+                "reference": "505ebcdeaa9ca56d6d7dbf38ed4f53998c973ed0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/103df9fafbeeac620305874d54a01288c6f1586b",
-                "reference": "103df9fafbeeac620305874d54a01288c6f1586b",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/505ebcdeaa9ca56d6d7dbf38ed4f53998c973ed0",
+                "reference": "505ebcdeaa9ca56d6d7dbf38ed4f53998c973ed0",
                 "shasum": ""
             },
             "require": {
@@ -2428,36 +2383,36 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2021-12-14T14:39:18+00:00"
+            "time": "2022-01-12T16:12:12+00:00"
         },
         {
             "name": "laravel/tinker",
-            "version": "v2.6.3",
+            "version": "v2.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/tinker.git",
-                "reference": "a9ddee4761ec8453c584e393b393caff189a3e42"
+                "reference": "5f2f9815b7631b9f586a3de7933c25f9327d4073"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/tinker/zipball/a9ddee4761ec8453c584e393b393caff189a3e42",
-                "reference": "a9ddee4761ec8453c584e393b393caff189a3e42",
+                "url": "https://api.github.com/repos/laravel/tinker/zipball/5f2f9815b7631b9f586a3de7933c25f9327d4073",
+                "reference": "5f2f9815b7631b9f586a3de7933c25f9327d4073",
                 "shasum": ""
             },
             "require": {
-                "illuminate/console": "^6.0|^7.0|^8.0",
-                "illuminate/contracts": "^6.0|^7.0|^8.0",
-                "illuminate/support": "^6.0|^7.0|^8.0",
+                "illuminate/console": "^6.0|^7.0|^8.0|^9.0",
+                "illuminate/contracts": "^6.0|^7.0|^8.0|^9.0",
+                "illuminate/support": "^6.0|^7.0|^8.0|^9.0",
                 "php": "^7.2.5|^8.0",
-                "psy/psysh": "^0.10.4",
-                "symfony/var-dumper": "^4.3.4|^5.0"
+                "psy/psysh": "^0.10.4|^0.11.1",
+                "symfony/var-dumper": "^4.3.4|^5.0|^6.0"
             },
             "require-dev": {
                 "mockery/mockery": "~1.3.3|^1.4.2",
                 "phpunit/phpunit": "^8.5.8|^9.3.3"
             },
             "suggest": {
-                "illuminate/database": "The Illuminate Database package (^6.0|^7.0|^8.0)."
+                "illuminate/database": "The Illuminate Database package (^6.0|^7.0|^8.0|^9.0)."
             },
             "type": "library",
             "extra": {
@@ -2494,22 +2449,22 @@
             ],
             "support": {
                 "issues": "https://github.com/laravel/tinker/issues",
-                "source": "https://github.com/laravel/tinker/tree/v2.6.3"
+                "source": "https://github.com/laravel/tinker/tree/v2.7.0"
             },
-            "time": "2021-12-07T16:41:42+00:00"
+            "time": "2022-01-10T08:52:49+00:00"
         },
         {
             "name": "league/commonmark",
-            "version": "1.6.6",
+            "version": "1.6.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/commonmark.git",
-                "reference": "c4228d11e30d7493c6836d20872f9582d8ba6dcf"
+                "reference": "2b8185c13bc9578367a5bf901881d1c1b5bbd09b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/c4228d11e30d7493c6836d20872f9582d8ba6dcf",
-                "reference": "c4228d11e30d7493c6836d20872f9582d8ba6dcf",
+                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/2b8185c13bc9578367a5bf901881d1c1b5bbd09b",
+                "reference": "2b8185c13bc9578367a5bf901881d1c1b5bbd09b",
                 "shasum": ""
             },
             "require": {
@@ -2573,10 +2528,6 @@
             },
             "funding": [
                 {
-                    "url": "https://enjoy.gitstore.app/repositories/thephpleague/commonmark",
-                    "type": "custom"
-                },
-                {
                     "url": "https://www.colinodell.com/sponsor",
                     "type": "custom"
                 },
@@ -2589,15 +2540,11 @@
                     "type": "github"
                 },
                 {
-                    "url": "https://www.patreon.com/colinodell",
-                    "type": "patreon"
-                },
-                {
                     "url": "https://tidelift.com/funding/github/packagist/league/commonmark",
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-07-17T17:13:23+00:00"
+            "time": "2022-01-13T17:18:13+00:00"
         },
         {
             "name": "league/csv",
@@ -4190,16 +4137,16 @@
         },
         {
             "name": "paragonie/constant_time_encoding",
-            "version": "v2.4.0",
+            "version": "v2.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/paragonie/constant_time_encoding.git",
-                "reference": "f34c2b11eb9d2c9318e13540a1dbc2a3afbd939c"
+                "reference": "9229e15f2e6ba772f0c55dd6986c563b937170a8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/paragonie/constant_time_encoding/zipball/f34c2b11eb9d2c9318e13540a1dbc2a3afbd939c",
-                "reference": "f34c2b11eb9d2c9318e13540a1dbc2a3afbd939c",
+                "url": "https://api.github.com/repos/paragonie/constant_time_encoding/zipball/9229e15f2e6ba772f0c55dd6986c563b937170a8",
+                "reference": "9229e15f2e6ba772f0c55dd6986c563b937170a8",
                 "shasum": ""
             },
             "require": {
@@ -4253,7 +4200,7 @@
                 "issues": "https://github.com/paragonie/constant_time_encoding/issues",
                 "source": "https://github.com/paragonie/constant_time_encoding"
             },
-            "time": "2020-12-06T15:14:20+00:00"
+            "time": "2022-01-17T05:32:27+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -5317,29 +5264,29 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.10.12",
+            "version": "v0.11.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "a0d9981aa07ecfcbea28e4bfa868031cca121e7d"
+                "reference": "570292577277f06f590635381a7f761a6cf4f026"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/a0d9981aa07ecfcbea28e4bfa868031cca121e7d",
-                "reference": "a0d9981aa07ecfcbea28e4bfa868031cca121e7d",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/570292577277f06f590635381a7f761a6cf4f026",
+                "reference": "570292577277f06f590635381a7f761a6cf4f026",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "ext-tokenizer": "*",
-                "nikic/php-parser": "~4.0|~3.0|~2.0|~1.3",
-                "php": "^8.0 || ^7.0 || ^5.5.9",
-                "symfony/console": "~5.0|~4.0|~3.0|^2.4.2|~2.3.10",
-                "symfony/var-dumper": "~5.0|~4.0|~3.0|~2.7"
+                "nikic/php-parser": "^4.0 || ^3.1",
+                "php": "^8.0 || ^7.0.8",
+                "symfony/console": "^6.0 || ^5.0 || ^4.0 || ^3.4",
+                "symfony/var-dumper": "^6.0 || ^5.0 || ^4.0 || ^3.4"
             },
             "require-dev": {
                 "bamarni/composer-bin-plugin": "^1.2",
-                "hoa/console": "3.17.*"
+                "hoa/console": "3.17.05.02"
             },
             "suggest": {
                 "ext-pcntl": "Enabling the PCNTL extension makes PsySH a lot happier :)",
@@ -5354,7 +5301,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "0.10.x-dev"
+                    "dev-main": "0.11.x-dev"
                 }
             },
             "autoload": {
@@ -5386,9 +5333,9 @@
             ],
             "support": {
                 "issues": "https://github.com/bobthecow/psysh/issues",
-                "source": "https://github.com/bobthecow/psysh/tree/v0.10.12"
+                "source": "https://github.com/bobthecow/psysh/tree/v0.11.1"
             },
-            "time": "2021-11-30T14:05:36+00:00"
+            "time": "2022-01-03T13:58:38+00:00"
         },
         {
             "name": "rackspace/php-opencloud",
@@ -8874,12 +8821,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/charlesStOlive/opentbs.git",
-                "reference": "6dae3f8aeb3bc562faac79dd5d7794bd81cd3d5f"
+                "reference": "6a69ad25918a2cdfa4aa8508fd75979310f60580"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/charlesStOlive/opentbs/zipball/6dae3f8aeb3bc562faac79dd5d7794bd81cd3d5f",
-                "reference": "6dae3f8aeb3bc562faac79dd5d7794bd81cd3d5f",
+                "url": "https://api.github.com/repos/charlesStOlive/opentbs/zipball/6a69ad25918a2cdfa4aa8508fd75979310f60580",
+                "reference": "6a69ad25918a2cdfa4aa8508fd75979310f60580",
                 "shasum": ""
             },
             "require": {
@@ -8909,7 +8856,7 @@
                 "issues": "https://github.com/charlesStOlive/opentbs/issues",
                 "source": "https://github.com/charlesStOlive/opentbs/tree/master"
             },
-            "time": "2022-01-10T17:18:54+00:00"
+            "time": "2022-01-12T07:35:54+00:00"
         },
         {
             "name": "wikimedia/composer-merge-plugin",
@@ -9039,12 +8986,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/wintercms/storm.git",
-                "reference": "13e5eed5f4ba029477c2ccbdff8e5626b921ca8d"
+                "reference": "a208f573f7d6c42923331604e19f4d45cef5714f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wintercms/storm/zipball/13e5eed5f4ba029477c2ccbdff8e5626b921ca8d",
-                "reference": "13e5eed5f4ba029477c2ccbdff8e5626b921ca8d",
+                "url": "https://api.github.com/repos/wintercms/storm/zipball/a208f573f7d6c42923331604e19f4d45cef5714f",
+                "reference": "a208f573f7d6c42923331604e19f4d45cef5714f",
                 "shasum": ""
             },
             "require": {
@@ -9145,7 +9092,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-12-06T21:34:37+00:00"
+            "time": "2022-01-12T01:20:11+00:00"
         },
         {
             "name": "winter/wn-backend-module",
@@ -9153,12 +9100,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/wintercms/wn-backend-module.git",
-                "reference": "c155ad91dd1859bfa81446b355a1b3c5ff39c2c0"
+                "reference": "74226e2152a45bd9beb924b3ad467a21e4b27854"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wintercms/wn-backend-module/zipball/c155ad91dd1859bfa81446b355a1b3c5ff39c2c0",
-                "reference": "c155ad91dd1859bfa81446b355a1b3c5ff39c2c0",
+                "url": "https://api.github.com/repos/wintercms/wn-backend-module/zipball/74226e2152a45bd9beb924b3ad467a21e4b27854",
+                "reference": "74226e2152a45bd9beb924b3ad467a21e4b27854",
                 "shasum": ""
             },
             "require": {
@@ -9213,7 +9160,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-01-05T00:04:20+00:00"
+            "time": "2022-01-12T02:47:20+00:00"
         },
         {
             "name": "winter/wn-cms-module",
@@ -11825,7 +11772,6 @@
         "winter/wn-backend-module": 20,
         "winter/wn-cms-module": 20,
         "mexitek/phpcolors": 20,
-        "juanmiguelbesada/mjml-php": 20,
         "dcblogdev/laravel-microsoft-graph": 20,
         "phpoffice/phpword": 20
     },
