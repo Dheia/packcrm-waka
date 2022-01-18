@@ -35,10 +35,6 @@
         "source": "https://github.com/wintercms/winter"
     },
     "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/charlesStOlive/mjml-php.git"
-        }
     ],
     "require": {
         "php": ">=7.2.9",
@@ -51,7 +47,6 @@
         "maatwebsite/excel": "^3.1",
         "mexitek/phpcolors": "dev-master",
         "markrogoyski/math-php": "0.*",
-        "juanmiguelbesada/mjml-php": "dev-dev-waka",
         "nao-pon/flysystem-google-drive": "~1.1",
         "zerodahero/laravel-workflow": "^2.0",
         "spatie/laravel-backup": "^6.11",

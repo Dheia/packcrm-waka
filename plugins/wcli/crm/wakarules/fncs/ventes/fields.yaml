@@ -13,6 +13,7 @@ fields:
         label: Choisissez une gamme (vide = tt gammes)
         type: taglist
         useKey: true
+        mode: array
         options: listGammes
 outputs:
     attributes: 
