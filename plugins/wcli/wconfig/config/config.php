@@ -13,9 +13,9 @@ return [
         'gl' => '#E0E0E0',
         'dark' => '#252525',
     ],
-    'dataSource' => [
-        'src' => 'wcli/wconfig/config/datasources.yaml',
-    ],
+    // 'dataSource' => [
+    //     'src' => 'wcli/wconfig/config/datasources.yaml',
+    // ],
     'workflows' => [
         // '/wcli/crm/config/project_w.yaml',
     ],

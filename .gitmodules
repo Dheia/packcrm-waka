@@ -34,3 +34,6 @@
 [submodule "plugins/waka/tbser"]
 	path = plugins/waka/tbser
 	url = https://github.com/charlesStOlive/ws-tbser.git
+[submodule "plugins/waka/docser"]
+	path = plugins/waka/docser
+	url = https://github.com/charlesStOlive/ws-docser.git
