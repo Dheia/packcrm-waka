@@ -58,16 +58,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.209.6",
+            "version": "3.209.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "fc4ac03c6ec4acea81c01e8b785c8606943d1fd6"
+                "reference": "45082e9fac26bdbc5db504639373374084f616d3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/fc4ac03c6ec4acea81c01e8b785c8606943d1fd6",
-                "reference": "fc4ac03c6ec4acea81c01e8b785c8606943d1fd6",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/45082e9fac26bdbc5db504639373374084f616d3",
+                "reference": "45082e9fac26bdbc5db504639373374084f616d3",
                 "shasum": ""
             },
             "require": {
@@ -143,9 +143,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.209.6"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.209.10"
             },
-            "time": "2022-01-14T19:29:33+00:00"
+            "time": "2022-01-21T19:18:51+00:00"
         },
         {
             "name": "barryvdh/laravel-snappy",
@@ -3951,6 +3951,86 @@
                 "source": "https://github.com/nikic/PHP-Parser/tree/v4.13.2"
             },
             "time": "2021-11-30T19:35:32+00:00"
+        },
+        {
+            "name": "omniphx/forrest",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/charlesStOlive/forrest.git",
+                "reference": "57a3fa18459080315276cec4274d0d27b6eb51f9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/charlesStOlive/forrest/zipball/57a3fa18459080315276cec4274d0d27b6eb51f9",
+                "reference": "57a3fa18459080315276cec4274d0d27b6eb51f9",
+                "shasum": ""
+            },
+            "require": {
+                "firebase/php-jwt": "^5.2",
+                "guzzlehttp/guzzle": "~6.0|~7.0",
+                "illuminate/cache": "~6.0|~7.0|~8.0",
+                "illuminate/config": "~6.0|~7.0|~8.0",
+                "illuminate/contracts": "~6.0|~7.0|~8.0",
+                "illuminate/http": "~6.0|~7.0|~8.0",
+                "illuminate/routing": "~6.0|~7.0|~8.0",
+                "nesbot/carbon": "^2.0",
+                "php": "~7.2 || ~8.0"
+            },
+            "require-dev": {
+                "phpspec/phpspec": "~6.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Omniphx\\Forrest\\Providers\\Laravel\\ForrestServiceProvider"
+                    ],
+                    "aliases": {
+                        "Forrest": "Omniphx\\Forrest\\Providers\\Laravel\\Facades\\Forrest"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Omniphx\\Forrest\\": "src/Omniphx/Forrest/"
+                }
+            },
+            "scripts": {
+                "test": [
+                    "vendor/bin/phpspec run"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Matthew Mitchener",
+                    "homepage": "http://mattmitchener.com",
+                    "email": "mattjmitchener@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A Laravel library for Salesforce",
+            "keywords": [
+                "force",
+                "force.com",
+                "laravel",
+                "rest",
+                "salesforce"
+            ],
+            "support": {
+                "source": "https://github.com/charlesStOlive/forrest/tree/master"
+            },
+            "funding": [
+                {
+                    "type": "github",
+                    "url": "https://github.com/omniphx"
+                }
+            ],
+            "time": "2021-02-27T13:17:03+00:00"
         },
         {
             "name": "opis/closure",
@@ -9100,12 +9180,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/wintercms/wn-backend-module.git",
-                "reference": "74226e2152a45bd9beb924b3ad467a21e4b27854"
+                "reference": "d63543299f7b157ad55dfbe22f736bddf1c0f3c8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wintercms/wn-backend-module/zipball/74226e2152a45bd9beb924b3ad467a21e4b27854",
-                "reference": "74226e2152a45bd9beb924b3ad467a21e4b27854",
+                "url": "https://api.github.com/repos/wintercms/wn-backend-module/zipball/d63543299f7b157ad55dfbe22f736bddf1c0f3c8",
+                "reference": "d63543299f7b157ad55dfbe22f736bddf1c0f3c8",
                 "shasum": ""
             },
             "require": {
@@ -9160,7 +9240,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-01-12T02:47:20+00:00"
+            "time": "2022-01-18T17:23:45+00:00"
         },
         {
             "name": "winter/wn-cms-module",
@@ -9168,12 +9248,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/wintercms/wn-cms-module.git",
-                "reference": "97387874292d494ae8aabd5a384277b3e94dbcbe"
+                "reference": "53def9ff0275e571fb894686554be0bd85e2c701"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wintercms/wn-cms-module/zipball/97387874292d494ae8aabd5a384277b3e94dbcbe",
-                "reference": "97387874292d494ae8aabd5a384277b3e94dbcbe",
+                "url": "https://api.github.com/repos/wintercms/wn-cms-module/zipball/53def9ff0275e571fb894686554be0bd85e2c701",
+                "reference": "53def9ff0275e571fb894686554be0bd85e2c701",
                 "shasum": ""
             },
             "require": {
@@ -9228,7 +9308,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-12-18T12:24:08+00:00"
+            "time": "2022-01-13T07:38:30+00:00"
         },
         {
             "name": "winter/wn-drivers-plugin",
@@ -9307,12 +9387,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/wintercms/wn-system-module.git",
-                "reference": "4e58632b720edca5a3e582496e3cc2c1a954789e"
+                "reference": "3fab4e67ab336054e3e9eda8f4fdcfe5c40775bd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wintercms/wn-system-module/zipball/4e58632b720edca5a3e582496e3cc2c1a954789e",
-                "reference": "4e58632b720edca5a3e582496e3cc2c1a954789e",
+                "url": "https://api.github.com/repos/wintercms/wn-system-module/zipball/3fab4e67ab336054e3e9eda8f4fdcfe5c40775bd",
+                "reference": "3fab4e67ab336054e3e9eda8f4fdcfe5c40775bd",
                 "shasum": ""
             },
             "require": {
@@ -9368,7 +9448,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-01-05T00:04:20+00:00"
+            "time": "2022-01-18T15:44:15+00:00"
         },
         {
             "name": "zerodahero/laravel-workflow",
@@ -9666,16 +9746,16 @@
         },
         {
             "name": "mockery/mockery",
-            "version": "1.4.4",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mockery/mockery.git",
-                "reference": "e01123a0e847d52d186c5eb4b9bf58b0c6d00346"
+                "reference": "c10a5f6e06fc2470ab1822fa13fa2a7380f8fbac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mockery/mockery/zipball/e01123a0e847d52d186c5eb4b9bf58b0c6d00346",
-                "reference": "e01123a0e847d52d186c5eb4b9bf58b0c6d00346",
+                "url": "https://api.github.com/repos/mockery/mockery/zipball/c10a5f6e06fc2470ab1822fa13fa2a7380f8fbac",
+                "reference": "c10a5f6e06fc2470ab1822fa13fa2a7380f8fbac",
                 "shasum": ""
             },
             "require": {
@@ -9732,9 +9812,9 @@
             ],
             "support": {
                 "issues": "https://github.com/mockery/mockery/issues",
-                "source": "https://github.com/mockery/mockery/tree/1.4.4"
+                "source": "https://github.com/mockery/mockery/tree/1.5.0"
             },
-            "time": "2021-09-13T15:28:59+00:00"
+            "time": "2022-01-20T13:18:17+00:00"
         },
         {
             "name": "myclabs/deep-copy",
@@ -10509,16 +10589,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "9.5.11",
+            "version": "9.5.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "2406855036db1102126125537adb1406f7242fdd"
+                "reference": "93d4bf4c37aec6384bb9e5d390d9049a463a7256"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/2406855036db1102126125537adb1406f7242fdd",
-                "reference": "2406855036db1102126125537adb1406f7242fdd",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/93d4bf4c37aec6384bb9e5d390d9049a463a7256",
+                "reference": "93d4bf4c37aec6384bb9e5d390d9049a463a7256",
                 "shasum": ""
             },
             "require": {
@@ -10596,7 +10676,7 @@
             ],
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/9.5.11"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/9.5.12"
             },
             "funding": [
                 {
@@ -10608,7 +10688,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-12-25T07:07:57+00:00"
+            "time": "2022-01-21T05:54:47+00:00"
         },
         {
             "name": "sebastian/cli-parser",
@@ -11773,6 +11853,7 @@
         "winter/wn-cms-module": 20,
         "mexitek/phpcolors": 20,
         "dcblogdev/laravel-microsoft-graph": 20,
+        "omniphx/forrest": 20,
         "phpoffice/phpword": 20
     },
     "prefer-stable": true,

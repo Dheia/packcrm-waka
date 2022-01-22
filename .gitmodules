@@ -37,3 +37,6 @@
 [submodule "plugins/waka/docser"]
 	path = plugins/waka/docser
 	url = https://github.com/charlesStOlive/ws-docser.git
+[submodule "plugins/waka/salesforce"]
+	path = plugins/waka/salesforce
+	url = https://github.com/charlesStOlive/oc-salesforce.git
