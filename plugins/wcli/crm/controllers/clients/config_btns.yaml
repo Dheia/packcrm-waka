@@ -59,6 +59,9 @@ action_bar:
             word:
                 config: waka.worder::btns.word
                 group: waka.utils::lang.prod.produce
+            presentation:
+                config: waka.tbser::btns.presentation
+                group: waka.utils::lang.prod.produce
             word_cloud:
                 config: waka.cloud::btns.word
                 group: waka.utils::lang.prod.send
