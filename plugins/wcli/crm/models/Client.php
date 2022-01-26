@@ -187,7 +187,7 @@ class Client extends Model
         $periode = $attributes['periode'];
         $sales = $this->ventes()->wakaPeriode($periode, 'sale_at');
         $sales =  $sales->select(\Db::raw('SUM(amount) as value'), \DB::raw('MONTH(sale_at) month'), \DB::raw('YEAR(sale_at) year'))
-            ->groupBy('year','month')->get();
+            ->groupBy('year','month')->orderBy('year')->orderBy('month')->get();
         return $sales->pluck('value', 'month')->toArray();;
     }
     public function getCcVentesByMonthN1($attributes) {

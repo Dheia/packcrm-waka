@@ -195,14 +195,16 @@ class Commercial extends Model
     }
     
     public function getVentesByMonthDataSet($attributes,$pluck=null) {
+        trace_log("getVentesByMonthDataSet");
         $periode = $attributes['periode'];
         if(!$periode) {
             throw new \SystemException('variable periode est null');
         }
         $sales = $this->ventes()->wakaPeriode($periode, 'sale_at');
         $sales =  $sales->select(\Db::raw('SUM(amount) as value'), \DB::raw('MONTH(sale_at) month'), \DB::raw('YEAR(sale_at) year'))
-            ->groupBy('laravel_through_key', 'year','month')->get();
+            ->groupBy('laravel_through_key', 'year','month')->orderBy('year')->orderBy('month')->get();
         if(!$pluck) {
+            trace_log($sales->pluck('value', 'month')->toArray());
             return $sales->pluck('value', 'month')->toArray();
         } else {
             return $sales->pluck($pluck)->toArray();
@@ -216,7 +218,7 @@ class Commercial extends Model
         }
         $sales = $this->ventes()->wakaPeriode($periode, 'sale_at');
         $sales =  $sales->select(\Db::raw('SUM(amount) as value'), \DB::raw('WEEK(sale_at) week'), \DB::raw('YEAR(sale_at) year'))
-            ->groupBy('laravel_through_key', 'year','week')->get();
+            ->groupBy('laravel_through_key', 'year','week')->orderBy('year')->orderBy('week')->get();
         if(!$pluck) {
             return $sales->pluck('value', 'week')->toArray();
         } else {
