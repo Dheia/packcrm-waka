@@ -456,5 +456,5 @@ p{font-size:1em;margin:0 0 1rem 0}.w-small{font-size:0.8rem}
 .w-text-center{text-align:center;margin-left:auto;margin-right:auto}
 .w-justify{text-align:justify}
 img .w-original{object-fit:contain;max-height:initial !important;max-width:initial !important}
-img{position:relative;object-fit:contain}
+img{position:relative;object-fit:contain;display:block}
 .bg-img-cover{background-position:center;background-repeat:no-repeat;background-size:cover}

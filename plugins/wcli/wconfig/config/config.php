@@ -103,7 +103,7 @@ return [
     'assets' => [ // obligatoire pour pdf et mailer
         'css' => [
             //si il  a du less penser à le mettre dans le registrer du plugin pour le combiner en css
-            //'pdf' => ['/wcli/wconfig/assets/css/simple_grid/pdf.css' => 'pdf de base'],
+            'pdf' => ['/wcli/wconfig/assets/css/simple_grid/pdf.css' => 'pdf de base'],
             'email' => ['/wcli/wconfig/assets/css/simple_grid/email.css' => 'email de base'],
         ],
     ],
